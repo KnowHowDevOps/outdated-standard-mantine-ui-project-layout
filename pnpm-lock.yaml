@@ -124,8 +124,8 @@ importers:
         specifier: ^3.16.1
         version: 3.16.1(typescript@5.9.2)
       '@kubb/core':
-        specifier: ^3.18.0
-        version: 3.18.0
+        specifier: ^3.18.1
+        version: 3.18.1
       '@kubb/swagger':
         specifier: ^2.28.4
         version: 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
@@ -1437,8 +1437,8 @@ packages:
     resolution: {integrity: sha512-Jx4QlofG8M21VkpiTfHAkwxiiYIte9Bs5eWd5GQhGB8ukoCwOIGi38qbYCUjqtiO/72uuUXdii1uaqLyiDePmg==}
     engines: {node: '>=20'}
 
-  '@kubb/core@3.18.0':
-    resolution: {integrity: sha512-9fGvT8kCjZToxaLIAiZSRjifxeUMkuvjLi7Biide4ekt6YzzfmBd2ULrDHMsT49tNG48UMauj2j4f3A8hWiVTA==}
+  '@kubb/core@3.18.1':
+    resolution: {integrity: sha512-S+ybPViYXMw+rbhIKFm/zWlHTzg4CULvAbJ6U9eiOCfcoe3L6ad/UFvz4RxQmng3kkS4p+l9nZIWBmTROiPiUA==}
     engines: {node: '>=20'}
 
   '@kubb/fs@2.28.4':
@@ -1457,8 +1457,8 @@ packages:
     resolution: {integrity: sha512-Ej/VLVJ1ysQP6IQW4oIFXlhvz1KgcA4KuRvlF7sDNw/XJEFXyT8H064s/XH65RKjmzOvsBJjYRuM/bKV8pb9pw==}
     engines: {node: '>=20'}
 
-  '@kubb/parser-ts@3.18.0':
-    resolution: {integrity: sha512-yNxhLYWVvvSuh+M17fuuNwMe02YfH+CxTTEpRcf9MxfUfwI+Rb/DbgvC5Mh+z12vnZmfWyrhlgNiKyCZH2/s2Q==}
+  '@kubb/parser-ts@3.18.1':
+    resolution: {integrity: sha512-SrcMOVI5PLWq8eVhzj3sEDjEOxVQkFKD663XWmvbp4rSn/QjQ9aeG2o/j/P0kCzlm0nDsyJ2EsfWCU0Na7Xtpw==}
     engines: {node: '>=20'}
 
   '@kubb/plugin-oas@2.28.4':
@@ -8675,9 +8675,9 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.2
 
-  '@kubb/core@3.18.0':
+  '@kubb/core@3.18.1':
     dependencies:
-      '@kubb/parser-ts': 3.18.0
+      '@kubb/parser-ts': 3.18.1
       camelcase: 8.0.0
       find-up: 7.0.0
       fs-extra: 11.3.1
@@ -8723,8 +8723,9 @@ snapshots:
       remeda: 2.30.0
       typescript: 5.8.3
 
-  '@kubb/parser-ts@3.18.0':
+  '@kubb/parser-ts@3.18.1':
     dependencies:
+      prettier: 3.6.2
       remeda: 2.30.0
       typescript: 5.9.2
 
