@@ -59,7 +59,7 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 
 ### 🔺 Local development
 
-```bash
+```shell script
 # Clone the repository
 git clone https://github.com/dimdnk/standard-mantine-ui-project-layout.git my-app
 
@@ -108,13 +108,13 @@ Conventional changelog located [here](CHANGELOG.md).
 
 ## 🙏 Community & Contributions
 
-Please, follow [Contributing](.github/CONTRIBUTING.md) page.
+Please follow [Contributing](.github/CONTRIBUTING.md) page.
 
 <a name="codeofconduct"></a>
 
 ## 📙 Code of Conduct
 
-Please, follow [Code of Conduct](.github/CODE_OF_CONDUCT.md) page.
+Please follow [Code of Conduct](.github/CODE_OF_CONDUCT.md) page.
 
 <a name="license"></a>
 
@@ -124,13 +124,13 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-## GitHub Project Tooling Overview
+## _GitHub Project Tooling Overview_
 
 ### GitHub Actions
 
 - **Build & Test** - Node.js project build validation
 - **PR Title Check** - Ensures proper PR naming conventions
-- **Commit Message Check** - Validates commit message format
+- **Commit Message Check** - Validates a commit message format
 - **Template Setup** - Automated template configuration
 
 ### Git Hooks (Husky)
