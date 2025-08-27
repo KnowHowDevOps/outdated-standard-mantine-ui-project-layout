@@ -9,7 +9,7 @@ import {
   Button,
   Group,
   Stack,
-  Select
+  Select,
 } from "@mantine/core";
 import { useState } from "react";
 
