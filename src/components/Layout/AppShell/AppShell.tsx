@@ -151,7 +151,7 @@ export function AppShell({ children }: AppShellProps) {
 
         <MantineAppShell.Section>
           <Text size="xs" c="dimmed" ta="center">
-            v1.0.0
+            v0.0.0
           </Text>
         </MantineAppShell.Section>
       </MantineAppShell.Navbar>

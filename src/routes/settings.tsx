@@ -9,9 +9,7 @@ import {
   Button,
   Group,
   Stack,
-  Select,
-  Textarea,
-  Divider,
+  Select
 } from "@mantine/core";
 import { useState } from "react";
 
