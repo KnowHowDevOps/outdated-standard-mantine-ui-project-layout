@@ -121,8 +121,8 @@ importers:
         specifier: ^9.34.0
         version: 9.34.0
       '@kubb/cli':
-        specifier: ^3.18.1
-        version: 3.18.1(typescript@5.9.2)
+        specifier: ^3.18.2
+        version: 3.18.2(typescript@5.9.2)
       '@kubb/core':
         specifier: ^3.18.1
         version: 3.18.1
@@ -1423,8 +1423,8 @@ packages:
   '@keyv/serialize@1.1.0':
     resolution: {integrity: sha512-RlDgexML7Z63Q8BSaqhXdCYNBy/JQnqYIwxofUrNLGCblOMHp+xux2Q8nLMLlPpgHQPoU0Do8Z6btCpRBEqZ8g==}
 
-  '@kubb/cli@3.18.1':
-    resolution: {integrity: sha512-rH2xpifcbtMxtTRkAKPelfanHrYkztPdFJf1+jf3LrZ/QziNBTYXbP/X9mlTa3FGwiVd02pEJ9K3FTEBfulrwg==}
+  '@kubb/cli@3.18.2':
+    resolution: {integrity: sha512-lfKiIx1EnVlDEBlQIuc+syWYgcJdVw4BkCaxvAJbg65TJxmlAzqqh4n5GN+rixTBZ6/qGl6fdhb6O/ullu8Kgg==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1434,6 +1434,10 @@ packages:
 
   '@kubb/core@3.18.1':
     resolution: {integrity: sha512-S+ybPViYXMw+rbhIKFm/zWlHTzg4CULvAbJ6U9eiOCfcoe3L6ad/UFvz4RxQmng3kkS4p+l9nZIWBmTROiPiUA==}
+    engines: {node: '>=20'}
+
+  '@kubb/core@3.18.2':
+    resolution: {integrity: sha512-x8KVGs1yYMieo23hzCbuLoKtQq58e1dcNEcg0YPquFJ/edjDl2q2PrA17Ffgyk++54sJ/g+tdEHz4kiJUcAwQw==}
     engines: {node: '>=20'}
 
   '@kubb/fs@2.28.4':
@@ -1450,6 +1454,10 @@ packages:
 
   '@kubb/parser-ts@3.18.1':
     resolution: {integrity: sha512-SrcMOVI5PLWq8eVhzj3sEDjEOxVQkFKD663XWmvbp4rSn/QjQ9aeG2o/j/P0kCzlm0nDsyJ2EsfWCU0Na7Xtpw==}
+    engines: {node: '>=20'}
+
+  '@kubb/parser-ts@3.18.2':
+    resolution: {integrity: sha512-cEwn7Tdejlp4gupjqWptaRRxYnUJiniX2+z/qdBBjAS8RzFD7tp913gCStMDAd6HZbV0GOSQwh0AxJOs1glEbQ==}
     engines: {node: '>=20'}
 
   '@kubb/plugin-oas@2.28.4':
@@ -1500,8 +1508,8 @@ packages:
     resolution: {integrity: sha512-UVNIFptS6iwLYKi78HqpbMzr+1FWJ9hn9mVQjYH4U1uwWbCV5QHchII0MqhOgJpdwjnkuCq57oqRMBm668D7zw==}
     engines: {node: '>=18'}
 
-  '@kubb/ui@3.18.1':
-    resolution: {integrity: sha512-H4hHJZjykSANPLivQfenFMBTN+KdBZj3b5eVWTfHiwWhGedIORiIsLb8NJXSTdk+/qFYhx1Nv1lWn98eTXXptQ==}
+  '@kubb/ui@3.18.2':
+    resolution: {integrity: sha512-UppKbZj2Oi0oT9AqSRuJmBM6zDnntI7RjvOGp0FDE1U5NXRAt6d8NhhCBL7TTmKPTC7sd/R6h7cDt0+zGlfHEQ==}
     engines: {node: '>=20'}
 
   '@mantine/core@8.1.0':
@@ -8651,10 +8659,10 @@ snapshots:
 
   '@keyv/serialize@1.1.0': {}
 
-  '@kubb/cli@3.18.1(typescript@5.9.2)':
+  '@kubb/cli@3.18.2(typescript@5.9.2)':
     dependencies:
-      '@kubb/core': 3.18.1
-      '@kubb/ui': 3.18.1
+      '@kubb/core': 3.18.2
+      '@kubb/ui': 3.18.2
       chokidar: 4.0.3
       citty: 0.1.6
       cli-progress: 3.12.0
@@ -8701,6 +8709,21 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.2
 
+  '@kubb/core@3.18.2':
+    dependencies:
+      '@kubb/parser-ts': 3.18.2
+      camelcase: 8.0.0
+      find-up: 7.0.0
+      fs-extra: 11.3.1
+      js-runtime: 0.0.8
+      natural-orderby: 5.0.0
+      object-hash: 3.0.0
+      p-limit: 7.1.0
+      picocolors: 1.1.1
+      remeda: 2.30.0
+      seedrandom: 3.0.5
+      semver: 7.7.2
+
   '@kubb/fs@2.28.4':
     dependencies:
       fs-extra: 11.3.1
@@ -8729,6 +8752,12 @@ snapshots:
       typescript: 5.9.2
 
   '@kubb/parser-ts@3.18.1':
+    dependencies:
+      prettier: 3.6.2
+      remeda: 2.30.0
+      typescript: 5.9.2
+
+  '@kubb/parser-ts@3.18.2':
     dependencies:
       prettier: 3.6.2
       remeda: 2.30.0
@@ -8820,7 +8849,7 @@ snapshots:
 
   '@kubb/types@2.28.4': {}
 
-  '@kubb/ui@3.18.1':
+  '@kubb/ui@3.18.2':
     dependencies:
       '@hono/node-server': 1.19.0(hono@4.9.4)
       '@hono/zod-openapi': 0.19.2(hono@4.9.4)(zod@3.25.76)
