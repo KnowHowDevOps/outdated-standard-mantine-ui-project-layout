@@ -121,8 +121,8 @@ importers:
         specifier: ^9.34.0
         version: 9.34.0
       '@kubb/cli':
-        specifier: ^3.18.2
-        version: 3.18.2(typescript@5.9.2)
+        specifier: ^3.18.3
+        version: 3.18.3(typescript@5.9.2)
       '@kubb/core':
         specifier: ^3.18.1
         version: 3.18.1
@@ -1149,8 +1149,8 @@ packages:
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0
 
-  '@hono/node-server@1.19.0':
-    resolution: {integrity: sha512-1k8/8OHf5VIymJEcJyVksFpT+AQ5euY0VA5hUkCnlKpD4mr8FSbvXaHblxeTTEr90OaqWzAkQaqD80qHZQKxBA==}
+  '@hono/node-server@1.19.1':
+    resolution: {integrity: sha512-h44e5s+ByUriaRIbeS/C74O8v90m0A95luyYQGMF7KEn96KkYMXO7bZAwombzTpjQTU4e0TkU8U1WBIXlwuwtA==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: ^4
@@ -1429,8 +1429,8 @@ packages:
   '@keyv/serialize@1.1.0':
     resolution: {integrity: sha512-RlDgexML7Z63Q8BSaqhXdCYNBy/JQnqYIwxofUrNLGCblOMHp+xux2Q8nLMLlPpgHQPoU0Do8Z6btCpRBEqZ8g==}
 
-  '@kubb/cli@3.18.2':
-    resolution: {integrity: sha512-lfKiIx1EnVlDEBlQIuc+syWYgcJdVw4BkCaxvAJbg65TJxmlAzqqh4n5GN+rixTBZ6/qGl6fdhb6O/ullu8Kgg==}
+  '@kubb/cli@3.18.3':
+    resolution: {integrity: sha512-SFifnhoRQSHlEd/z84xavAF9J3L0sCEF2EX+fweuUYMbqRtqJ4uI7j6YkdVcMTftLgKy5eTobFCKjruTBb14IQ==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1442,8 +1442,8 @@ packages:
     resolution: {integrity: sha512-S+ybPViYXMw+rbhIKFm/zWlHTzg4CULvAbJ6U9eiOCfcoe3L6ad/UFvz4RxQmng3kkS4p+l9nZIWBmTROiPiUA==}
     engines: {node: '>=20'}
 
-  '@kubb/core@3.18.2':
-    resolution: {integrity: sha512-x8KVGs1yYMieo23hzCbuLoKtQq58e1dcNEcg0YPquFJ/edjDl2q2PrA17Ffgyk++54sJ/g+tdEHz4kiJUcAwQw==}
+  '@kubb/core@3.18.3':
+    resolution: {integrity: sha512-H4OysRLF8HcSAafeVI9kduReEtVAf+GpCLDlmoswOMl9aK8jv/ooTMaOn7T8nOgE5a5o/nv3ohetjW/j7GsPtw==}
     engines: {node: '>=20'}
 
   '@kubb/fs@2.28.4':
@@ -1462,8 +1462,8 @@ packages:
     resolution: {integrity: sha512-SrcMOVI5PLWq8eVhzj3sEDjEOxVQkFKD663XWmvbp4rSn/QjQ9aeG2o/j/P0kCzlm0nDsyJ2EsfWCU0Na7Xtpw==}
     engines: {node: '>=20'}
 
-  '@kubb/parser-ts@3.18.2':
-    resolution: {integrity: sha512-cEwn7Tdejlp4gupjqWptaRRxYnUJiniX2+z/qdBBjAS8RzFD7tp913gCStMDAd6HZbV0GOSQwh0AxJOs1glEbQ==}
+  '@kubb/parser-ts@3.18.3':
+    resolution: {integrity: sha512-+UBoAg4Dvoa9KLi13LpkE8jpC4wykwO5Z47tGF9YlTTCFaKiGeAcJW3RE9awFM8U5UrGNeCrPP1/GMljINaV6Q==}
     engines: {node: '>=20'}
 
   '@kubb/plugin-oas@2.28.4':
@@ -1514,8 +1514,8 @@ packages:
     resolution: {integrity: sha512-UVNIFptS6iwLYKi78HqpbMzr+1FWJ9hn9mVQjYH4U1uwWbCV5QHchII0MqhOgJpdwjnkuCq57oqRMBm668D7zw==}
     engines: {node: '>=18'}
 
-  '@kubb/ui@3.18.2':
-    resolution: {integrity: sha512-UppKbZj2Oi0oT9AqSRuJmBM6zDnntI7RjvOGp0FDE1U5NXRAt6d8NhhCBL7TTmKPTC7sd/R6h7cDt0+zGlfHEQ==}
+  '@kubb/ui@3.18.3':
+    resolution: {integrity: sha512-EVqOGbORyjCqUzZSoT+j57sTPunl0dcCmroL5S070j5xXwnlh4Mmsc+ePCfrC+CShTP+dklb1PJAsEHYBTi+cg==}
     engines: {node: '>=20'}
 
   '@mantine/core@8.1.0':
@@ -4713,8 +4713,8 @@ packages:
     resolution: {integrity: sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==}
     engines: {node: '>=0.10.0'}
 
-  hono@4.9.4:
-    resolution: {integrity: sha512-61hl6MF6ojTl/8QSRu5ran6GXt+6zsngIUN95KzF5v5UjiX/xnrLR358BNRawwIRO49JwUqJqQe3Rb2v559R8Q==}
+  hono@4.9.5:
+    resolution: {integrity: sha512-aLAVl5/67ifNnoFVxnhR89dpmSLsgwBprw/PT671ASwUpJqmd7Ne8KPTQo37DbRZfgpHaHeZ4bPVUvbOkeedMw==}
     engines: {node: '>=16.9.0'}
 
   hookified@1.11.0:
@@ -5267,8 +5267,8 @@ packages:
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
 
-  ky@1.9.0:
-    resolution: {integrity: sha512-NgBeR/cu7kuC4BAeF1rnXhfoI2uQ9RBe8zl5vo87ASsf1iIQoCeOxyt6Io6K4Ki++5ItCavXAtbEWWCGFciQ6g==}
+  ky@1.9.1:
+    resolution: {integrity: sha512-WGzpBn57klhxsqRTEABAqF4tqTtqCuxoTIv9m6nIZtMMFTVcrHp7bRDWblzFIfqkb47+OhTztOgHn6A4xItmqg==}
     engines: {node: '>=18'}
 
   language-subtag-registry@0.3.23:
@@ -5936,6 +5936,10 @@ packages:
 
   p-limit@7.1.0:
     resolution: {integrity: sha512-7LbrpOjbzBWFHFgRtVrIAwBwW1bB7c7n914Q2+CXr1TvOfbTrVHAEH1Ya9PwDwAoKLeiRrczymYWPwaHNOQ0vA==}
+    engines: {node: '>=20'}
+
+  p-limit@7.1.1:
+    resolution: {integrity: sha512-i8PyM2JnsNChVSYWLr2BAjNoLi0BAYC+wecOnZnVV+YSNJkzP7cWmvI34dk0WArWfH9KwBHNoZI3P3MppImlIA==}
     engines: {node: '>=20'}
 
   p-locate@5.0.0:
@@ -8415,20 +8419,20 @@ snapshots:
     dependencies:
       graphql: 16.11.0
 
-  '@hono/node-server@1.19.0(hono@4.9.4)':
+  '@hono/node-server@1.19.1(hono@4.9.5)':
     dependencies:
-      hono: 4.9.4
+      hono: 4.9.5
 
-  '@hono/zod-openapi@0.19.2(hono@4.9.4)(zod@3.25.76)':
+  '@hono/zod-openapi@0.19.2(hono@4.9.5)(zod@3.25.76)':
     dependencies:
       '@asteasolutions/zod-to-openapi': 7.3.4(zod@3.25.76)
-      '@hono/zod-validator': 0.4.3(hono@4.9.4)(zod@3.25.76)
-      hono: 4.9.4
+      '@hono/zod-validator': 0.4.3(hono@4.9.5)(zod@3.25.76)
+      hono: 4.9.5
       zod: 3.25.76
 
-  '@hono/zod-validator@0.4.3(hono@4.9.4)(zod@3.25.76)':
+  '@hono/zod-validator@0.4.3(hono@4.9.5)(zod@3.25.76)':
     dependencies:
-      hono: 4.9.4
+      hono: 4.9.5
       zod: 3.25.76
 
   '@hookform/resolvers@5.2.1(react-hook-form@7.62.0(react@19.1.1))':
@@ -8668,10 +8672,10 @@ snapshots:
 
   '@keyv/serialize@1.1.0': {}
 
-  '@kubb/cli@3.18.2(typescript@5.9.2)':
+  '@kubb/cli@3.18.3(typescript@5.9.2)':
     dependencies:
-      '@kubb/core': 3.18.2
-      '@kubb/ui': 3.18.2
+      '@kubb/core': 3.18.3
+      '@kubb/ui': 3.18.3
       chokidar: 4.0.3
       citty: 0.1.6
       cli-progress: 3.12.0
@@ -8718,16 +8722,16 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.2
 
-  '@kubb/core@3.18.2':
+  '@kubb/core@3.18.3':
     dependencies:
-      '@kubb/parser-ts': 3.18.2
+      '@kubb/parser-ts': 3.18.3
       camelcase: 8.0.0
       find-up: 7.0.0
       fs-extra: 11.3.1
       js-runtime: 0.0.8
       natural-orderby: 5.0.0
       object-hash: 3.0.0
-      p-limit: 7.1.0
+      p-limit: 7.1.1
       picocolors: 1.1.1
       remeda: 2.30.0
       seedrandom: 3.0.5
@@ -8766,7 +8770,7 @@ snapshots:
       remeda: 2.30.0
       typescript: 5.9.2
 
-  '@kubb/parser-ts@3.18.2':
+  '@kubb/parser-ts@3.18.3':
     dependencies:
       prettier: 3.6.2
       remeda: 2.30.0
@@ -8858,11 +8862,11 @@ snapshots:
 
   '@kubb/types@2.28.4': {}
 
-  '@kubb/ui@3.18.2':
+  '@kubb/ui@3.18.3':
     dependencies:
-      '@hono/node-server': 1.19.0(hono@4.9.4)
-      '@hono/zod-openapi': 0.19.2(hono@4.9.4)(zod@3.25.76)
-      hono: 4.9.4
+      '@hono/node-server': 1.19.1(hono@4.9.5)
+      '@hono/zod-openapi': 0.19.2(hono@4.9.5)(zod@3.25.76)
+      hono: 4.9.5
       zod: 3.25.76
 
   '@mantine/core@8.1.0(@mantine/hooks@8.1.0(react@19.1.1))(@types/react@19.1.12)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
@@ -12543,7 +12547,7 @@ snapshots:
     dependencies:
       parse-passwd: 1.0.0
 
-  hono@4.9.4: {}
+  hono@4.9.5: {}
 
   hookified@1.11.0: {}
 
@@ -13088,7 +13092,7 @@ snapshots:
 
   kolorist@1.8.0: {}
 
-  ky@1.9.0: {}
+  ky@1.9.1: {}
 
   language-subtag-registry@0.3.23: {}
 
@@ -13837,6 +13841,10 @@ snapshots:
     dependencies:
       yocto-queue: 1.2.1
 
+  p-limit@7.1.1:
+    dependencies:
+      yocto-queue: 1.2.1
+
   p-locate@5.0.0:
     dependencies:
       p-limit: 3.1.0
@@ -13874,7 +13882,7 @@ snapshots:
 
   package-json@10.0.1:
     dependencies:
-      ky: 1.9.0
+      ky: 1.9.1
       registry-auth-token: 5.1.0
       registry-url: 6.0.1
       semver: 7.7.2
