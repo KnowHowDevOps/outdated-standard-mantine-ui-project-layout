@@ -124,8 +124,8 @@ importers:
         specifier: ^3.18.3
         version: 3.18.3(typescript@5.9.2)
       '@kubb/core':
-        specifier: ^3.18.1
-        version: 3.18.1
+        specifier: ^3.18.3
+        version: 3.18.3
       '@kubb/swagger':
         specifier: ^2.28.4
         version: 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
@@ -1438,10 +1438,6 @@ packages:
     resolution: {integrity: sha512-ceujy+nWvG2vavxS6tqbkKCsQQNAqhPRBaKJ3skJ1o4JgNfoOprjKM3E1u5Z1+XboRa8xp8GhzymZ94DDYeeuA==}
     engines: {node: '>=18'}
 
-  '@kubb/core@3.18.1':
-    resolution: {integrity: sha512-S+ybPViYXMw+rbhIKFm/zWlHTzg4CULvAbJ6U9eiOCfcoe3L6ad/UFvz4RxQmng3kkS4p+l9nZIWBmTROiPiUA==}
-    engines: {node: '>=20'}
-
   '@kubb/core@3.18.3':
     resolution: {integrity: sha512-H4OysRLF8HcSAafeVI9kduReEtVAf+GpCLDlmoswOMl9aK8jv/ooTMaOn7T8nOgE5a5o/nv3ohetjW/j7GsPtw==}
     engines: {node: '>=20'}
@@ -1457,10 +1453,6 @@ packages:
   '@kubb/parser-ts@2.28.4':
     resolution: {integrity: sha512-YQHTBMzMMJzVvNFRXzUSLmjIAXVXVyvWVApOHgoRWgvO3vDCLbGij3fdKoiMIsaLg2R8BB9IcGubCfLgjkkj4w==}
     engines: {node: '>=18'}
-
-  '@kubb/parser-ts@3.18.1':
-    resolution: {integrity: sha512-SrcMOVI5PLWq8eVhzj3sEDjEOxVQkFKD663XWmvbp4rSn/QjQ9aeG2o/j/P0kCzlm0nDsyJ2EsfWCU0Na7Xtpw==}
-    engines: {node: '>=20'}
 
   '@kubb/parser-ts@3.18.3':
     resolution: {integrity: sha512-+UBoAg4Dvoa9KLi13LpkE8jpC4wykwO5Z47tGF9YlTTCFaKiGeAcJW3RE9awFM8U5UrGNeCrPP1/GMljINaV6Q==}
@@ -5934,10 +5926,6 @@ packages:
     resolution: {integrity: sha512-5b0R4txpzjPWVw/cXXUResoD4hb6U/x9BH08L7nw+GN1sezDzPdxeRvpc9c433fZhBan/wusjbCsqwqm4EIBIQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  p-limit@7.1.0:
-    resolution: {integrity: sha512-7LbrpOjbzBWFHFgRtVrIAwBwW1bB7c7n914Q2+CXr1TvOfbTrVHAEH1Ya9PwDwAoKLeiRrczymYWPwaHNOQ0vA==}
-    engines: {node: '>=20'}
-
   p-limit@7.1.1:
     resolution: {integrity: sha512-i8PyM2JnsNChVSYWLr2BAjNoLi0BAYC+wecOnZnVV+YSNJkzP7cWmvI34dk0WArWfH9KwBHNoZI3P3MppImlIA==}
     engines: {node: '>=20'}
@@ -8707,21 +8695,6 @@ snapshots:
       semver: 7.7.2
       unraw: 3.0.0
 
-  '@kubb/core@3.18.1':
-    dependencies:
-      '@kubb/parser-ts': 3.18.1
-      camelcase: 8.0.0
-      find-up: 7.0.0
-      fs-extra: 11.3.1
-      js-runtime: 0.0.8
-      natural-orderby: 5.0.0
-      object-hash: 3.0.0
-      p-limit: 7.1.0
-      picocolors: 1.1.1
-      remeda: 2.30.0
-      seedrandom: 3.0.5
-      semver: 7.7.2
-
   '@kubb/core@3.18.3':
     dependencies:
       '@kubb/parser-ts': 3.18.3
@@ -8762,12 +8735,6 @@ snapshots:
     dependencies:
       remeda: 2.30.0
       ts-morph: 23.0.0
-      typescript: 5.9.2
-
-  '@kubb/parser-ts@3.18.1':
-    dependencies:
-      prettier: 3.6.2
-      remeda: 2.30.0
       typescript: 5.9.2
 
   '@kubb/parser-ts@3.18.3':
@@ -13834,10 +13801,6 @@ snapshots:
       yocto-queue: 0.1.0
 
   p-limit@4.0.0:
-    dependencies:
-      yocto-queue: 1.2.1
-
-  p-limit@7.1.0:
     dependencies:
       yocto-queue: 1.2.1
 
