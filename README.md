@@ -96,6 +96,18 @@ pnpm dev
 | `TZ`       | Defines timezone           | `UTC`         |
 | `NODE_ENV` | Defines nodejs environment | `development` |
 
+### 🎯 Cursor AI IDE Support
+
+This project includes Cursor AI IDE rules for enhanced development experience:
+
+- **TypeScript React Query Best Practices** - Enforces best practices for using TanStack Query (React Query) in TypeScript React applications
+- **Code organization and structure guidelines**
+- **Performance optimization recommendations** 
+- **Security best practices enforcement**
+- **Testing approaches and patterns**
+
+The rules are located in `.cursor/rules/` directory and are automatically applied when using Cursor IDE.
+
 ---
 
 <a name="changelog"></a>
