@@ -102,7 +102,7 @@ This project includes Cursor AI IDE rules for enhanced development experience:
 
 - **TypeScript React Query Best Practices** - Enforces best practices for using TanStack Query (React Query) in TypeScript React applications
 - **Code organization and structure guidelines**
-- **Performance optimization recommendations** 
+- **Performance optimization recommendations**
 - **Security best practices enforcement**
 - **Testing approaches and patterns**
 
