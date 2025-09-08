@@ -25,8 +25,7 @@ This document outlines the coding standards and architectural patterns to be fol
 
 - Always use functional components with hooks rather than class components.
 - Use React 19's new features like automatic batching and concurrent rendering for better performance.
-```
-tsx
+```tsx
 // Good
 function UserProfile({ userId }: { userId: string }) {
 const [user, setUser] = useState<User | null>(null);
@@ -43,8 +42,7 @@ class UserProfile extends React.Component<UserProfileProps, UserProfileState> {
 
 - Extract complex logic into custom hooks for reusability and testability.
 - Name custom hooks with the `use` prefix according to React conventions.
-```
-tsx
+```tsx
 // Custom hook example
 function useUserData(userId: string) {
 const [user, setUser] = useState<User | null>(null);
@@ -69,8 +67,7 @@ return { user, loading, error };
 - Use TypeScript interfaces for props instead of PropTypes.
 - Provide meaningful names for props and interfaces.
 - Use default props when applicable.
-```
-tsx
+```tsx
 interface UserCardProps {
 name: string;
 email: string;
@@ -86,8 +83,7 @@ function UserCard({ name, email, role = 'User', onEdit }: UserCardProps) {
 
 - Use callbacks passed as props for component communication.
 - Name handler props with the `on` prefix and handler functions with `handle` prefix.
-```
-tsx
+```tsx
 function ParentComponent() {
 const handleUserUpdate = (userData: UserData) => {
 // Update user logic
@@ -102,8 +98,7 @@ return <UserForm onSubmit={handleUserUpdate} />;
 
 - Use the file-based routing system of TanStack Router for organized route definition.
 - Place route files in the `src/routes` directory following the TanStack Router conventions.
-```
-tsx
+```tsx
 // src/routes/users.tsx
 import { createFileRoute } from "@tanstack/react-router";
 
@@ -119,8 +114,7 @@ function Users() {
 
 - Define route parameters using TanStack Router's parameter syntax.
 - Validate and type parameters using TypeScript and TanStack Router's validation features.
-```
-tsx
+```tsx
 // src/routes/users/$userId.tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { z } from "zod";
@@ -141,8 +135,7 @@ const { userId } = Route.useParams();
 
 - Use route loaders to prefetch data needed for a route.
 - Handle loading states and errors gracefully.
-```
-tsx
+```tsx
 export const Route = createFileRoute("/users/$userId")({
 loader: ({ params }) => {
 return queryClient.ensureQueryData({
@@ -157,8 +150,7 @@ component: UserDetail,
 
 - Use nested routes for hierarchical UI structures.
 - Share layouts between related routes using parent routes.
-```
-tsx
+```tsx
 // src/routes/users/__layout.tsx
 import { createFileRoute, Outlet } from "@tanstack/react-router";
 
@@ -183,8 +175,7 @@ return (
 
 - Use structured and consistent query keys for caching and invalidation.
 - Organize query keys hierarchically for related data.
-```
-tsx
+```tsx
 // Good query key structure
 const userKey = ["users", userId];
 const userSettingsKey = ["users", userId, "settings"];
@@ -199,8 +190,7 @@ queryFn: () => fetchUser(userId),
 
 - Isolate API calls in separate functions outside of the query hook.
 - Handle errors and edge cases in query functions.
-```
-tsx
+```tsx
 // API function
 async function fetchUser(userId: string): Promise<User> {
 const response = await axios.get(`/api/users/${userId}`);
@@ -220,8 +210,7 @@ queryFn: () => fetchUser(userId),
 
 - Use mutations for data modification operations.
 - Update the cache after mutations using `invalidateQueries` or `setQueryData`.
-```
-tsx
+```tsx
 const updateUserMutation = useMutation({
 mutationFn: updateUser,
 onSuccess: (data, variables) => {
@@ -237,8 +226,7 @@ queryClient.invalidateQueries({ queryKey: ["users", variables.id] });
 
 - Configure appropriate staleTime and cacheTime based on data volatility.
 - Use retry and retryDelay options for transient failures.
-```
-tsx
+```tsx
 const { data } = useQuery({
 queryKey: ["users"],
 queryFn: fetchUsers,
@@ -252,8 +240,7 @@ retryDelay: (attemptIndex) => Math.min(1000 * 2 ** attemptIndex, 30000),
 
 - Set up sensible global defaults in the QueryClient configuration.
 - Configure global error handling and retry logic.
-```
-tsx
+```tsx
 // src/lib/query-client.ts
 import { QueryClient } from "@tanstack/react-query";
 
@@ -277,8 +264,7 @@ retry: 1,
 
 - Use `useState` for simple component-level state.
 - Consider using `useReducer` for complex state logic within a component.
-```
-tsx
+```tsx
 // Using useState
 const [users, setUsers] = useState<User[]>([]);
 
@@ -289,8 +275,7 @@ const [state, dispatch] = useReducer(userReducer, initialState);
 
 - Use React Context for state that needs to be accessed by multiple components.
 - Keep context providers focused on specific concerns.
-```
-tsx
+```tsx
 // src/contexts/AuthContext.tsx
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -334,8 +319,7 @@ return context;
 
 - Keep component APIs intuitive and consistent.
 - Use composition over complex prop APIs.
-```
-tsx
+```tsx
 // Good: Using composition
 <Card>
 <Card.Header>User Profile</Card.Header>
@@ -358,8 +342,7 @@ user={user}
 
 - Implement error boundaries to prevent UI crashes.
 - Provide meaningful fallback UIs.
-```
-tsx
+```tsx
 // src/components/ErrorBoundary.tsx
 import { Component, ErrorInfo, ReactNode } from 'react';
 
@@ -405,8 +388,7 @@ export default ErrorBoundary;
 
 - Define robust interfaces and types for all components, hooks, and functions.
 - Place shared types in a dedicated `types` directory.
-```
-tsx
+``` tsx
 // src/types/user.ts
 export interface User {
 id: string;
@@ -422,8 +404,7 @@ updatedAt: string;
 
 - Avoid using `any` type, use proper typing or `unknown` when necessary.
 - Use type narrowing and type guards for runtime type checking.
-```
-tsx
+```tsx
 // Type narrowing example
 function processData(data: unknown): string {
 if (typeof data === 'string') {
@@ -440,8 +421,7 @@ throw new Error('Invalid data format');
 ### Generic Components
 
 - Use generics for components that work with different data types.
-```
-tsx
+```tsx
 interface DataTableProps<T> {
 data: T[];
 columns: Array<{
@@ -462,8 +442,7 @@ function DataTable<T extends { id: string }>({ data, columns, onRowClick }: Data
 
 - Use `useMemo` for expensive calculations.
 - Use `useCallback` for function references passed to child components.
-```
-tsx
+```tsx
 // Memoize expensive calculations
 const sortedUsers = useMemo(() => {
 return [...users].sort((a, b) => a.name.localeCompare(b.name));
@@ -478,8 +457,7 @@ const handleUserEdit = useCallback((userId: string) => {
 
 - Use `React.memo` for components that render often but with the same props.
 - Implement custom equality functions for complex prop objects.
-```
-tsx
+```tsx
 const UserCard = React.memo(function UserCard({ user, onEdit }: UserCardProps) {
 // Component implementation
 });
@@ -499,8 +477,7 @@ prevProps.user.lastUpdated === nextProps.user.lastUpdated;
 
 - Use dynamic imports for route-based code splitting.
 - Lazy load components that are not immediately needed.
-```
-tsx
+```tsx
 // Dynamic import with React.lazy
 const Settings = React.lazy(() => import('./pages/Settings'));
 
@@ -513,8 +490,7 @@ const Settings = React.lazy(() => import('./pages/Settings'));
 
 - Use virtualization for long lists to improve performance.
 - Consider libraries like `react-virtual` or `react-window`.
-```
-tsx
+```tsx
 // Example with react-virtual
 function UserList({ users }: { users: User[] }) {
 const { rows } = useVirtualizer({
@@ -552,8 +528,7 @@ transform: `translateY(${row.start}px)`,
 
 - Test individual components, hooks, and utility functions.
 - Focus on behavior rather than implementation details.
-```
-tsx
+```tsx
 // Button component test
 test('Button triggers onClick when clicked', () => {
 const handleClick = vi.fn();
@@ -568,8 +543,7 @@ expect(handleClick).toHaveBeenCalledTimes(1);
 
 - Test component integration and interactions.
 - Mock external dependencies using tools like MSW.
-```
-tsx
+```tsx
 // User list integration test
 test('User list displays users from API', async () => {
 // Setup MSW to mock API response
@@ -595,8 +569,7 @@ expect(screen.getByText('Jane Smith')).toBeInTheDocument();
 
 - Use Playwright for critical user flows.
 - Focus on key user journeys rather than exhaustive testing.
-```
-typescript
+```typescript
 // Playwright E2E test example
 test('User can log in and access dashboard', async ({ page }) => {
 await page.goto('/login');
@@ -614,8 +587,7 @@ await expect(page.getByText('Welcome back')).toBeVisible();
 
 - Create Storybook stories for component variations.
 - Use stories for visual testing and documentation.
-```
-tsx
+```tsx
 // UserCard.stories.tsx
 import type { Meta, StoryObj } from '@storybook/react';
 import { UserCard } from './UserCard';
@@ -659,8 +631,7 @@ status: 'active',
 
 - Use Mantine components for consistent UI.
 - Follow Mantine's theming and customization approach.
-```
-tsx
+```tsx
 // Configure Mantine theme
 const theme = createTheme({
 colors: {
@@ -707,8 +678,7 @@ Role: <Badge color={user.role === 'Admin' ? 'blue' : 'gray'}>{user.role}</Badge>
 
 - Use Mantine's styling system for component-specific styles.
 - Use global CSS variables for design tokens.
-```
-tsx
+```tsx
 // Using Mantine's styling
 function CustomComponent() {
 return (
@@ -729,8 +699,7 @@ Content
 
 - Maintain consistent spacing, colors, and typography using theme tokens.
 - Avoid hardcoded values for colors, spacing, and other design properties.
-```
-tsx
+```tsx
 // Good: Using theme tokens
 <Box p="md" m="sm" bg="gray.1" style={{ borderRadius: theme.radius.md }}>
 
@@ -781,7 +750,6 @@ apiClient.interceptors.response.use(
 
 export default apiClient;
 ```
-```
 
 
 ### API Services
@@ -789,7 +757,7 @@ export default apiClient;
 - Create service modules for different API domains.
 - Keep API calls separate from components.
 
-```textmate
+```typescript
 // src/services/users-service.ts
 import apiClient from '../lib/api-client';
 import type { User, UserCreateData, UserUpdateData } from '../types/user';
@@ -825,7 +793,7 @@ export async function deleteUser(id: string): Promise<void> {
 - Implement consistent error handling for API requests.
 - Show user-friendly error messages.
 
-```textmate
+```typescript
 // Hook for API error handling
 function useApiError() {
   const { showNotification } = useNotifications();
