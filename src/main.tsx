@@ -1,30 +1,24 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { MantineProvider } from "@mantine/core";
+import { StrictMode } from "react";
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { RouterProvider, createRouter } from "@tanstack/react-router";
-import { Notifications } from "@mantine/notifications";
-
-// Import custom theme
-import { adminTheme } from "@/theme";
+import { createRouter, RouterProvider } from "@tanstack/react-router";
+import ReactDOM from "react-dom/client";
 
 // Import the generated route tree
 import { routeTree } from "./routeTree.gen";
 
-// Import styles
-import "@mantine/core/styles.css";
-import "@mantine/notifications/styles.css";
-import "@mantine/dates/styles.css";
-
-// Initialize MSW in development
-if (import.meta.env.DEV) {
-  const { worker } = await import("./mocks/browser");
-  worker.start();
-}
+const queryClient = new QueryClient();
 
 // Create a new router instance
-const router = createRouter({ routeTree });
+const router = createRouter({
+  routeTree,
+  context: {
+    queryClient,
+  },
+  defaultPreload: "intent",
+  defaultPreloadStaleTime: 0,
+});
 
 // Register the router instance for type safety
 declare module "@tanstack/react-router" {
@@ -33,32 +27,16 @@ declare module "@tanstack/react-router" {
   }
 }
 
-// Create a client with optimized default options
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 1000 * 60 * 5, // 5 minutes
-      gcTime: 1000 * 60 * 10, // 10 minutes
-      retry: 1,
-      refetchOnWindowFocus: false,
-    },
-    mutations: {
-      retry: 1,
-    },
-  },
-});
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <MantineProvider theme={adminTheme} defaultColorScheme="auto">
-        <Notifications position="top-right" />
+// Render the app
+const rootElement = document.getElementById("root")!;
+if (!rootElement.innerHTML) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <StrictMode>
+      <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
-        <ReactQueryDevtools
-          initialIsOpen={false}
-          buttonPosition="bottom-left"
-        />
-      </MantineProvider>
-    </QueryClientProvider>
-  </React.StrictMode>
-);
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
+    </StrictMode>
+  );
+}
