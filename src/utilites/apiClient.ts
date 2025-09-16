@@ -1,3 +1,4 @@
+/*jshint sub:true*/
 import { api } from "../api/client.ts";
 import { publicApi } from "../api/public-client.ts";
 
