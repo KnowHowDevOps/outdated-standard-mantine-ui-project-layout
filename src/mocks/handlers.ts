@@ -75,7 +75,7 @@ export const handlers = [
       filteredUsers = filteredUsers.filter(
         (user) =>
           user.name.toLowerCase().includes(search.toLowerCase()) ||
-          user.email.toLowerCase().includes(search.toLowerCase()),
+          user.email.toLowerCase().includes(search.toLowerCase())
       );
     }
 
