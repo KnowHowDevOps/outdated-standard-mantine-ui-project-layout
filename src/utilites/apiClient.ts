@@ -1,4 +1,4 @@
-/*jshint sub:true*/
+/* eslint-disable @typescript-eslint/dot-notation */
 import { api } from "../api/client.ts";
 import { publicApi } from "../api/public-client.ts";
 
