@@ -1,5 +1,5 @@
 import { api } from "./client.ts";
-import { Account, GenericDataResponse, IdParam, User } from "../types.ts";
+import { Account, GenericDataResponse, User } from "../types.ts";
 
 interface CreateAccountRequest {
   first_name: string;
@@ -27,10 +27,5 @@ export const accountClient = {
     );
     return response.data;
   },
-  getStripeConnectDetails: async (accountId: IdParam) => {
-    const response = await api.post<GenericDataResponse<any>>(
-      `accounts/${accountId}/stripe/connect`
-    );
-    return response.data;
-  },
+
 };

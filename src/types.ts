@@ -58,6 +58,17 @@ export interface User {
   locale?: SupportedLocales;
 }
 
+export interface Account {
+  id?: IdParam;
+  name: string;
+  email: string;
+  timezone?: string;
+  currency_code?: string;
+  password?: string;
+  is_account_email_confirmed?: boolean;
+  requires_manual_verification?: boolean;
+}
+
 export interface LoginData {
   email: string;
   password: string;

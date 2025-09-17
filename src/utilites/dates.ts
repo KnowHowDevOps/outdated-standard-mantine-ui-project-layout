@@ -15,7 +15,6 @@ dayjs.extend(timezone);
 dayjs.extend(advanced);
 
 export const prettyDate = (date: string, tz: string): string => {
-  // eslint-disable-next-line lingui/no-unlocalized-strings
   return dayjs.utc(date).tz(tz).format("MMM D, YYYY h:mma");
 };
 
@@ -46,7 +45,7 @@ export const utcToTz = (
   if (!date) {
     return undefined;
   }
-  // eslint-disable-next-line lingui/no-unlocalized-strings
+
   return dayjs.utc(date).tz(tz).format("YYYY-MM-DDTHH:mm");
 };
 
