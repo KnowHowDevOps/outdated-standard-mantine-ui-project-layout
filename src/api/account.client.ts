@@ -27,5 +27,4 @@ export const accountClient = {
     );
     return response.data;
   },
-
 };
