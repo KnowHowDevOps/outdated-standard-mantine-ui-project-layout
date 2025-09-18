@@ -12,7 +12,6 @@
 
 # 🚀 Mantine UI Project Layout
 
-<a name="description"></a>
 
 ## 📜 Description
 
@@ -20,30 +19,69 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 
 > A modern, feature-rich template for building scalable React applications with the latest tools and best practices.
 
-<a name="keyfeatures"></a>
 
 ## 🔑 Key Features
 
-- ✨ **React 19** - Experience the future with the latest React version
-- ⚡ **Vite** - Lightning-fast development with instant HMR
-- 🎯 **TypeScript** - Type-safe development with latest features
-- 📦 **PNPM** - Fast, disk space efficient package manager
-- 🔍 **ESLint + Prettier** - Modern linting and code formatting
-- 🎨 **Mantine UI** for styling
-- 🔄 **TanStack Router** - Type-safe routing with code splitting
-- 🔄 **TanStack Query** for powerful data synchronization
-- 📡 **Axios** for API calls
-- 📡 **graphql-request** for GraphQL support
-- 🧱 **storybook** for building UIs in isolation
-- 🧪 **vitest** for fast testing
-- 🧪 **Playwright** for fast and reliable e2e testing
-- 🧪 **Mock Service Worker** for client-agnostic API mocks
-- ✅ **React Hook Form + zod** for form validation
-- 🎭 **React Icons** for beautiful icons
-- 👷 **GitHub Actions** for easy workflow automation
-- 🔒️ **Dependabot** for monitoring vulnerabilities and keeping dependencies up to date
+### 🚀 **Core Technologies**
+- ✨ **React 19** - Latest React with concurrent features and improved performance
+- ⚡ **Vite 6** - Lightning-fast development with instant HMR and optimized builds
+- 🎯 **TypeScript** - Type-safe development with latest language features
+- �  **PNPM** - Fast, disk space efficient package manager with workspaces support
 
-<a name="documentation"></a>
+### 🎨 **UI & Styling**
+- 🎨 **Mantine UI** - Modern React components library with comprehensive theming
+- 🎪 **Mantine Extensions** - Carousel, Charts, Dates, Dropzone, Modals, Notifications
+- �️ ***Tiptap Editor** - Rich text editor with extensions for images, links, and formatting
+- 🎭 **Tabler Icons** - Beautiful SVG icons optimized for React
+- 📊 **Mantine DataTable** - Advanced data table with sorting, filtering, and pagination
+
+### 🔄 **State Management & Data**
+- 🔄 **TanStack Router** - Type-safe routing with code splitting and search params
+- 🔄 **TanStack Query** - Powerful data synchronization and caching
+- � **Axiosb** - Promise-based HTTP client for API calls
+- � **GDraphQL Request** - Lightweight GraphQL client
+- ✅ **React Hook Form + Zod** - Type-safe form validation and management
+- 🍪 **JS Cookie** - Simple cookie management
+- 🔗 **nuqs** - Type-safe URL search params state management
+
+### 🌐 **Internationalization & Accessibility**
+- 🌍 **Lingui** - Modern i18n framework with macro support and pluralization
+- ♿ **A11y Support** - Built-in accessibility features and Storybook a11y addon
+
+### 🧪 **Testing & Quality**
+- 🧪 **Vitest** - Fast unit testing with coverage reports and UI
+- 🧪 **Playwright** - Reliable end-to-end testing with UI mode
+- 🧪 **Mock Service Worker** - Client-agnostic API mocking for development and testing
+- 🧪 **Testing Library** - Simple and complete testing utilities for React
+
+### 🔍 **Code Quality & Development**
+- 🔍 **ESLint 9** - Modern linting with flat config and React/TypeScript rules
+- 💅 **Prettier** - Opinionated code formatting with package.json plugin
+- 🎨 **Stylelint** - CSS/SCSS linting for consistent styling
+- 🪝 **Husky + Lefthook** - Git hooks for pre-commit validation
+- 📝 **Commitlint** - Conventional commit message validation
+- 🔪 **Knip** - Dead code elimination and dependency analysis
+
+### 🧱 **Development Tools**
+- 📚 **Storybook 8** - Component development in isolation with dark mode support
+- 🔧 **SWC** - Fast TypeScript/JavaScript compiler for React
+- 📦 **Bundle Analyzer** - Visualize and optimize bundle size
+- 🖼️ **Image Optimizer** - Automatic image optimization in builds
+- 🧹 **Console Remover** - Remove console statements in production builds
+
+### 🚀 **DevOps & Automation**
+- 👷 **GitHub Actions** - CI/CD workflows for testing, building, and deployment
+- 🔒 **Dependabot** - Automated dependency updates and security monitoring
+- 📦 **Release-it** - Automated versioning and changelog generation
+- 🐳 **Docker Compose** - Local development environment setup
+- 📊 **SonarQube** - Code quality and security analysis
+
+### 🏗️ **Architecture & Patterns**
+- 🏗️ **Feature-Sliced Design** - Scalable frontend architecture methodology
+- 🔌 **API Code Generation** - Kubb for OpenAPI/Swagger client generation
+- 🎯 **TypeScript Strict Mode** - Enhanced type safety with strict configuration
+- 🔄 **Hot Module Replacement** - Instant updates during development
+
 
 ## 📚 Documentation
 
