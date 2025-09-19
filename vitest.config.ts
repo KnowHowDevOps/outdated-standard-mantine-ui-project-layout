@@ -1,24 +1,17 @@
 import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react-swc";
-import { resolve } from "path";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    tsconfigPaths(),
+    react({
+      plugins: [["@lingui/swc-plugin", {}]],
+    }),
+  ],
   test: {
     globals: true,
     environment: "jsdom",
     setupFiles: "./src/setupTests.ts",
-  },
-  resolve: {
-    alias: {
-      "@": resolve(__dirname, "./src"),
-      "@/components": resolve(__dirname, "./src/components"),
-      "@/pages": resolve(__dirname, "./src/pages"),
-      "@/hooks": resolve(__dirname, "./src/hooks"),
-      "@/utils": resolve(__dirname, "./src/utils"),
-      "@/types": resolve(__dirname, "./src/types"),
-      "@/schemas": resolve(__dirname, "./src/schemas"),
-      "@/api": resolve(__dirname, "./src/api"),
-    },
   },
 });
