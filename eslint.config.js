@@ -28,6 +28,7 @@ export default tseslint.config(
       ...pluginQuery.recommended,
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": "off",
+      "no-console": "off",
       "@tanstack/router/create-route-property-order": "error",
       "react-refresh/only-export-components": [
         "warn",
