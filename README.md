@@ -157,7 +157,7 @@ After creating your project from this template, you'll want to customize it:
 
 #### 2. Customize Branding
 
-- [ ] Update the app title in `src/routes/__root.tsx`
+- [ ] Update the app title in `src/pages/__root.tsx`
 - [ ] Modify the theme in `src/theme.ts` with your brand colors
 - [ ] Replace favicon and other icons in `public/` directory
 - [ ] Update meta tags in `index.html`
