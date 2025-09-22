@@ -101,7 +101,7 @@ function HomePage() {
                 <List.Item>React 19 with concurrent features</List.Item>
                 <List.Item>Vite for lightning-fast development</List.Item>
                 <List.Item>Feature-Sliced Design architecture</List.Item>
-                <List.Item>Comprehensive testing setup</List.Item>
+                <List.Item>Testing setup</List.Item>
                 <List.Item>CI/CD with GitHub Actions</List.Item>
               </List>
             </Card>

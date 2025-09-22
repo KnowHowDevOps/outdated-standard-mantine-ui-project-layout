@@ -95,8 +95,8 @@ function AboutPage() {
               UI components
             </List.Item>
             <List.Item>
-              <strong>Testing Ready:</strong> Comprehensive testing setup with
-              Vitest and Playwright
+              <strong>Testing Ready:</strong> testing setup with Vitest and
+              Playwright
             </List.Item>
             <List.Item>
               <strong>Code Quality:</strong> ESLint, Prettier, and automated
