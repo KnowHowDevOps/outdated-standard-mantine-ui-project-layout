@@ -12,30 +12,31 @@
 
 # 🚀 Mantine UI Project Layout
 
-
 ## 📜 Description
 
 React + TypeScript + Vite + TanStack Router + Mantine UI Template
 
 > A modern, feature-rich template for building scalable React applications with the latest tools and best practices.
 
-
 ## 🔑 Key Features
 
 ### 🚀 **Core Technologies**
+
 - ✨ **React 19** - Latest React with concurrent features and improved performance
 - ⚡ **Vite 6** - Lightning-fast development with instant HMR and optimized builds
 - 🎯 **TypeScript** - Type-safe development with latest language features
-- �  **PNPM** - Fast, disk space efficient package manager with workspaces support
+- � **PNPM** - Fast, disk space efficient package manager with workspaces support
 
 ### 🎨 **UI & Styling**
+
 - 🎨 **Mantine UI** - Modern React components library with comprehensive theming
 - 🎪 **Mantine Extensions** - Carousel, Charts, Dates, Dropzone, Modals, Notifications
-- �️ ***Tiptap Editor** - Rich text editor with extensions for images, links, and formatting
+- �️ **\*Tiptap Editor** - Rich text editor with extensions for images, links, and formatting
 - 🎭 **Tabler Icons** - Beautiful SVG icons optimized for React
 - 📊 **Mantine DataTable** - Advanced data table with sorting, filtering, and pagination
 
 ### 🔄 **State Management & Data**
+
 - 🔄 **TanStack Router** - Type-safe routing with code splitting and search params
 - 🔄 **TanStack Query** - Powerful data synchronization and caching
 - � **Axiosb** - Promise-based HTTP client for API calls
@@ -45,16 +46,19 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 - 🔗 **nuqs** - Type-safe URL search params state management
 
 ### 🌐 **Internationalization & Accessibility**
+
 - 🌍 **Lingui** - Modern i18n framework with macro support and pluralization
 - ♿ **A11y Support** - Built-in accessibility features and Storybook a11y addon
 
 ### 🧪 **Testing & Quality**
+
 - 🧪 **Vitest** - Fast unit testing with coverage reports and UI
 - 🧪 **Playwright** - Reliable end-to-end testing with UI mode
 - 🧪 **Mock Service Worker** - Client-agnostic API mocking for development and testing
 - 🧪 **Testing Library** - Simple and complete testing utilities for React
 
 ### 🔍 **Code Quality & Development**
+
 - 🔍 **ESLint 9** - Modern linting with flat config and React/TypeScript rules
 - 💅 **Prettier** - Opinionated code formatting with package.json plugin
 - 🎨 **Stylelint** - CSS/SCSS linting for consistent styling
@@ -63,6 +67,7 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 - 🔪 **Knip** - Dead code elimination and dependency analysis
 
 ### 🧱 **Development Tools**
+
 - 📚 **Storybook 8** - Component development in isolation with dark mode support
 - 🔧 **SWC** - Fast TypeScript/JavaScript compiler for React
 - 📦 **Bundle Analyzer** - Visualize and optimize bundle size
@@ -70,6 +75,7 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 - 🧹 **Console Remover** - Remove console statements in production builds
 
 ### 🚀 **DevOps & Automation**
+
 - 👷 **GitHub Actions** - CI/CD workflows for testing, building, and deployment
 - 🔒 **Dependabot** - Automated dependency updates and security monitoring
 - 📦 **Release-it** - Automated versioning and changelog generation
@@ -77,11 +83,11 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 - 📊 **SonarQube** - Code quality and security analysis
 
 ### 🏗️ **Architecture & Patterns**
+
 - 🏗️ **Feature-Sliced Design** - Scalable frontend architecture methodology
 - 🔌 **API Code Generation** - Kubb for OpenAPI/Swagger client generation
 - 🎯 **TypeScript Strict Mode** - Enhanced type safety with strict configuration
 - 🔄 **Hot Module Replacement** - Instant updates during development
-
 
 ## 📚 Documentation
 
@@ -95,7 +101,16 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 > - [Docker](https://www.docker.com/get-started/)
 > - [Docker Compose](https://docs.docker.com/compose/)
 
-### 🔺 Local development
+### 🔺 Using This Template
+
+#### Option 1: Use GitHub Template (Recommended)
+
+1. Click **[Use this template](https://github.com/dimdnk/standard-mantine-ui-project-layout/generate)** button
+2. Create your new repository
+3. Clone your new repository
+4. Follow the setup steps below
+
+#### Option 2: Clone Directly
 
 ```shell script
 # Clone the repository
@@ -104,68 +119,194 @@ git clone https://github.com/dimdnk/standard-mantine-ui-project-layout.git my-ap
 # Navigate to project directory
 cd my-app
 
+# Remove the original git history (optional)
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit from template"
+```
+
+### 🔺 Local Development Setup
+
+```shell script
 # Install dependencies
 pnpm install
 
-# Start local dev services in Docker using the command:
+# Copy environment variables
+cp .env.example .env
+
+# Start local dev services in Docker (optional)
 docker compose -f compose.yaml up -d
 
 # Start development server
 pnpm dev
 ```
 
+The application will be available at `http://localhost:5173`
+
+### 🎨 Template Customization
+
+After creating your project from this template, you'll want to customize it:
+
+#### 1. Update Project Information
+
+- [ ] Update `package.json` name, description, and repository URLs
+- [ ] Update `README.md` title and description
+- [ ] Update `LICENSE` file with your information
+- [ ] Update GitHub repository settings and topics
+
+#### 2. Customize Branding
+
+- [ ] Update the app title in `src/routes/__root.tsx`
+- [ ] Modify the theme in `src/theme.ts` with your brand colors
+- [ ] Replace favicon and other icons in `public/` directory
+- [ ] Update meta tags in `index.html`
+
+#### 3. Configure Environment
+
+- [ ] Update `.env.example` with your API endpoints
+- [ ] Configure `src/api/client.ts` with your API base URL
+- [ ] Set up authentication endpoints in API clients
+
+#### 4. Remove Template Examples (Optional)
+
+- [ ] Remove or modify `src/components/SampleComponents.tsx`
+- [ ] Update the home page content in `src/routes/index.tsx`
+- [ ] Customize the about page in `src/routes/about.tsx`
+- [ ] Remove template-specific Storybook stories
+
+#### 5. Set Up CI/CD
+
+- [ ] Configure GitHub Actions secrets for deployment
+- [ ] Update SonarQube configuration in `sonar-project.properties`
+- [ ] Set up deployment targets in GitHub Actions workflows
+
 ### 📃 Available Scripts
 
-| Command               | Description                                |
-| --------------------- | ------------------------------------------ |
-| `pnpm dev`            | Start development server                   |
-| `pnpm build`          | Build for production                       |
-| `pnpm preview`        | Preview production build                   |
-| `pnpm test`           | Run tests                                  |
-| `pnpm prettier:write` | Run Prettier over the code                 |
-| `pnpm lint`           | Lint code                                  |
-| `pnpm type-check`     | Check types                                |
-| `pnpm release`        | Automate versioning and package publishing |
+| Command                 | Description                                |
+| ----------------------- | ------------------------------------------ |
+| `pnpm dev`              | Start development server                   |
+| `pnpm build`            | Build for production                       |
+| `pnpm preview`          | Preview production build                   |
+| `pnpm test`             | Run unit tests with Vitest                 |
+| `pnpm test:ui`          | Run tests with UI interface                |
+| `pnpm test:coverage`    | Run tests with coverage report             |
+| `pnpm e2e`              | Run end-to-end tests with Playwright       |
+| `pnpm e2e:ui`           | Run e2e tests with UI interface            |
+| `pnpm storybook`        | Start Storybook development server         |
+| `pnpm storybook:build`  | Build Storybook for production             |
+| `pnpm lint`             | Lint code with ESLint                      |
+| `pnpm lint:fix`         | Fix linting issues automatically           |
+| `pnpm lint:stylelint`   | Lint CSS/SCSS files                        |
+| `pnpm prettier:check`   | Check code formatting                      |
+| `pnpm prettier:write`   | Format code with Prettier                  |
+| `pnpm type-check`       | Check TypeScript types                     |
+| `pnpm messages:extract` | Extract i18n messages                      |
+| `pnpm messages:compile` | Compile i18n messages                      |
+| `pnpm release`          | Automate versioning and package publishing |
 
 ## 🏗️ **Feature-Sliced Design Architecture**
 
 This project follows **Feature-Sliced Design (FSD)** methodology for scalable frontend architecture.
 
-### 📁 **Project Structure**
+### 📁 **Enhanced Feature-Sliced Design Structure**
 
 ```
 src/
 ├── app/                    # Application layer
 │   ├── app.tsx            # App component with providers
-│   ├── router.ts          # Router configuration
+│   ├── theme.ts           # Mantine theme configuration
 │   └── index.ts           # Public API
 ├── processes/              # Cross-entity business processes
-│   ├── auth-session/      # Authentication session management
-│   └── user-onboarding/   # User registration workflow
-├── pages/                  # Pages layer (owns routing)
-│   ├── __root.tsx         # Root route with layout
-│   ├── index.tsx          # Home route
-│   ├── about.tsx          # About route
-│   ├── home/              # Home page components
-│   └── about/             # About page components
+│   └── auth-session/      # Authentication session management
+│       ├── model/         # Session business logic
+│       │   └── use-auth-session.ts # Auth session hook
+│       ├── ui/            # Session UI components
+│       │   └── auth-session-provider.tsx # Context provider
+│       └── index.ts       # Public API
+├── pages/                  # Pages layer (routing)
+│   ├── root/              # Root layout page
+│   │   ├── root-page.tsx  # Root route component
+│   │   └── index.ts       # Public API
+│   ├── home/              # Home page
+│   │   ├── home-page.tsx  # Home route component
+│   │   └── index.ts       # Public API
+│   └── about/             # About page
+│       ├── about-page.tsx # About route component
+│       └── index.ts       # Public API
+├── widgets/               # Composite UI components
+│   ├── header/            # Application header
+│   │   ├── ui/header.tsx  # Header component
+│   │   └── index.ts       # Public API
+│   └── sidebar/           # Navigation sidebar
+│       ├── ui/sidebar.tsx # Sidebar component
+│       └── index.ts       # Public API
 ├── features/              # Business features
-│   ├── auth/              # Authentication feature
-│   │   ├── model/         # Validation & business logic
-│   │   ├── ui/            # Feature UI components
+│   ├── authentication/    # Authentication feature
+│   │   ├── model/         # Auth validation & logic
+│   │   │   └── validation.ts # Form validation rules
+│   │   ├── ui/            # Auth UI components
+│   │   │   ├── login-form.tsx # Login form
+│   │   │   └── register-form.tsx # Registration form
 │   │   └── index.ts       # Public API
-│   └── user-management/   # User management feature
-├── entities/              # Business entities (pure data)
+│   └── sample-form/       # Sample form feature
+│       ├── model/         # Business logic & validation
+│       │   ├── types.ts   # Feature types
+│       │   └── validation.ts # Form validation
+│       ├── ui/            # Feature UI components
+│       │   ├── sample-form-feature.tsx
+│       │   ├── sample-form-feature.test.tsx
+│       │   └── sample-form-feature.stories.tsx
+│       └── index.ts       # Public API
+├── entities/              # Business entities
 │   ├── user/              # User entity
-│   │   ├── model/         # Types & pure queries
-│   │   ├── api/           # API methods
-│   │   ├── ui/            # Data display components
+│   │   ├── model/         # Entity types
+│   │   │   └── types.ts   # User types
+│   │   ├── api/           # Entity API methods
+│   │   │   └── user-api.ts # User API client
 │   │   └── index.ts       # Public API
-│   └── auth/              # Auth entity
-└── shared/                # Reusable utilities
-    ├── api/               # Base API configuration
-    ├── lib/               # Utilities & helpers
-    ├── types/             # Common types
-    └── ui/                # Reusable UI components
+│   ├── auth/              # Authentication entity
+│   │   ├── model/         # Auth types
+│   │   │   └── types.ts   # Auth types
+│   │   ├── api/           # Auth API methods
+│   │   │   └── auth-api.ts # Auth API client
+│   │   └── index.ts       # Public API
+│   └── account/           # Account entity
+│       ├── model/         # Account types
+│       │   └── types.ts   # Account types
+│       ├── api/           # Account API methods
+│       │   └── account-api.ts # Account API client
+│       └── index.ts       # Public API
+├── shared/                # Reusable utilities
+│   ├── api/               # Base API configuration
+│   │   ├── client.ts      # Axios client setup
+│   │   └── index.ts       # Public API
+│   ├── lib/               # Utilities & helpers
+│   │   ├── config.ts      # Environment configuration
+│   │   ├── query-client.ts # TanStack Query client
+│   │   ├── dates.ts       # Date utilities
+│   │   ├── helpers.ts     # General helpers
+│   │   ├── string-helper.ts # String utilities
+│   │   └── index.ts       # Public API
+│   ├── types/             # Common types
+│   │   └── index.ts       # Shared type definitions
+│   └── ui/                # Reusable UI components
+│       ├── app-layout/    # Application layout
+│       │   ├── app-layout.tsx
+│       │   └── index.ts   # Public API
+│       ├── loading-overlay/ # Loading overlay
+│       │   ├── loading-overlay.tsx
+│       │   └── index.ts   # Public API
+│       ├── error-boundary/ # Error boundary
+│       │   ├── error-boundary.tsx
+│       │   └── index.ts   # Public API
+│       └── index.ts       # Public API
+├── routes/                # TanStack Router files (re-exports)
+│   ├── __root.tsx         # Re-exports from pages/root
+│   ├── index.tsx          # Re-exports from pages/home
+│   └── about.tsx          # Re-exports from pages/about
+├── main.tsx               # Application entry point
+└── routeTree.gen.ts       # Generated route tree
 ```
 
 ### 🎯 **Layer Responsibilities**

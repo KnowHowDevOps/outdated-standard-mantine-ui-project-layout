@@ -1,6 +1,8 @@
 import React from "react";
 
-import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
+
+import { AppLayout } from "../shared/ui/app-layout";
 
 const env = import.meta.env;
 const TanStackRouterDevtools =
@@ -15,16 +17,15 @@ const TanStackRouterDevtools =
         }))
       );
 
-export const Route = createRootRoute({
-  component: () => (
-    <>
-      <div>
-        <Link to="/">Home</Link>&nbsp;
-        <Link to="/about">About</Link>
-      </div>
-      <hr />
+function RootComponent() {
+  return (
+    <AppLayout>
       <Outlet />
       <TanStackRouterDevtools />
-    </>
-  ),
+    </AppLayout>
+  );
+}
+
+export const Route = createRootRoute({
+  component: RootComponent,
 });
