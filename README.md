@@ -205,7 +205,7 @@ After creating your project from this template, you'll want to customize it:
 | `pnpm messages:compile` | Compile i18n messages                      |
 | `pnpm release`          | Automate versioning and package publishing |
 
-## 🏗️ **Feature-Sliced Design Architecture**
+### 🏗️ **Feature-Sliced Design Architecture**
 
 This project follows **Feature-Sliced Design (FSD)** methodology for scalable frontend architecture.
 
