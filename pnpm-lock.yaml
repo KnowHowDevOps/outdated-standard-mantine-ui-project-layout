@@ -220,8 +220,8 @@ importers:
         specifier: ^3.18.3
         version: 3.18.3(typescript@5.9.2)
       '@kubb/core':
-        specifier: ^3.18.3
-        version: 3.18.3
+        specifier: ^4.0.0
+        version: 4.0.0
       '@kubb/swagger':
         specifier: ^2.28.4
         version: 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
@@ -1551,6 +1551,10 @@ packages:
     resolution: {integrity: sha512-H4OysRLF8HcSAafeVI9kduReEtVAf+GpCLDlmoswOMl9aK8jv/ooTMaOn7T8nOgE5a5o/nv3ohetjW/j7GsPtw==}
     engines: {node: '>=20'}
 
+  '@kubb/core@4.0.0':
+    resolution: {integrity: sha512-BPDMqlWJIh1e5hpKgRnbtsFN6ZwfYQtwnqUHSX6Qu1H3QTQuCd/NXheECfLAg/jOINBrMHhDMA49s0nE49RejQ==}
+    engines: {node: '>=20'}
+
   '@kubb/fs@2.28.4':
     resolution: {integrity: sha512-r14Opu6BbRfbovGRph2vK30H6vI4KkGQVG/qEY4ZrGKenoQhsLqDllkLYTUbZc77E6ncpBlw5m17mE0N2EyXbw==}
     engines: {node: '>=18'}
@@ -1565,6 +1569,10 @@ packages:
 
   '@kubb/parser-ts@3.18.3':
     resolution: {integrity: sha512-+UBoAg4Dvoa9KLi13LpkE8jpC4wykwO5Z47tGF9YlTTCFaKiGeAcJW3RE9awFM8U5UrGNeCrPP1/GMljINaV6Q==}
+    engines: {node: '>=20'}
+
+  '@kubb/parser-ts@4.0.0':
+    resolution: {integrity: sha512-WnnSiNsXi1xBwoEFKyMFwsuyA1bDwx/0ebBnt6G2QemEBSgL1LjPVtq+AeBYNe8aHkFCsmq00dzg67XFuB/BJQ==}
     engines: {node: '>=20'}
 
   '@kubb/plugin-oas@2.28.4':
@@ -5043,8 +5051,8 @@ packages:
   fs-constants@1.0.0:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
 
-  fs-extra@11.3.1:
-    resolution: {integrity: sha512-eXvGGwZ5CL17ZSwHWd3bbgk7UUpF6IFHtP57NYYakPvHOs8GDgDe5KJI36jIJzDkJ6eJjuzRA8eBQb6SkKue0g==}
+  fs-extra@11.3.2:
+    resolution: {integrity: sha512-Xr9F6z6up6Ws+NjzMCZc6WXg2YFRlrLP9NQDO3VQrWrfiojdhS56TzueT88ze0uBdCTwEIhQ3ptnmKeWGFAe0A==}
     engines: {node: '>=14.14'}
 
   fs-extra@9.1.0:
@@ -7199,8 +7207,8 @@ packages:
     engines: {node: ^20.12.0 || >=22.0.0}
     hasBin: true
 
-  remeda@2.30.0:
-    resolution: {integrity: sha512-TcRpI1ecqnMer3jHhFtMerGvHFCDlCHljUp0/9A4HxHOh5bSY3kP1l8nQDFMnWYJKl3MSarDNY1tb0Bs/bCmvw==}
+  remeda@2.32.0:
+    resolution: {integrity: sha512-BZx9DsT4FAgXDTOdgJIc5eY6ECIXMwtlSPQoPglF20ycSWigttDDe88AozEsPPT4OWk5NujroGSBC1phw5uU+w==}
 
   remove-undefined-objects@5.0.0:
     resolution: {integrity: sha512-DE8C17uIWeHaY4SqIkpQpHXm0MIdYHtIqjieWuh0I2PG8YcZRxFE6pqeEhnRetsrQ7Lu9uvSNQkDbg95NLpvnQ==}
@@ -9522,7 +9530,7 @@ snapshots:
       find-up: 7.0.0
       natural-orderby: 3.0.2
       p-queue: 8.1.0
-      remeda: 2.30.0
+      remeda: 2.32.0
       seedrandom: 3.0.5
       semver: 7.7.2
       unraw: 3.0.0
@@ -9532,19 +9540,34 @@ snapshots:
       '@kubb/parser-ts': 3.18.3
       camelcase: 8.0.0
       find-up: 7.0.0
-      fs-extra: 11.3.1
+      fs-extra: 11.3.2
       js-runtime: 0.0.8
       natural-orderby: 5.0.0
       object-hash: 3.0.0
       p-limit: 7.1.1
       picocolors: 1.1.1
-      remeda: 2.30.0
+      remeda: 2.32.0
+      seedrandom: 3.0.5
+      semver: 7.7.2
+
+  '@kubb/core@4.0.0':
+    dependencies:
+      '@kubb/parser-ts': 4.0.0
+      camelcase: 8.0.0
+      find-up: 7.0.0
+      fs-extra: 11.3.2
+      js-runtime: 0.0.8
+      natural-orderby: 5.0.0
+      object-hash: 3.0.0
+      p-limit: 7.1.1
+      picocolors: 1.1.1
+      remeda: 2.32.0
       seedrandom: 3.0.5
       semver: 7.7.2
 
   '@kubb/fs@2.28.4':
     dependencies:
-      fs-extra: 11.3.1
+      fs-extra: 11.3.2
       js-runtime: 0.0.8
 
   '@kubb/oas@2.28.4(encoding@0.1.13)':
@@ -9556,7 +9579,7 @@ snapshots:
       oas: 25.3.0
       oas-normalize: 11.1.4(encoding@0.1.13)
       openapi-types: 12.1.3
-      remeda: 2.30.0
+      remeda: 2.32.0
       swagger2openapi: 7.0.8(encoding@0.1.13)
       ts-toolbelt: 9.6.0
     transitivePeerDependencies:
@@ -9565,14 +9588,20 @@ snapshots:
 
   '@kubb/parser-ts@2.28.4':
     dependencies:
-      remeda: 2.30.0
+      remeda: 2.32.0
       ts-morph: 23.0.0
       typescript: 5.9.2
 
   '@kubb/parser-ts@3.18.3':
     dependencies:
       prettier: 3.6.2
-      remeda: 2.30.0
+      remeda: 2.32.0
+      typescript: 5.9.2
+
+  '@kubb/parser-ts@4.0.0':
+    dependencies:
+      prettier: 3.6.2
+      remeda: 2.32.0
       typescript: 5.9.2
 
   '@kubb/plugin-oas@2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)':
@@ -9582,7 +9611,7 @@ snapshots:
       '@kubb/oas': 2.28.4(encoding@0.1.13)
       '@kubb/react': 2.28.4
       '@stoplight/yaml': 4.3.0
-      remeda: 2.30.0
+      remeda: 2.32.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -13554,7 +13583,7 @@ snapshots:
 
   fs-constants@1.0.0: {}
 
-  fs-extra@11.3.1:
+  fs-extra@11.3.2:
     dependencies:
       graceful-fs: 4.2.11
       jsonfile: 6.2.0
@@ -15900,7 +15929,7 @@ snapshots:
       - magicast
       - supports-color
 
-  remeda@2.30.0:
+  remeda@2.32.0:
     dependencies:
       type-fest: 4.41.0
 
