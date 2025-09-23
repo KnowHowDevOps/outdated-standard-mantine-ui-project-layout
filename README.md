@@ -31,7 +31,7 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 
 - 🎨 **Mantine UI** - Modern React components library with comprehensive theming
 - 🎪 **Mantine Extensions** - Carousel, Charts, Dates, Dropzone, Modals, Notifications
-- �️ **\*Tiptap Editor** - Rich text editor with extensions for images, links, and formatting
+- �️ **Tiptap Editor** - Rich text editor with extensions for images, links, and formatting
 - 🎭 **Tabler Icons** - Beautiful SVG icons optimized for React
 - 📊 **Mantine DataTable** - Advanced data table with sorting, filtering, and pagination
 
@@ -216,7 +216,7 @@ This project follows **Feature-Sliced Design (FSD)** methodology for scalable fr
 - 🔒 [**Public API Enforcement**](template-docs/public-api-enforcement.md) - API patterns and rules
 - ✅ [**Validation Guide**](template-docs/validation-guide.md) - Zod validation patterns
 - 🛠️ [**Development Guide**](template-docs/development-guide.md) - Step-by-step development patterns
-- 📋 [**Final FSD Summary**](template-docs/final-fsd-summary.md) - Implementation summary
+- 📋 [**Project Overview**](template-docs/project-overview.md) - Implementation summary
 
 ### Environment Variables
 
@@ -239,19 +239,13 @@ The rules are located in `.cursor/rules/` directory and are automatically applie
 
 ---
 
-<a name="changelog"></a>
-
 ## 📆 Changelog
 
 Conventional changelog located [here](CHANGELOG.md).
 
-<a name="contributing"></a>
-
 ## 🙏 Community & Contributions
 
 Please follow [Contributing](.github/CONTRIBUTING.md) page.
-
-<a name="codeofconduct"></a>
 
 ## 📙 Code of Conduct
 
