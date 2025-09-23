@@ -26,7 +26,9 @@ export function useConfirmationModal(
   };
 
   const handleConfirm = async () => {
-    if (!onConfirmCallback) {return;}
+    if (!onConfirmCallback) {
+      return;
+    }
 
     try {
       setLoading(true);
@@ -41,7 +43,9 @@ export function useConfirmationModal(
   };
 
   const handleClose = () => {
-    if (loading) {return;}
+    if (loading) {
+      return;
+    }
     close();
     setOnConfirmCallback(null);
   };

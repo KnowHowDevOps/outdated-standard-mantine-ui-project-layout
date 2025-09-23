@@ -44,7 +44,9 @@ export function DataTable<T = any>({
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
 
   const handleSort = (key: string) => {
-    if (!onSort) {return;}
+    if (!onSort) {
+      return;
+    }
 
     const newDirection =
       sortKey === key && sortDirection === "asc" ? "desc" : "asc";
@@ -54,7 +56,9 @@ export function DataTable<T = any>({
   };
 
   const renderSortIcon = (key: string) => {
-    if (sortKey !== key) { return null; }
+    if (sortKey !== key) {
+      return null;
+    }
     return sortDirection === "asc" ? (
       <IconChevronUp size={14} />
     ) : (

@@ -9,7 +9,9 @@ export function LoadingOverlay({
   visible,
   message = "Loading...",
 }: LoadingOverlayProps) {
-  if (!visible) { return null; }
+  if (!visible) {
+    return null;
+  }
 
   return (
     <Overlay>

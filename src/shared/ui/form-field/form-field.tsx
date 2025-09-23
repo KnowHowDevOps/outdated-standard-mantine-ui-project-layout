@@ -95,8 +95,8 @@ export function FormField(props: FormFieldProps) {
         />
       );
 
-    case "textarea":
-      { const textareaProps = props as TextareaFormFieldProps;
+    case "textarea": {
+      const textareaProps = props as TextareaFormFieldProps;
       return (
         <Textarea
           {...baseProps}
@@ -105,10 +105,11 @@ export function FormField(props: FormFieldProps) {
           minRows={textareaProps.minRows}
           maxRows={textareaProps.maxRows}
         />
-      ); }
+      );
+    }
 
-    case "select":
-      { const selectProps = props as SelectFormFieldProps;
+    case "select": {
+      const selectProps = props as SelectFormFieldProps;
       return (
         <Select
           {...baseProps}
@@ -116,10 +117,11 @@ export function FormField(props: FormFieldProps) {
           searchable={selectProps.searchable}
           clearable={selectProps.clearable}
         />
-      ); }
+      );
+    }
 
-    case "multiselect":
-      { const multiSelectProps = props as MultiSelectFormFieldProps;
+    case "multiselect": {
+      const multiSelectProps = props as MultiSelectFormFieldProps;
       return (
         <MultiSelect
           {...baseProps}
@@ -127,7 +129,8 @@ export function FormField(props: FormFieldProps) {
           searchable={multiSelectProps.searchable}
           clearable={multiSelectProps.clearable}
         />
-      ); }
+      );
+    }
 
     default:
       return <TextInput {...baseProps} />;

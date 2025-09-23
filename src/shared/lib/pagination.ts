@@ -52,7 +52,9 @@ export const parsePaginationParams = (
   searchParams: URLSearchParams
 ): PaginationParams => {
   return {
-    page: searchParams.get("page") ? parseInt(searchParams.get("page")!, 10) : 1,
+    page: searchParams.get("page")
+      ? parseInt(searchParams.get("page")!, 10)
+      : 1,
     per_page: searchParams.get("per_page")
       ? parseInt(searchParams.get("per_page")!, 10)
       : 10,
