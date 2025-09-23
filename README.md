@@ -211,12 +211,12 @@ This project follows **Feature-Sliced Design (FSD)** methodology for scalable fr
 
 ### 📚 **Architecture Documentation**
 
-- 📚 [**Documentation Index**](docs/index.md) - Complete documentation guide
-- 📖 [**FSD Architecture Guide**](docs/fsd-architecture.md) - Complete architecture overview
-- 🔒 [**Public API Enforcement**](docs/public-api-enforcement.md) - API patterns and rules
-- ✅ [**Validation Guide**](docs/validation-guide.md) - Zod validation patterns
-- 🛠️ [**Development Guide**](docs/development-guide.md) - Step-by-step development patterns
-- 📋 [**Final FSD Summary**](docs/final-fsd-summary.md) - Implementation summary
+- 📚 [**Documentation Index**](template-docs/index.md) - Complete documentation guide
+- 📖 [**FSD Architecture Guide**](template-docs/fsd-architecture.md) - Complete architecture overview
+- 🔒 [**Public API Enforcement**](template-docs/public-api-enforcement.md) - API patterns and rules
+- ✅ [**Validation Guide**](template-docs/validation-guide.md) - Zod validation patterns
+- 🛠️ [**Development Guide**](template-docs/development-guide.md) - Step-by-step development patterns
+- 📋 [**Final FSD Summary**](template-docs/final-fsd-summary.md) - Implementation summary
 
 ### Environment Variables
 
