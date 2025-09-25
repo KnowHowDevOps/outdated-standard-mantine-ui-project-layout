@@ -1,38 +1,9 @@
 import { Button, Paper, Stack, Title } from "@mantine/core";
-import { useForm } from "@mantine/form";
-import { type LoginData, type LoginResponse } from "@/entities/auth";
-import { useAuthSessionContext } from "@/processes/auth-session";
 import { FormField } from "@/shared/ui";
-import { useFormMutation } from "@/shared/lib";
-import { loginValidation } from "../model/validation";
+import { useLoginForm } from "../model/use-login-form";
 
 export function LoginForm() {
-  const { login, isLoginPending } = useAuthSessionContext();
-
-  const form = useForm<LoginData>({
-    initialValues: {
-      email: "",
-      password: "",
-    },
-    validate: loginValidation,
-  });
-
-  const mutation = useFormMutation<LoginResponse, LoginData>(
-    form,
-    (values) => login(values),
-    {
-      notifySuccess: { message: "You have been logged in successfully" },
-      notifyError: {
-        title: "Login Failed",
-        fallback: "Invalid credentials",
-        includeFieldErrorsInMessage: true,
-      },
-    }
-  );
-
-  const handleSubmit = async (values: LoginData) => {
-    await mutation.mutateAsync(values);
-  };
+  const { form, handleSubmit, isPending } = useLoginForm();
 
   return (
     <Paper withBorder shadow="md" p={30} mt={30} radius="md">
@@ -60,11 +31,7 @@ export function LoginForm() {
             form={form}
           />
 
-          <Button
-            type="submit"
-            fullWidth
-            loading={isLoginPending || mutation.isPending}
-          >
+          <Button type="submit" fullWidth loading={isPending}>
             Sign In
           </Button>
         </Stack>

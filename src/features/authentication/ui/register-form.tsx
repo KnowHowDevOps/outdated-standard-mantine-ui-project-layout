@@ -6,46 +6,10 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
-import { useForm } from "@mantine/form";
-import { type RegisterAccountRequest } from "@/entities/auth";
-import { useAuthSessionContext } from "@/processes/auth-session";
-import { registerValidation } from "../model/validation";
-import { useFormMutation } from "@/shared/lib";
+import { useRegisterForm } from "../model/use-register-form";
 
 export function RegisterForm() {
-  const { register, isRegisterPending } = useAuthSessionContext();
-
-  const form = useForm<RegisterAccountRequest>({
-    initialValues: {
-      first_name: "",
-      last_name: "",
-      email: "",
-      password: "",
-      password_confirmation: "",
-      locale: "en",
-    },
-    validate: registerValidation,
-  });
-
-  const mutation = useFormMutation<any, RegisterAccountRequest>(
-    form,
-    (values) => register(values),
-    {
-      notifySuccess: {
-        title: "Success!",
-        message: "Account created successfully",
-      },
-      notifyError: {
-        title: "Registration Failed",
-        fallback: "Failed to create account",
-        includeFieldErrorsInMessage: true,
-      },
-    }
-  );
-
-  const handleSubmit = async (values: RegisterAccountRequest) => {
-    await mutation.mutateAsync(values);
-  };
+  const { form, handleSubmit, isPending } = useRegisterForm();
 
   return (
     <Paper withBorder shadow="md" p={30} mt={30} radius="md">
@@ -90,11 +54,7 @@ export function RegisterForm() {
             {...form.getInputProps("password_confirmation")}
           />
 
-          <Button
-            type="submit"
-            fullWidth
-            loading={isRegisterPending || mutation.isPending}
-          >
+          <Button type="submit" fullWidth loading={isPending}>
             Create Account
           </Button>
         </Stack>
