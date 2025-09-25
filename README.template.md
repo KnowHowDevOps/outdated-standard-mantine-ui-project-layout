@@ -1,6 +1,6 @@
 # Project Name 🚀
 
-<!-- TEMPLATE: This README.intro.md is a starter template. Copy parts into your real README.md and replace placeholders. -->
+<!-- TEMPLATE: This README.template.md is a starter template. Copy parts into your real README.md and replace placeholders. -->
 
 <details>
   <summary><strong>How to use this template (click to expand)</strong></summary>
