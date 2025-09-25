@@ -128,12 +128,10 @@ function SettingsPanel() {
 Manages authentication session state.
 
 ```typescript
-import { useAuthSession, useAuthTokens, useCurrentUser } from '@/entities/auth';
+import { useAuthSessionContext } from '@/processes/auth-session';
 
 function UserProfile() {
-  const { isAuthenticated, user } = useAuthSession();
-  const { accessToken, shouldRefreshToken } = useAuthTokens();
-  const currentUser = useCurrentUser();
+  const { isAuthenticated, user } = useAuthSessionContext();
 
   if (!isAuthenticated) {
     return <div>Please log in</div>;
@@ -161,7 +159,7 @@ function UserProfile() {
 Manages form state with auto-save and validation.
 
 ```typescript
-import { useLoginForm, useRegisterForm } from '@/features/auth';
+import { useLoginForm, useRegisterForm } from '@/features/authentication';
 
 function LoginForm() {
   const { data, update, clear, errors, isDirty } = useLoginForm();
@@ -382,10 +380,10 @@ function AuthProvider({ children }) {
 }
 
 // After: Zustand store
-import { useAuthSession } from '@/entities/auth';
+import { useAuthSessionContext } from '@/processes/auth-session';
 
 function MyComponent() {
-  const { user } = useAuthSession();
+  const { user } = useAuthSessionContext();
   return <div>Welcome, {user?.name}</div>;
 }
 ```
@@ -462,13 +460,13 @@ Testing and Validation
 
 The Zustand integration has been thoroughly tested and validated:
 
-### ✅ Export Validation
+// ✅ Export Validation
 
-All hooks are properly exported from the shared layer:
+All hooks are properly exported from their respective layers:
 
 - `useTheme`, `useNotifications`, `useGlobalLoading` from `@/shared`
-- `useAuthSession`, `useAuthTokens` from `@/entities/auth`
-- `useLoginForm`, `useRegisterForm` from `@/features/auth`
+- `useAuthSessionContext` from `@/processes/auth-session`
+- `useLoginForm`, `useRegisterForm` from `@/features/authentication`
 
 ### ✅ Integration Testing
 

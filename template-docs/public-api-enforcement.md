@@ -48,7 +48,9 @@ export * from "./ui";
 
 ```typescript
 // processes/auth-session/index.ts
-export * from "./model/queries";
+export { useAuthSession } from "./model/use-auth-session";
+export { AuthSessionProvider } from "./ui/auth-session-provider";
+export { useAuthSessionContext } from "./ui/use-auth-session-context";
 
 // processes/user-onboarding/index.ts
 export * from "./model/queries";
@@ -164,17 +166,17 @@ import from: external libraries only ✅
 ### **✅ Import Examples in Codebase**
 
 ```typescript
-// features/auth/ui/login-form.tsx
-import { useLoginProcess } from "@/processes/auth-session"; // ✅ Public API
-import { loginSchema, type LoginInput } from "../model/validation"; // ✅ Internal
+// features/authentication/ui/login-form.tsx
+import { useLoginForm } from "@/features/authentication"; // ✅ Public API
 
 // features/user-management/model/queries.ts
-import { useUsers, useUser, userKeys } from "@/entities/user"; // ✅ Public API
+import { userApi, type User } from "@/entities/user"; // ✅ Public API
 
-// processes/auth-session/model/queries.ts
-import { useAuthLogin, useAuthLogout, authKeys } from "@/entities/auth"; // ✅ Public API
-import { useUserMe, userKeys } from "@/entities/user"; // ✅ Public API
-import type { LoginInput } from "@/features/auth"; // ✅ Public API
+// processes/auth-session/index.ts
+import {
+  useAuthSessionContext,
+  AuthSessionProvider,
+} from "@/processes/auth-session"; // ✅ Public API
 ```
 
 ## 🎯 **Benefits Achieved**

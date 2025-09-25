@@ -256,41 +256,41 @@ export const useUpdateUser = () => {
 };
 ```
 
-#### 🟠 **Processes Layer Queries**
+#### 🟠 Processes Layer: Session Orchestration
 
-- **Purpose**: Cross-entity business processes
-- **Location**: `processes/{process}/model/queries.ts`
-- **Examples**: `useLoginProcess()`, `useUserOnboardingProcess()`
-- **Characteristics**:
-  - Coordinate multiple entities
-  - Complex business workflows
-  - Cross-cutting concerns
-  - Application-level state management
+- Purpose: Cross-entity session orchestration and application-level state
+- Location: `processes/auth-session/model/use-auth-session.ts`
+- Responsibilities:
+  - Refresh auth session on app start and page reload
+  - Expose session state via context/provider and a convenience hook
+  - Handle logout and clear session cache
+- Note: Login/Register flows are implemented as feature-level hooks under `features/authentication/model` to respect FSD boundaries.
 
 ```typescript
-// processes/auth-session/model/queries.ts
-export const useLoginProcess = () => {
+// processes/auth-session/model/use-auth-session.ts
+export function useAuthSession() {
   const queryClient = useQueryClient();
-  const loginMutation = useAuthLogin();
+  const { data: user } = useQuery({
+    queryKey: ["auth-session"],
+    queryFn: refresh,
+  });
+
+  const logout = useMutation({
+    mutationFn: () => authApi.logout(),
+    onSuccess: () => {
+      clearAuthToken();
+      queryClient.setQueryData(["auth-session"], null);
+      queryClient.clear();
+    },
+  });
 
   return {
-    ...loginMutation,
-    mutateAsync: async (loginData: LoginInput) => {
-      // Step 1: Perform login
-      const result = await loginMutation.mutateAsync(loginData);
-
-      // Step 2: Cross-entity coordination
-      queryClient.invalidateQueries({ queryKey: userKeys.me() });
-
-      // Step 3: Additional business processes
-      // - Analytics tracking
-      // - User preferences initialization
-      // - Notification setup
-
-      return result;
-    },
-  };
-};
+    user,
+    isAuthenticated: !!user,
+    logout: logout.mutateAsync,
+    isLogoutPending: logout.isPending,
+  } as const;
+}
 ```
 
 ### Query Keys Organization
@@ -528,18 +528,17 @@ function MyComponent() {
 }
 
 // Auth State Management
-import { useAuthSession } from '@/entities/auth';
-import { useLoginProcess } from '@/processes/auth-session';
+import { useAuthSessionContext } from '@/processes/auth-session';
+import { LoginForm } from '@/features/authentication';
 
 function LoginComponent() {
-  const { isAuthenticated, user } = useAuthSession();
-  const login = useLoginProcess();
+  const { isAuthenticated, user } = useAuthSessionContext();
 
   if (isAuthenticated) {
     return <div>Welcome, {user?.first_name}!</div>;
   }
 
-  return <LoginForm onSubmit={login.mutateAsync} />;
+  return <LoginForm />;
 }
 ```
 

@@ -130,16 +130,13 @@ src/
 ### **Query Organization**
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Process       │    │   Feature       │    │   Entity        │
-│   Queries       │    │   Queries       │    │   Queries       │
-│                 │    │                 │    │                 │
-│ Cross-entity    │───▶│ Business logic  │───▶│ Pure CRUD       │
-│ coordination    │    │ + validation    │    │ operations      │
-│                 │    │                 │    │                 │
-│ useLoginProcess │    │ useLogin        │    │ useAuthLogin    │
-│ useOnboarding   │    │ useRegister     │    │ useAuthRegister │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+┌──────────────────────────┐    ┌──────────────────────────┐    ┌──────────────────────┐
+│   Process (Orchestration)│    │   Feature (Business)     │    │   Entity (Data)       │
+│                          │    │                          │    │                        │
+│ Session refresh, logout  │───▶│ Form logic + validation  │───▶│ Pure API calls         │
+│ via useAuthSession       │    │ useLoginForm,            │    │ authApi.login/register │
+│                          │    │ useRegisterForm          │    │                        │
+└──────────────────────────┘    └──────────────────────────┘    └──────────────────────┘
 ```
 
 ### **Import Flow**
