@@ -1,9 +1,5 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import {
-  authApi,
-  type LoginData,
-  type RegisterAccountRequest,
-} from "@/entities/auth";
+import { authApi } from "@/entities/auth";
 import { type User } from "@/entities/user";
 import { clearAuthToken, setAuthToken } from "@/shared/lib/auth-token";
 
@@ -31,17 +27,6 @@ export function useAuthSession() {
     retry: false,
   });
 
-  const loginMutation = useMutation({
-    mutationFn: (data: LoginData) => authApi.login(data),
-    onSuccess: (response) => {
-      // Persist access token for axios
-      if (response?.token) {
-        setAuthToken(response.token);
-      }
-      queryClient.setQueryData([AUTH_SESSION_KEY], response.user);
-    },
-  });
-
   const logoutMutation = useMutation({
     mutationFn: () => authApi.logout(),
     onSuccess: () => {
@@ -51,22 +36,11 @@ export function useAuthSession() {
     },
   });
 
-  const registerMutation = useMutation({
-    mutationFn: (data: RegisterAccountRequest) => authApi.register(data),
-    onSuccess: (user) => {
-      queryClient.setQueryData([AUTH_SESSION_KEY], user);
-    },
-  });
-
   return {
     user,
     isLoading,
     isAuthenticated: !!user,
-    login: loginMutation.mutateAsync,
     logout: logoutMutation.mutateAsync,
-    register: registerMutation.mutateAsync,
-    isLoginPending: loginMutation.isPending,
     isLogoutPending: logoutMutation.isPending,
-    isRegisterPending: registerMutation.isPending,
   };
 }
