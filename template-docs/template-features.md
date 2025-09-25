@@ -94,8 +94,7 @@ src/
 │   └── auth/              # Auth entity
 ├── widgets/               # Composite UI blocks
 └── shared/                # Reusable utilities
-    ├── api/               # API configuration
-    ├── lib/               # Utilities and helpers
+    ├── lib/               # Utilities, helpers, and API clients
     ├── types/             # Common types
     └── ui/                # Reusable components
 ```
@@ -188,7 +187,7 @@ This template is designed to be easily customizable:
 
 After using this template:
 
-1. **Configure your API** endpoints in `src/shared/api/`
+1. **Configure your API** endpoints in `src/shared/lib/`
 2. **Add your features** following the FSD methodology
 3. **Customize styling** to match your brand
 4. **Set up deployment** using the provided guides

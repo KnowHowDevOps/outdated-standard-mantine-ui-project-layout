@@ -51,8 +51,7 @@ src/
 │   │   └── index.ts       # Public API
 │   └── index.ts           # Widgets barrel
 ├── shared/                # Shared layer
-│   ├── api/               # Base API configuration
-│   ├── lib/               # Utilities and helpers
+│   ├── lib/               # Utilities, helpers, and API clients
 │   │   ├── store.ts       # Zustand store utilities
 │   │   ├── store-persistence.ts  # Store persistence middleware
 │   │   └── store-devtools.ts     # Development utilities

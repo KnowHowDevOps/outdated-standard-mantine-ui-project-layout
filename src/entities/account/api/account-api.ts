@@ -1,4 +1,4 @@
-import { api } from "../../../shared/api/client";
+import { api } from "../../../shared/lib/client";
 import { User } from "../../user";
 import { Account } from "../model/types";
 

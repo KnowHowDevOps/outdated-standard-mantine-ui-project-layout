@@ -70,7 +70,7 @@ src/
 ## 🎯 Next Steps
 
 1. **Customize the app** - Update `src/app/app.tsx` and routing
-2. **Add your API** - Configure endpoints in `src/shared/api/`
+2. **Add your API** - Configure endpoints in `src/shared/lib/`
 3. **Create features** - Build your business logic in `src/features/`
 4. **Style your app** - Customize styles in `src/styles/`
 5. **Deploy** - Use the build output from `pnpm build`

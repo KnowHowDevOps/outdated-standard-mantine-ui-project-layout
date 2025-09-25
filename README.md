@@ -165,7 +165,7 @@ After creating your project from this template, you'll want to customize it:
 #### 3. Configure Environment
 
 - [ ] Update `.env.example` with your API endpoints
-- [ ] Configure `src/api/client.ts` with your API base URL
+- [ ] Configure `src/shared/lib/client.ts` with your API base URL and update values in `src/app/config`
 - [ ] Set up authentication endpoints in API clients
 
 #### 4. Remove Template Examples (Optional)

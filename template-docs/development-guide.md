@@ -119,7 +119,7 @@ export interface MyEntity {
 }
 
 // src/entities/my-entity/api/my-entity-api.ts
-import { api } from "@/shared/api";
+import { api } from "@/shared/lib";
 import type { MyEntity } from "../model/types";
 
 export const myEntityApi = {
@@ -669,7 +669,7 @@ import { LoginForm } from "@/features/auth";
 import { useLogin } from "@/features/auth";
 
 // ✅ Correct: Entity only imports from shared
-import { api } from "@/shared/api";
+import { api } from "@/shared/lib";
 ```
 
 ### **Validation Placement**
