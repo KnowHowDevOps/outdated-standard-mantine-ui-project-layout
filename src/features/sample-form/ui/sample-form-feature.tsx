@@ -14,8 +14,8 @@ import { IconCheck, IconPlus, IconX } from "@tabler/icons-react";
 
 import { initialFormValues, validateSampleForm } from "../model/validation";
 import { FormValues } from "../model/types";
-import { FormField } from "../../../shared/ui";
-import { notificationService } from "../../../shared/lib";
+import { FormField } from "@/shared/ui";
+import { notificationService } from "@/shared/lib";
 
 export function SampleFormFeature() {
   const [opened, { open, close }] = useDisclosure(false);

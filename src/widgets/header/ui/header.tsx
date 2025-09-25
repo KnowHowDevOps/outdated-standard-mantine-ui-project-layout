@@ -1,8 +1,8 @@
 import { Avatar, Button, Group, Menu, Text, Title } from "@mantine/core";
 import { IconLogout, IconSettings, IconUser } from "@tabler/icons-react";
-import { useAuthSessionContext } from "../../../processes/auth-session";
-import { getUserDisplayName, getUserInitials } from "../../../entities/user";
-import { notificationService } from "../../../shared/lib";
+import { useAuthSessionContext } from "@/processes/auth-session";
+import { getUserDisplayName, getUserInitials } from "@/entities/user";
+import { notificationService } from "@/shared/lib";
 
 interface HeaderProps {
   title?: string;

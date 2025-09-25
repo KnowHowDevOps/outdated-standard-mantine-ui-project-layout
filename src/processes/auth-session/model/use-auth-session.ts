@@ -3,8 +3,8 @@ import {
   authApi,
   type LoginData,
   type RegisterAccountRequest,
-} from "../../../entities/auth";
-import { type User } from "../../../entities/user";
+} from "@/entities/auth";
+import { type User } from "@/entities/user";
 
 const AUTH_SESSION_KEY = "auth-session";
 

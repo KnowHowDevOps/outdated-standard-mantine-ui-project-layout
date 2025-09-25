@@ -1,5 +1,6 @@
 import { Button, Group, Modal, Stack, Text, Title } from "@mantine/core";
 import { IconAlertTriangle } from "@tabler/icons-react";
+import { t } from "@lingui/core/macro";
 
 interface ConfirmationModalProps {
   opened: boolean;
@@ -18,10 +19,10 @@ export function ConfirmationModal({
   opened,
   onClose,
   onConfirm,
-  title = "Confirm Action",
-  message = "Are you sure you want to proceed?",
-  confirmLabel = "Confirm",
-  cancelLabel = "Cancel",
+  title = t`Confirm Action`,
+  message = t`Are you sure you want to proceed?`,
+  confirmLabel = t`Confirm`,
+  cancelLabel = t`Cancel`,
   confirmColor = "blue",
   loading = false,
   danger = false,

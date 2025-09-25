@@ -1,9 +1,9 @@
 import { Button, Paper, Stack, Title } from "@mantine/core";
 import { useForm } from "@mantine/form";
-import { type LoginData } from "../../../entities/auth";
-import { useAuthSessionContext } from "../../../processes/auth-session";
-import { FormField } from "../../../shared/ui";
-import { notificationService } from "../../../shared/lib";
+import { type LoginData } from "@/entities/auth";
+import { useAuthSessionContext } from "@/processes/auth-session";
+import { FormField } from "@/shared/ui";
+import { notificationService } from "@/shared/lib";
 import { loginValidation } from "../model/validation";
 
 export function LoginForm() {

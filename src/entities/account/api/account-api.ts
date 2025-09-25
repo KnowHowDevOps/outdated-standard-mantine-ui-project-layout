@@ -1,5 +1,5 @@
-import { api } from "../../../shared/lib/client";
-import { User } from "../../user";
+import { api } from "@/shared/lib/client";
+import { User } from "@/entities/user";
 import { Account } from "../model/types";
 
 interface CreateAccountRequest {

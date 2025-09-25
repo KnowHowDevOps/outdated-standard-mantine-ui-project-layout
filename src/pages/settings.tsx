@@ -14,9 +14,9 @@ import {
 import { useForm } from "@mantine/form";
 import { IconSettings, IconInfoCircle } from "@tabler/icons-react";
 import { createFileRoute, Navigate } from "@tanstack/react-router";
-import { useAuthSessionContext } from "../processes/auth-session";
-import { FormField } from "../shared/ui";
-import { notificationService } from "../shared/lib";
+import { useAuthSessionContext } from "@/processes/auth-session";
+import { FormField } from "@/shared/ui";
+import { notificationService } from "@/shared/lib";
 
 export const Route = createFileRoute("/settings")({
   component: SettingsPage,

@@ -1,7 +1,7 @@
 import { Container, Text, Title, Anchor } from "@mantine/core";
 import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
-import { RegisterForm } from "../features/authentication";
-import { useAuthSessionContext } from "../processes/auth-session";
+import { RegisterForm } from "@/features/authentication";
+import { useAuthSessionContext } from "@/processes/auth-session";
 
 export const Route = createFileRoute("/register")({
   component: RegisterPage,

@@ -1,17 +1,23 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 
 import { MantineProvider } from "@mantine/core";
 import { Notifications } from "@mantine/notifications";
+import { ModalsProvider } from "@mantine/modals";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { createRouter, RouterProvider } from "@tanstack/react-router";
+import { HelmetProvider } from "react-helmet-async";
+import { I18nProvider } from "@lingui/react";
+import { i18n } from "@lingui/core";
 
 // Import the generated route tree
-import { routeTree } from "../routeTree.gen";
+import { routeTree } from "@/routeTree.gen";
 import { theme } from "./theme";
-import { queryClient } from "../shared/lib";
-import { AuthSessionProvider } from "../processes/auth-session";
-import { ErrorBoundary } from "../shared/ui";
+import { queryClient } from "@/shared/lib";
+import { AuthSessionProvider } from "@/processes/auth-session";
+import { ErrorBoundary } from "@/shared/ui";
+import { dynamicActivateLocale, getClientLocale } from "@/shared/locales";
+import { ConfirmContextModal } from "@/shared/ui/confirmation-modal";
 
 // Import Mantine styles
 import "@mantine/core/styles.css";
@@ -35,19 +41,30 @@ declare module "@tanstack/react-router" {
 }
 
 export function App() {
+  useEffect(() => {
+    // Activate locale based on cookie or browser
+    dynamicActivateLocale(getClientLocale());
+  }, []);
+
   return (
     <StrictMode>
-      <ErrorBoundary>
-        <MantineProvider theme={theme}>
-          <Notifications />
-          <QueryClientProvider client={queryClient}>
-            <AuthSessionProvider>
-              <RouterProvider router={router} />
-              <ReactQueryDevtools initialIsOpen={false} />
-            </AuthSessionProvider>
-          </QueryClientProvider>
-        </MantineProvider>
-      </ErrorBoundary>
+      <HelmetProvider>
+        <I18nProvider i18n={i18n}>
+          <ErrorBoundary>
+            <MantineProvider theme={theme}>
+          <ModalsProvider modals={{ confirmation: ConfirmContextModal }}>
+            <Notifications />
+            <QueryClientProvider client={queryClient}>
+              <AuthSessionProvider>
+                <RouterProvider router={router} />
+                <ReactQueryDevtools initialIsOpen={false} />
+              </AuthSessionProvider>
+            </QueryClientProvider>
+          </ModalsProvider>
+            </MantineProvider>
+          </ErrorBoundary>
+        </I18nProvider>
+      </HelmetProvider>
     </StrictMode>
   );
 }

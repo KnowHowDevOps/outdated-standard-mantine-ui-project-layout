@@ -22,14 +22,14 @@ import {
   IconEdit,
 } from "@tabler/icons-react";
 import { createFileRoute, Navigate } from "@tanstack/react-router";
-import { useAuthSessionContext } from "../processes/auth-session";
+import { useAuthSessionContext } from "@/processes/auth-session";
 import {
   getUserDisplayName,
   getUserInitials,
   isUserActive,
   isUserAdmin,
   isUserEmailVerified,
-} from "../entities/user";
+} from "@/entities/user";
 
 export const Route = createFileRoute("/profile")({
   component: ProfilePage,

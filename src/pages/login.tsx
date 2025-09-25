@@ -8,8 +8,8 @@ import {
   Anchor,
 } from "@mantine/core";
 import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
-import { LoginForm } from "../features/authentication";
-import { useAuthSessionContext } from "../processes/auth-session";
+import { LoginForm } from "@/features/authentication";
+import { useAuthSessionContext } from "@/processes/auth-session";
 
 export const Route = createFileRoute("/login")({
   component: LoginPage,

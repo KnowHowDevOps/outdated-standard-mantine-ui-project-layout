@@ -1,4 +1,4 @@
-import { email, minLength } from "../../../entities/form";
+import { email, minLength } from "@/entities/form";
 import { FormValues } from "./types";
 
 export const validateSampleForm = {

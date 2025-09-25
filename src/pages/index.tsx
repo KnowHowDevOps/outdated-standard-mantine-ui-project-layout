@@ -14,7 +14,7 @@ import { notifications } from "@mantine/notifications";
 import { IconCheck, IconRocket, IconStar } from "@tabler/icons-react";
 import { createFileRoute } from "@tanstack/react-router";
 
-import { SampleFormFeature } from "../features/sample-form";
+import { SampleFormFeature } from "@/features/sample-form";
 
 export const Route = createFileRoute("/")({
   component: HomePage,

@@ -20,13 +20,13 @@ import {
   IconEye,
 } from "@tabler/icons-react";
 import { createFileRoute } from "@tanstack/react-router";
-import { SampleFormFeature } from "../features/sample-form";
+import { SampleFormFeature } from "@/features/sample-form";
 import {
   DataTable,
   useConfirmationModal,
   type DataTableColumn,
-} from "../shared/ui";
-import { notificationService } from "../shared/lib";
+} from "@/shared/ui";
+import { notificationService } from "@/shared/lib";
 
 export const Route = createFileRoute("/examples")({
   component: ExamplesPage,

@@ -1,6 +1,6 @@
 import { AppShell, Burger } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
-import { Header, Sidebar } from "../../../widgets";
+import { Header, Sidebar } from "@/widgets";
 
 interface AppLayoutProps {
   children: React.ReactNode;

@@ -1,4 +1,4 @@
-import { api } from "../../../shared/lib/client";
+import { api } from "@/shared/lib/client";
 import { User } from "../model/types";
 
 export interface UserMeRequest {

@@ -9,8 +9,8 @@ import {
 import { useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
 import { IconCheck, IconX } from "@tabler/icons-react";
-import { type RegisterAccountRequest } from "../../../entities/auth";
-import { useAuthSessionContext } from "../../../processes/auth-session";
+import { type RegisterAccountRequest } from "@/entities/auth";
+import { useAuthSessionContext } from "@/processes/auth-session";
 import { registerValidation } from "../model/validation";
 
 export function RegisterForm() {
