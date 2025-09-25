@@ -78,7 +78,7 @@ Write about setting up the working environment for your project.
 - [ ] Development prerequisites and environment documented
 - [ ] Architecture notes reflect your stack and modules
 - [ ] Links verified (Getting Started, docs, external resources)
-- [ ] Guidance blocks removed before publishing
+- [ ] Guidance blocks, template-docs folder, are removed before publishing
 
 </details>
 
