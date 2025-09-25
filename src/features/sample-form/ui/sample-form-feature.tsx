@@ -15,7 +15,7 @@ import { IconCheck, IconPlus, IconX } from "@tabler/icons-react";
 import { initialFormValues, validateSampleForm } from "../model/validation";
 import { FormValues } from "../model/types";
 import { FormField } from "@/shared/ui";
-import { notificationService } from "@/shared/lib";
+import { useFormMutation } from "@/shared/lib";
 
 export function SampleFormFeature() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -25,13 +25,30 @@ export function SampleFormFeature() {
     validate: validateSampleForm,
   });
 
+  const mutation = useFormMutation<void, FormValues>(
+    form,
+    async (values) => {
+      // demo-only: no backend call
+      console.log("Sample form submitted:", values);
+    },
+    {
+      notifySuccess: {
+        title: "Form submitted!",
+        message: "We have received your submission.",
+      },
+      notifyError: {
+        title: "Submit Failed",
+        fallback: "Could not submit the form",
+      },
+      onSuccess: () => {
+        form.reset();
+        close();
+      },
+    } as any
+  );
+
   const handleSubmit = (values: FormValues) => {
-    notificationService.success({
-      title: "Form submitted!",
-      message: `Hello ${values.name}, we'll contact you at ${values.email}`,
-    });
-    form.reset();
-    close();
+    void mutation.mutateAsync(values);
   };
 
   return (
@@ -74,7 +91,11 @@ export function SampleFormFeature() {
               >
                 Cancel
               </Button>
-              <Button type="submit" leftSection={<IconCheck size="1rem" />}>
+              <Button
+                type="submit"
+                leftSection={<IconCheck size="1rem" />}
+                loading={mutation.isPending}
+              >
                 Submit
               </Button>
             </Group>

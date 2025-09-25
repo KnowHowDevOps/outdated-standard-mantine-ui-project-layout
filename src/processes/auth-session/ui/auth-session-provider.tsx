@@ -1,9 +1,5 @@
-import { createContext, useContext } from "react";
 import { useAuthSession } from "../model/use-auth-session";
-
-type AuthSessionContextType = ReturnType<typeof useAuthSession>;
-
-const AuthSessionContext = createContext<AuthSessionContextType | null>(null);
+import { AuthSessionContext } from "./auth-session-context";
 
 interface AuthSessionProviderProps {
   children: React.ReactNode;
@@ -17,14 +13,4 @@ export function AuthSessionProvider({ children }: AuthSessionProviderProps) {
       {children}
     </AuthSessionContext.Provider>
   );
-}
-
-export function useAuthSessionContext() {
-  const context = useContext(AuthSessionContext);
-  if (!context) {
-    throw new Error(
-      "useAuthSessionContext must be used within AuthSessionProvider"
-    );
-  }
-  return context;
 }

@@ -16,7 +16,7 @@ import { IconSettings, IconInfoCircle } from "@tabler/icons-react";
 import { createFileRoute, Navigate } from "@tanstack/react-router";
 import { useAuthSessionContext } from "@/processes/auth-session";
 import { FormField } from "@/shared/ui";
-import { notificationService } from "@/shared/lib";
+import { useFormMutation } from "@/shared/lib";
 
 export const Route = createFileRoute("/settings")({
   component: SettingsPage,
@@ -33,37 +33,41 @@ interface SettingsForm {
 function SettingsPage() {
   const { user, isAuthenticated } = useAuthSessionContext();
 
-  // Redirect to login if not authenticated
-  if (!isAuthenticated || !user) {
-    return <Navigate to="/login" />;
-  }
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const form = useForm<SettingsForm>({
     initialValues: {
-      timezone: user.timezone || "UTC",
-      locale: user.locale || "en",
+      timezone: user?.timezone ?? "UTC",
+      locale: user?.locale ?? "en",
       emailNotifications: true,
       pushNotifications: false,
       marketingEmails: false,
     },
   });
 
-  const handleSubmit = async (values: SettingsForm) => {
-    try {
+  const mutation = useFormMutation<void, SettingsForm>(
+    form,
+    async (values) => {
       // Here you would typically call an API to update settings
       console.log("Updating settings:", values);
-
-      notificationService.success({
+    },
+    {
+      notifySuccess: {
         title: "Settings Updated",
         message: "Your preferences have been saved successfully",
-      });
-    } catch (error) {
-      notificationService.error({
+      },
+      notifyError: {
         title: "Update Failed",
-        message: "Failed to update settings. Please try again.",
-      });
+        fallback: "Failed to update settings. Please try again.",
+      },
     }
+  );
+
+  // Redirect to login if not authenticated
+  if (!isAuthenticated || !user) {
+    return <Navigate to="/login" />;
+  }
+
+  const handleSubmit = async (values: SettingsForm) => {
+    await mutation.mutateAsync(values);
   };
 
   const timezones = [
@@ -208,7 +212,9 @@ function SettingsPage() {
             </Card>
 
             <Group justify="flex-end">
-              <Button type="submit">Save Settings</Button>
+              <Button type="submit" loading={mutation.isPending}>
+                Save Settings
+              </Button>
             </Group>
           </Stack>
         </form>

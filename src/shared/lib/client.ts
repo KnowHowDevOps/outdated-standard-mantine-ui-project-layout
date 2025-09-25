@@ -5,6 +5,8 @@ import axios, {
 } from "axios";
 import { getConfig } from "@/app/config";
 import { clearAuthToken, getAuthToken, setAuthToken } from "./auth-token";
+import { normalizeAxiosError } from "./http-error";
+import { notificationService } from "./notifications";
 
 const BASE_URL = getConfig("VITE_API_URL_SERVER");
 const LOGIN_PATH = "/auth/login";
@@ -25,25 +27,6 @@ axios.defaults.withCredentials = true;
 
 let isRefreshing = false as boolean;
 let refreshPromise: Promise<string | null> | null = null;
-let pendingQueue: {
-  resolve: (token: string | null) => void;
-  reject: (err: any) => void;
-}[] = [];
-
-const enqueue = (
-  resolve: (t: string | null) => void,
-  reject: (e: any) => void
-) => {
-  pendingQueue.push({ resolve, reject });
-};
-const drainQueueSuccess = (token: string | null) => {
-  pendingQueue.forEach((p) => p.resolve(token));
-  pendingQueue = [];
-};
-const drainQueueError = (err: any) => {
-  pendingQueue.forEach((p) => p.reject(err));
-  pendingQueue = [];
-};
 
 async function performRefresh(): Promise<string | null> {
   try {
@@ -66,19 +49,10 @@ async function performRefresh(): Promise<string | null> {
 function startRefreshIfNeeded(): Promise<string | null> {
   if (!isRefreshing) {
     isRefreshing = true;
-    refreshPromise = performRefresh()
-      .then((t) => {
-        drainQueueSuccess(t ?? null);
-        return t ?? null;
-      })
-      .catch((err) => {
-        drainQueueError(err);
-        throw err;
-      })
-      .finally(() => {
-        isRefreshing = false;
-        refreshPromise = null;
-      });
+    refreshPromise = performRefresh().finally(() => {
+      isRefreshing = false;
+      refreshPromise = null;
+    });
   }
   // Non-null assertion because when called, refreshPromise will be set above if it was null
   return refreshPromise!;
@@ -135,10 +109,19 @@ api.interceptors.response.use(
               PREVIOUS_URL_KEY,
               window?.location?.href || "/"
             );
-          } catch { /* empty */ }
+          } catch {
+            void 0; // ignore storage errors
+          }
           window?.location?.replace(LOGIN_PATH);
         }
-        return Promise.reject(refreshErr);
+        const normalized = normalizeAxiosError(refreshErr);
+        if (normalized.type === "server") {
+          notificationService.error({
+            title: "Server error",
+            message: normalized.message,
+          });
+        }
+        return Promise.reject(normalized);
       }
     }
 
@@ -149,10 +132,22 @@ api.interceptors.response.use(
           PREVIOUS_URL_KEY,
           window?.location?.href || "/"
         );
-      } catch { /* empty */ }
+      } catch {
+        void 0; // ignore storage errors
+      }
       window?.location?.replace(LOGIN_PATH);
     }
 
-    return Promise.reject(error);
+    const normalized = normalizeAxiosError(error);
+    if (normalized.type === "server") {
+      const cfg = original as any;
+      if (!cfg?.__suppressGlobalError) {
+        notificationService.error({
+          title: "Server error",
+          message: normalized.message,
+        });
+      }
+    }
+    return Promise.reject(normalized);
   }
 );
