@@ -261,20 +261,27 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## _GitHub Project Tooling Overview_
 
-### GitHub Actions
+A concise summary of automation and quality tooling. For full details, see:
+- template-docs/index.md
+- template-docs/development-guide.md
 
-- **Build & Test** - Node.js project build validation
-- **PR Title Check** - Ensures proper PR naming conventions
-- **Commit Message Check** - Validates a commit message format
-- **Template Setup** - Automated template configuration
+### CI/CD (GitHub Actions)
 
-### Git Hooks (Husky)
+- .github/workflows/build-nodejs-project.yml – build & test pipeline
+- .github/workflows/check-pr-title.yml – PR naming conventions
+- .github/workflows/check-commit-message.yml – commit message validation
+- .github/workflows/use-template.yml – one-time template setup
 
-- **Pre-commit** - Runs linting and formatting on staged files
-- **Commit-msg** - Validates commit message format
+### Local Automation (Husky + Lefthook)
+
+- .husky/pre-commit – triggers pre-commit checks
+- lefthook.yml – defines staged checks (linting/formatting/tests as configured)
+- commitlint.config.js – enforces conventional commit messages
 
 ### Quality Gates
 
-- **ESLint** - JavaScript/TypeScript linting
-- **Prettier** - Code formatting enforcement
-- **Stylelint** - CSS/SCSS linting
+- ESLint – see eslint.config.js
+- Prettier & Stylelint – run via package.json scripts
+- TypeScript – pnpm type-check
+
+See the Available Scripts section above for everyday commands.
