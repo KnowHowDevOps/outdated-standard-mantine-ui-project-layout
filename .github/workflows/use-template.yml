@@ -26,6 +26,6 @@ jobs:
         uses: "stefanzweifel/git-auto-commit-action@v4"
         with:
           commit_message: "feat: create initial directory layout"
-          commit_options: "--amend"
+          commit_options: "--amend -a"
           push_options: "--force"
           skip_fetch: true
