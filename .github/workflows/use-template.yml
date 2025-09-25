@@ -16,9 +16,11 @@ jobs:
       - name: "Check out the repo"
         uses: "actions/checkout@v4"
 
-      - name: "Remove files not needed in the user's copy of the template"
+      - name: "Modify/remove files before use"
         run: |
           rm -f "./.github/workflows/use-template.yml"
+          mv README.md README.boilerplate.md
+          mv README.template.md README.md
 
       - name: "Update commit"
         uses: "stefanzweifel/git-auto-commit-action@v4"
