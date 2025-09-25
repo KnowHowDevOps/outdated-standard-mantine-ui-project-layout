@@ -9,8 +9,10 @@ import {
 
 export const authApi = {
   refreshAccessToken: async (): Promise<LoginResponse> => {
-    const response = await api.get<LoginResponse>("/auth/refresh");
-    return response.data;
+    const response = await api.get<LoginResponse | any>("/auth/refresh");
+    const data: any = response.data ?? {};
+    const token = data.token ?? data.accessToken ?? data.access_token ?? null;
+    return { ...data, token } as LoginResponse;
   },
 
   register: async (registerData: RegisterAccountRequest): Promise<User> => {
@@ -22,8 +24,13 @@ export const authApi = {
   },
 
   login: async (loginData: LoginData): Promise<LoginResponse> => {
-    const response = await api.post<LoginResponse>("/auth/login", loginData);
-    return response.data;
+    const response = await api.post<LoginResponse | any>(
+      "/auth/login",
+      loginData
+    );
+    const data: any = response.data ?? {};
+    const token = data.token ?? data.accessToken ?? data.access_token ?? null;
+    return { ...data, token } as LoginResponse;
   },
 
   logout: async (): Promise<void> => {

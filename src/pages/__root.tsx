@@ -21,7 +21,10 @@ const TanStackRouterDevtools =
 function RootComponent() {
   return (
     <AppLayout>
-      <Helmet defaultTitle="Mantine UI Template" titleTemplate="%s | Mantine UI Template" />
+      <Helmet
+        defaultTitle="Mantine UI Template"
+        titleTemplate="%s | Mantine UI Template"
+      />
       <Outlet />
       <TanStackRouterDevtools />
     </AppLayout>

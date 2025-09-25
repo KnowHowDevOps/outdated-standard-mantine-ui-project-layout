@@ -52,15 +52,15 @@ export function App() {
         <I18nProvider i18n={i18n}>
           <ErrorBoundary>
             <MantineProvider theme={theme}>
-          <ModalsProvider modals={{ confirmation: ConfirmContextModal }}>
-            <Notifications />
-            <QueryClientProvider client={queryClient}>
-              <AuthSessionProvider>
-                <RouterProvider router={router} />
-                <ReactQueryDevtools initialIsOpen={false} />
-              </AuthSessionProvider>
-            </QueryClientProvider>
-          </ModalsProvider>
+              <ModalsProvider modals={{ confirmation: ConfirmContextModal }}>
+                <Notifications />
+                <QueryClientProvider client={queryClient}>
+                  <AuthSessionProvider>
+                    <RouterProvider router={router} />
+                    <ReactQueryDevtools initialIsOpen={false} />
+                  </AuthSessionProvider>
+                </QueryClientProvider>
+              </ModalsProvider>
             </MantineProvider>
           </ErrorBoundary>
         </I18nProvider>

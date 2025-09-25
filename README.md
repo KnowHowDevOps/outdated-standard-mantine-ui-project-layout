@@ -262,6 +262,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## _GitHub Project Tooling Overview_
 
 A concise summary of automation and quality tooling. For full details, see:
+
 - template-docs/index.md
 - template-docs/development-guide.md
 

@@ -5,6 +5,7 @@ import {
   type RegisterAccountRequest,
 } from "@/entities/auth";
 import { type User } from "@/entities/user";
+import { clearAuthToken, setAuthToken } from "@/shared/lib/auth-token";
 
 const AUTH_SESSION_KEY = "auth-session";
 
@@ -16,8 +17,13 @@ export function useAuthSession() {
     queryFn: async () => {
       try {
         const response = await authApi.refreshAccessToken();
+        // If backend returns a token on refresh, store it for subsequent calls
+        if (response?.token) {
+          setAuthToken(response.token);
+        }
         return response.user;
       } catch {
+        clearAuthToken();
         return null;
       }
     },
@@ -28,6 +34,10 @@ export function useAuthSession() {
   const loginMutation = useMutation({
     mutationFn: (data: LoginData) => authApi.login(data),
     onSuccess: (response) => {
+      // Persist access token for axios
+      if (response?.token) {
+        setAuthToken(response.token);
+      }
       queryClient.setQueryData([AUTH_SESSION_KEY], response.user);
     },
   });
@@ -35,6 +45,7 @@ export function useAuthSession() {
   const logoutMutation = useMutation({
     mutationFn: () => authApi.logout(),
     onSuccess: () => {
+      clearAuthToken();
       queryClient.setQueryData([AUTH_SESSION_KEY], null);
       queryClient.clear();
     },
