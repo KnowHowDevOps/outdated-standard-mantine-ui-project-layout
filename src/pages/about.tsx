@@ -120,7 +120,7 @@ function AboutPage() {
 
           <Group>
             <Anchor
-              href="https://github.com/dimdnk/standard-mantine-ui-project-layout"
+              href="https://github.com/IQKV/standard-mantine-ui-project-layout"
               target="_blank"
               rel="noopener noreferrer"
             >
