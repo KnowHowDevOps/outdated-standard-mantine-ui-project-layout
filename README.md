@@ -62,7 +62,7 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 - 🔍 **ESLint 9** - Modern linting with flat config and React/TypeScript rules
 - 💅 **Prettier** - Opinionated code formatting with package.json plugin
 - 🎨 **Stylelint** - CSS/SCSS linting for consistent styling
-- 🪝 **Husky + Lefthook** - Git hooks for pre-commit validation
+- 🪝 **Husky** - Git hooks for pre-commit validation
 - 📝 **Commitlint** - Conventional commit message validation
 - 🔪 **Knip** - Dead code elimination and dependency analysis
 
@@ -273,10 +273,9 @@ A concise summary of automation and quality tooling. For full details, see:
 - .github/workflows/check-commit-message.yml – commit message validation
 - .github/workflows/use-template.yml – one-time template setup
 
-### Local Automation (Husky + Lefthook)
+### Local Automation (Husky)
 
 - .husky/pre-commit – triggers pre-commit checks
-- lefthook.yml – defines staged checks (linting/formatting/tests as configured)
 - commitlint.config.js – enforces conventional commit messages
 
 ### Quality Gates
