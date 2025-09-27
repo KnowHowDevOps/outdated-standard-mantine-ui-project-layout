@@ -53,7 +53,7 @@
     "@lingui/core": "^5.5.0",
     "@lingui/macro": "^5.5.0",
     "@lingui/react": "^5.5.0",
-    "@mantine/carousel": "^8.0.1",
+    "@mantine/carousel": "^8.3.2",
     "@mantine/charts": "^8.3.2",
     "@mantine/core": "^8.0.1",
     "@mantine/dates": "^8.0.1",
