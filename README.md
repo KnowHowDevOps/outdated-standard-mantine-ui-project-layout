@@ -25,13 +25,13 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 - ✨ **React 19** - Latest React with concurrent features and improved performance
 - ⚡ **Vite 6** - Lightning-fast development with instant HMR and optimized builds
 - 🎯 **TypeScript** - Type-safe development with latest language features
-- � **PNPM** - Fast, disk space efficient package manager with workspaces support
+- 📦 **PNPM** - Fast, disk space efficient package manager with workspaces support
 
 ### 🎨 **UI & Styling**
 
 - 🎨 **Mantine UI** - Modern React components library with comprehensive theming
 - 🎪 **Mantine Extensions** - Carousel, Charts, Dates, Dropzone, Modals, Notifications
-- �️ **Tiptap Editor** - Rich text editor with extensions for images, links, and formatting
+- 📝 **Tiptap Editor** - Rich text editor with extensions for images, links, and formatting
 - 🎭 **Tabler Icons** - Beautiful SVG icons optimized for React
 - 📊 **Mantine DataTable** - Advanced data table with sorting, filtering, and pagination
 
@@ -39,8 +39,8 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 
 - 🔄 **TanStack Router** - Type-safe routing with code splitting and search params
 - 🔄 **TanStack Query** - Powerful data synchronization and caching
-- � **Axiosb** - Promise-based HTTP client for API calls
-- � **GDraphQL Request** - Lightweight GraphQL client
+- 🔄 **Axiosb** - Promise-based HTTP client for API calls
+- 🔍 **GDraphQL Request** - Lightweight GraphQL client
 - ✅ **React Hook Form + Zod** - Type-safe form validation and management
 - 🍪 **JS Cookie** - Simple cookie management
 - 🔗 **nuqs** - Type-safe URL search params state management
