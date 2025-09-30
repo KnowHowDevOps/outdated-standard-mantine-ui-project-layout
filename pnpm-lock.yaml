@@ -57,8 +57,8 @@ importers:
         specifier: ^8.0.1
         version: 8.1.0(@mantine/core@8.1.0(@mantine/hooks@8.1.0(react@19.1.1))(@types/react@19.1.14)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mantine/hooks@8.1.0(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@mantine/nprogress':
-        specifier: ^8.0.1
-        version: 8.3.1(@mantine/core@8.1.0(@mantine/hooks@8.1.0(react@19.1.1))(@types/react@19.1.14)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mantine/hooks@8.1.0(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+        specifier: ^8.3.2
+        version: 8.3.2(@mantine/core@8.1.0(@mantine/hooks@8.1.0(react@19.1.1))(@types/react@19.1.14)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mantine/hooks@8.1.0(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@mantine/tiptap':
         specifier: ^8.0.1
         version: 8.3.1(@mantine/core@8.1.0(@mantine/hooks@8.1.0(react@19.1.1))(@types/react@19.1.14)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mantine/hooks@8.1.0(react@19.1.1))(@tiptap/extension-link@3.4.4(@tiptap/core@3.6.1(@tiptap/pm@3.6.1))(@tiptap/pm@3.6.1))(@tiptap/react@3.4.4(@floating-ui/dom@1.7.1)(@tiptap/core@3.6.1(@tiptap/pm@3.6.1))(@tiptap/pm@3.6.1)(@types/react-dom@19.1.9(@types/react@19.1.14))(@types/react@19.1.14)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -1748,11 +1748,11 @@ packages:
       react: ^18.x || ^19.x
       react-dom: ^18.x || ^19.x
 
-  '@mantine/nprogress@8.3.1':
-    resolution: {integrity: sha512-zQSHSkDM5a2sXWF7MVf/vma6WXgr04O7Zx6NovsD29JdtiZbIPSwSJ6FINtwn1brklkDt2e85Ur8My+9Ye6oAQ==}
+  '@mantine/nprogress@8.3.2':
+    resolution: {integrity: sha512-2F2RAHXRVmxAhQKoih29XfL/7DQ0YxKm2OnALNJ0X7pisBunV0i7dgxa2GJU6dC4Pn8wXFutLv3zV8MD0N2kuw==}
     peerDependencies:
-      '@mantine/core': 8.3.1
-      '@mantine/hooks': 8.3.1
+      '@mantine/core': 8.3.2
+      '@mantine/hooks': 8.3.2
       react: ^18.x || ^19.x
       react-dom: ^18.x || ^19.x
 
@@ -1761,8 +1761,8 @@ packages:
     peerDependencies:
       react: ^18.x || ^19.x
 
-  '@mantine/store@8.3.1':
-    resolution: {integrity: sha512-OZwg0YKbCEKnkFmS9oRLKA8TMriBzO1T6nUib1yfLCx0VFuznllYZiDtaSWNkEYSdnFWCv5hKh5aOD4RHUnQfQ==}
+  '@mantine/store@8.3.2':
+    resolution: {integrity: sha512-AZ2Gzj7G8mtdb/GCwda4Ol/DjRmU2hYLaSH/UAUC4Z79kYSHF7CE5uJl7NKLmJnwyFR6Znz/XHpyxfNzPN4nmQ==}
     peerDependencies:
       react: ^18.x || ^19.x
 
@@ -9918,11 +9918,11 @@ snapshots:
       react-dom: 19.1.1(react@19.1.1)
       react-transition-group: 4.4.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
 
-  '@mantine/nprogress@8.3.1(@mantine/core@8.1.0(@mantine/hooks@8.1.0(react@19.1.1))(@types/react@19.1.14)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mantine/hooks@8.1.0(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
+  '@mantine/nprogress@8.3.2(@mantine/core@8.1.0(@mantine/hooks@8.1.0(react@19.1.1))(@types/react@19.1.14)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(@mantine/hooks@8.1.0(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@mantine/core': 8.1.0(@mantine/hooks@8.1.0(react@19.1.1))(@types/react@19.1.14)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@mantine/hooks': 8.1.0(react@19.1.1)
-      '@mantine/store': 8.3.1(react@19.1.1)
+      '@mantine/store': 8.3.2(react@19.1.1)
       react: 19.1.1
       react-dom: 19.1.1(react@19.1.1)
 
@@ -9930,7 +9930,7 @@ snapshots:
     dependencies:
       react: 19.1.1
 
-  '@mantine/store@8.3.1(react@19.1.1)':
+  '@mantine/store@8.3.2(react@19.1.1)':
     dependencies:
       react: 19.1.1
 
