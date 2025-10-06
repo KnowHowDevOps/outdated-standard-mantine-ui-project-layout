@@ -5,36 +5,44 @@ This directory contains specialized Claude agents and commands designed for mode
 ## Agents
 
 ### 🎯 [typescript-pro](./agents/typescript-pro.md)
+
 Expert TypeScript agent for FSD architecture with React 19, Mantine UI, and strict type safety. Enforces Zod-first development, proper layer boundaries, and modern TypeScript patterns.
 
 **Use for:**
+
 - Type-safe API contracts and validation
 - Advanced TypeScript patterns and generics
 - Zod schema design and type inference
 - Error handling with discriminated unions
 
 ### ⚛️ [react-architect](./agents/react-architect.md)
+
 React 19 architecture specialist for FSD-compliant applications. Handles Suspense, concurrent features, Mantine UI integration, and performance optimization patterns.
 
 **Use for:**
+
 - Component architecture and composition
 - React 19 concurrent features (Suspense, useTransition)
 - Performance optimization patterns
 - State management with TanStack Query
 
 ### 🏗️ [fsd-enforcer](./agents/fsd-enforcer.md)
+
 Feature-Sliced Design architecture enforcer. Validates layer boundaries, public API compliance, and proper segment organization.
 
 **Use for:**
+
 - Architecture reviews and validation
 - Refactoring guidance for FSD compliance
 - Layer boundary enforcement
 - Public API design patterns
 
 ### 🎨 [ui-specialist](./agents/ui-specialist.md)
+
 Mantine UI and accessibility specialist. Creates consistent, accessible, and responsive components following design system principles and WCAG 2.1 AA standards.
 
 **Use for:**
+
 - Mantine UI component development
 - Accessibility compliance (WCAG 2.1 AA)
 - Responsive design patterns
@@ -43,23 +51,29 @@ Mantine UI and accessibility specialist. Creates consistent, accessible, and res
 ## Commands
 
 ### 📋 [review-code](./commands/review-code.md)
+
 Comprehensive code review using all specialized agents to validate architecture, code quality, UI/UX, and accessibility compliance.
 
 ### 🚀 [create-feature](./commands/create-feature.md)
+
 Create new features following FSD architecture with complete structure, type safety, React patterns, and UI compliance.
 
 ### 🔧 [refactor-architecture](./commands/refactor-architecture.md)
+
 Refactor existing code to comply with FSD architecture and modern development patterns, including migration strategies and breaking change management.
 
 ### ⚡ [optimize-performance](./commands/optimize-performance.md)
+
 Analyze and optimize application performance using React 19 patterns, proper memoization, and bundle optimization techniques.
 
 ### ♿ [accessibility-audit](./commands/accessibility-audit.md)
+
 Perform comprehensive accessibility audits to ensure WCAG 2.1 AA compliance and inclusive user experience.
 
 ## Usage Patterns
 
 ### For New Features
+
 ```
 Use create-feature command with requirements:
 - Feature name and functionality description
@@ -69,6 +83,7 @@ Use create-feature command with requirements:
 ```
 
 ### For Code Reviews
+
 ```
 Use review-code command to:
 - Validate FSD architecture compliance
@@ -78,6 +93,7 @@ Use review-code command to:
 ```
 
 ### For Refactoring
+
 ```
 Use refactor-architecture command to:
 - Fix layer boundary violations
@@ -87,6 +103,7 @@ Use refactor-architecture command to:
 ```
 
 ### For Performance Issues
+
 ```
 Use optimize-performance command to:
 - Identify rendering bottlenecks
@@ -96,6 +113,7 @@ Use optimize-performance command to:
 ```
 
 ### For Accessibility Compliance
+
 ```
 Use accessibility-audit command to:
 - Check WCAG 2.1 AA compliance

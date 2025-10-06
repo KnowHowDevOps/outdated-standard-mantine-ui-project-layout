@@ -1,12 +1,14 @@
 Create a new feature following Feature-Sliced Design architecture with the specified name and requirements.
 
 ## Process
+
 1. Use fsd-enforcer to validate the feature design and layer placement
 2. Use typescript-pro to implement type-safe schemas and interfaces
 3. Use react-architect to create React components with proper patterns
 4. Use ui-specialist to ensure Mantine UI compliance and accessibility
 
 ## Feature Structure
+
 Create the complete FSD feature structure:
 
 ```
@@ -34,34 +36,39 @@ features/{feature-name}/
 ## Implementation Requirements
 
 ### Type Safety (typescript-pro)
+
 - Define Zod schemas first, then infer TypeScript types
 - Implement proper error handling with discriminated unions
 - Create type-safe API contracts and validation
 - Use strict TypeScript patterns throughout
 
 ### React Patterns (react-architect)
+
 - Implement React 19 concurrent features (Suspense, useTransition)
 - Create optimized components with proper memoization
 - Use TanStack Query for data fetching
 - Implement proper error boundaries
 
 ### UI Components (ui-specialist)
+
 - Use Mantine UI components with theme tokens
 - Ensure WCAG 2.1 AA accessibility compliance
 - Implement responsive design patterns
 - Create consistent loading and error states
 
 ### Architecture (fsd-enforcer)
+
 - Follow strict layer import hierarchy
 - Export only necessary items through public API
 - Ensure no cross-feature dependencies
 - Maintain proper segment organization
 
 ## Example Usage
+
 ```
 Create a user management feature that allows:
 - Creating new users with form validation
-- Editing existing user information  
+- Editing existing user information
 - Deleting users with confirmation
 - Filtering and searching users
 - Bulk operations on selected users

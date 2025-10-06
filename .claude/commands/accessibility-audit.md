@@ -1,6 +1,7 @@
 Perform a comprehensive accessibility audit to ensure WCAG 2.1 AA compliance and inclusive user experience.
 
 ## Audit Process
+
 1. Use ui-specialist to analyze component accessibility patterns
 2. Use react-architect to check focus management and keyboard navigation
 3. Use typescript-pro to validate ARIA types and accessibility APIs
@@ -9,12 +10,14 @@ Perform a comprehensive accessibility audit to ensure WCAG 2.1 AA compliance and
 ## Accessibility Standards
 
 ### WCAG 2.1 AA Requirements
+
 - **Perceivable**: Information must be presentable in ways users can perceive
 - **Operable**: Interface components must be operable by all users
 - **Understandable**: Information and UI operation must be understandable
 - **Robust**: Content must be robust enough for various assistive technologies
 
 ### Key Areas to Audit
+
 - **Color and Contrast**: Minimum 4.5:1 ratio for normal text, 3:1 for large text
 - **Keyboard Navigation**: All interactive elements accessible via keyboard
 - **Screen Reader Support**: Proper semantic markup and ARIA attributes
@@ -25,6 +28,7 @@ Perform a comprehensive accessibility audit to ensure WCAG 2.1 AA compliance and
 ## Implementation Patterns
 
 ### Semantic HTML Structure
+
 ```typescript
 // ✅ REQUIRED - Proper semantic structure
 function AccessibleUserProfile({ user }: { user: User }) {
@@ -34,7 +38,7 @@ function AccessibleUserProfile({ user }: { user: User }) {
         <h1 id="profile-heading">{user.name}</h1>
         <p aria-describedby="user-role">{user.title}</p>
       </header>
-      
+
       <section aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact Information</h2>
         <address>
@@ -64,12 +68,13 @@ function BadUserProfile({ user }: { user: User }) {
 ```
 
 ### ARIA Attributes and Roles
+
 ```typescript
 // ✅ REQUIRED - Proper ARIA usage
 function AccessibleDataTable({ users }: { users: User[] }) {
   const [sortColumn, setSortColumn] = useState<keyof User>("name");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
-  
+
   return (
     <Table
       role="table"
@@ -103,7 +108,7 @@ function AccessibleDataTable({ users }: { users: User[] }) {
           </Table.Th>
         </Table.Tr>
       </Table.Thead>
-      
+
       <Table.Tbody>
         {users.map((user, index) => (
           <Table.Tr key={user.id} role="row" aria-rowindex={index + 2}>
@@ -135,6 +140,7 @@ function AccessibleDataTable({ users }: { users: User[] }) {
 ```
 
 ### Form Accessibility
+
 ```typescript
 // ✅ REQUIRED - Accessible form patterns
 function AccessibleUserForm({ onSubmit }: { onSubmit: (data: UserFormData) => void }) {
@@ -142,11 +148,11 @@ function AccessibleUserForm({ onSubmit }: { onSubmit: (data: UserFormData) => vo
     initialValues: { name: "", email: "", role: "user" },
     validate: zodResolver(userFormSchema),
   });
-  
+
   const [submitAttempted, setSubmitAttempted] = useState(false);
-  
+
   return (
-    <form 
+    <form
       onSubmit={form.onSubmit((values) => {
         setSubmitAttempted(true);
         onSubmit(values);
@@ -157,7 +163,7 @@ function AccessibleUserForm({ onSubmit }: { onSubmit: (data: UserFormData) => vo
       <Text id="form-instructions" size="sm" c="dimmed" mb="md">
         All fields marked with an asterisk (*) are required.
       </Text>
-      
+
       <Stack gap="md">
         <TextInput
           label="Full Name"
@@ -166,13 +172,13 @@ function AccessibleUserForm({ onSubmit }: { onSubmit: (data: UserFormData) => vo
           error={form.errors.name}
           {...form.getInputProps("name")}
           aria-describedby={
-            form.errors.name 
-              ? `name-error ${submitAttempted ? "name-error-live" : ""}` 
+            form.errors.name
+              ? `name-error ${submitAttempted ? "name-error-live" : ""}`
               : "name-description"
           }
           aria-invalid={!!form.errors.name}
         />
-        
+
         {form.errors.name && (
           <div
             id="name-error"
@@ -182,7 +188,7 @@ function AccessibleUserForm({ onSubmit }: { onSubmit: (data: UserFormData) => vo
             {form.errors.name}
           </div>
         )}
-        
+
         <TextInput
           label="Email Address"
           description="We'll use this to send you notifications"
@@ -191,13 +197,13 @@ function AccessibleUserForm({ onSubmit }: { onSubmit: (data: UserFormData) => vo
           error={form.errors.email}
           {...form.getInputProps("email")}
           aria-describedby={
-            form.errors.email 
-              ? `email-error ${submitAttempted ? "email-error-live" : ""}` 
+            form.errors.email
+              ? `email-error ${submitAttempted ? "email-error-live" : ""}`
               : "email-description"
           }
           aria-invalid={!!form.errors.email}
         />
-        
+
         <Select
           label="Role"
           description="Select your role in the organization"
@@ -225,17 +231,18 @@ function AccessibleUserForm({ onSubmit }: { onSubmit: (data: UserFormData) => vo
 ```
 
 ### Focus Management
+
 ```typescript
 // ✅ REQUIRED - Proper focus management
 function AccessibleModal({ opened, onClose, title, children }: ModalProps) {
   const modalRef = useRef<HTMLDivElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
-  
+
   useEffect(() => {
     if (opened) {
       // Store previous focus
       previousFocusRef.current = document.activeElement as HTMLElement;
-      
+
       // Focus modal
       setTimeout(() => {
         modalRef.current?.focus();
@@ -245,22 +252,22 @@ function AccessibleModal({ opened, onClose, title, children }: ModalProps) {
       previousFocusRef.current?.focus();
     }
   }, [opened]);
-  
+
   const handleKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
     if (e.key === "Escape") {
       onClose();
     }
-    
+
     // Trap focus within modal
     if (e.key === "Tab") {
       const focusableElements = modalRef.current?.querySelectorAll(
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
       );
-      
+
       if (focusableElements && focusableElements.length > 0) {
         const firstElement = focusableElements[0] as HTMLElement;
         const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-        
+
         if (e.shiftKey && document.activeElement === firstElement) {
           e.preventDefault();
           lastElement.focus();
@@ -271,7 +278,7 @@ function AccessibleModal({ opened, onClose, title, children }: ModalProps) {
       }
     }
   };
-  
+
   return (
     <Modal
       opened={opened}
@@ -294,6 +301,7 @@ function AccessibleModal({ opened, onClose, title, children }: ModalProps) {
 ```
 
 ### Color and Contrast
+
 ```typescript
 // ✅ REQUIRED - Accessible color patterns
 function AccessibleStatusBadge({ status }: { status: UserStatus }) {
@@ -325,9 +333,9 @@ function AccessibleStatusBadge({ status }: { status: UserStatus }) {
         };
     }
   };
-  
+
   const statusProps = getStatusProps(status);
-  
+
   return (
     <Badge
       {...statusProps}
@@ -362,6 +370,7 @@ function HighContrastButton({ children, ...props }: ButtonProps) {
 ## Audit Checklist
 
 ### Keyboard Navigation
+
 - [ ] All interactive elements are keyboard accessible
 - [ ] Tab order is logical and intuitive
 - [ ] Focus indicators are visible and clear
@@ -369,6 +378,7 @@ function HighContrastButton({ children, ...props }: ButtonProps) {
 - [ ] Keyboard shortcuts don't conflict with assistive technology
 
 ### Screen Reader Support
+
 - [ ] Proper heading hierarchy (h1, h2, h3, etc.)
 - [ ] ARIA labels and descriptions are meaningful
 - [ ] Form labels are properly associated
@@ -376,6 +386,7 @@ function HighContrastButton({ children, ...props }: ButtonProps) {
 - [ ] Dynamic content changes are announced
 
 ### Visual Accessibility
+
 - [ ] Color contrast meets WCAG AA standards (4.5:1 for normal text)
 - [ ] Information is not conveyed by color alone
 - [ ] Text can be resized up to 200% without loss of functionality
@@ -383,6 +394,7 @@ function HighContrastButton({ children, ...props }: ButtonProps) {
 - [ ] Animation can be disabled (prefers-reduced-motion)
 
 ### Form Accessibility
+
 - [ ] All form controls have labels
 - [ ] Required fields are clearly marked
 - [ ] Error messages are descriptive and helpful
@@ -390,6 +402,7 @@ function HighContrastButton({ children, ...props }: ButtonProps) {
 - [ ] Fieldsets and legends are used for grouped controls
 
 ### Media Accessibility
+
 - [ ] Images have appropriate alt text
 - [ ] Decorative images have empty alt attributes
 - [ ] Videos have captions and transcripts
@@ -399,6 +412,7 @@ function HighContrastButton({ children, ...props }: ButtonProps) {
 ## Testing Tools and Methods
 
 ### Automated Testing
+
 ```typescript
 // ✅ REQUIRED - Accessibility tests
 import { axe, toHaveNoViolations } from "jest-axe";
@@ -411,31 +425,32 @@ describe("UserCard Accessibility", () => {
     const results = await axe(container);
     expect(results).toHaveNoViolations();
   });
-  
+
   it("should be keyboard navigable", async () => {
     render(<UserCard user={mockUser} onEdit={mockEdit} onDelete={mockDelete} />);
-    
+
     // Tab to edit button
     await userEvent.tab();
     expect(screen.getByLabelText(`Edit ${mockUser.name}`)).toHaveFocus();
-    
+
     // Tab to delete button
     await userEvent.tab();
     expect(screen.getByLabelText(`Delete ${mockUser.name}`)).toHaveFocus();
   });
-  
+
   it("should announce changes to screen readers", async () => {
     render(<UserStatusUpdater user={mockUser} />);
-    
+
     const statusButton = screen.getByRole("button", { name: /change status/i });
     await userEvent.click(statusButton);
-    
+
     expect(screen.getByRole("status")).toHaveTextContent("Status updated to active");
   });
 });
 ```
 
 ### Manual Testing Checklist
+
 - [ ] Navigate entire application using only keyboard
 - [ ] Test with screen reader (NVDA, JAWS, VoiceOver)
 - [ ] Verify high contrast mode compatibility
