@@ -78,7 +78,7 @@
     "@tiptap/extension-underline": "^3.6.1",
     "@tiptap/pm": "^3.6.3",
     "@tiptap/react": "^3.4.4",
-    "@tiptap/starter-kit": "^3.6.1",
+    "@tiptap/starter-kit": "^3.6.5",
     "@types/sanitize-html": "^2.16.0",
     "axios": "^1.12.2",
     "chroma-js": "^3.1.2",
