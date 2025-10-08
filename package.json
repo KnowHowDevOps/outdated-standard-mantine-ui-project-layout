@@ -140,7 +140,7 @@
     "@tanstack/eslint-plugin-query": "^5.91.0",
     "@tanstack/eslint-plugin-router": "^1.132.31",
     "@tanstack/react-query-devtools": "^5.90.2",
-    "@tanstack/react-router-devtools": "^1.132.47",
+    "@tanstack/react-router-devtools": "^1.132.50",
     "@tanstack/router-plugin": "^1.132.47",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
@@ -199,13 +199,13 @@
     "stylelint-config-standard-scss": "^16.0.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.0",
-    "vite": "^6.3.6",
+    "vite": "^7.1.9",
     "vite-bundle-visualizer": "^1.2.1",
     "vite-plugin-copy": "^0.1.6",
     "vite-plugin-image-optimizer": "^2.0.2",
     "vite-plugin-remove-console": "^2.2.0",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "3.2.3"
+    "vitest": "3.2.4"
   },
   "packageManager": "pnpm@10.17.1"
 }
