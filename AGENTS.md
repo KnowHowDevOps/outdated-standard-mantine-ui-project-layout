@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-This is a modern React application built with Feature-Sliced Design (FSD) architecture, focusing on maintainability, scalability, and developer experience. The project uses React 19, TypeScript, Mantine UI v8, and a comprehensive toolchain for building high-performance Single Page Applications.
+This is a modern React application built with Feature-Sliced Design (FSD) architecture, focusing on maintainability, scalability, and developer experience. The project uses React 19,
+TypeScript, Mantine UI v8, and a comprehensive toolchain for building high-performance Single Page Applications.
 
 **Key Characteristics:**
 
