@@ -158,7 +158,7 @@ After creating your project from this template, you'll want to customize it:
 #### 2. Customize Branding
 
 - [ ] Update the app title in `src/pages/__root.tsx`
-- [ ] Modify the theme in `src/theme.ts` with your brand colors
+- [ ] Modify the theme in `src/app/theme.ts` with your brand colors
 - [ ] Replace favicon and other icons in `public/` directory
 - [ ] Update meta tags in `index.html`
 
@@ -170,7 +170,7 @@ After creating your project from this template, you'll want to customize it:
 
 #### 4. Remove Template Examples (Optional)
 
-- [ ] Remove or modify `src/components/SampleComponents.tsx`
+- [ ] Remove or modify `src/features/sample-form`
 - [ ] Update the home page content in `src/routes/index.tsx`
 - [ ] Customize the about page in `src/routes/about.tsx`
 - [ ] Remove template-specific Storybook stories
