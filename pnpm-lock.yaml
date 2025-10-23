@@ -409,8 +409,8 @@ importers:
         specifier: 5.66.1
         version: 5.66.1(@types/node@24.9.1)(typescript@5.9.3)
       lint-staged:
-        specifier: ^16.2.4
-        version: 16.2.4
+        specifier: ^16.2.6
+        version: 16.2.6
       lru-cache:
         specifier: ^11.2.2
         version: 11.2.2
@@ -1904,8 +1904,8 @@ packages:
     resolution: {integrity: sha512-0EbE8LRbkogtcCXU7liAyC00n9uNG9hJ+eMyHFdUsy9lB/WGqnEBgwjA9q2cyzAVcdTkQqTBBU1XePNnN3OijA==}
     engines: {node: '>=18.17.0', npm: '>=9.5.0'}
 
-  '@reduxjs/toolkit@2.9.1':
-    resolution: {integrity: sha512-sETJ3qO72y7L7WiR5K54UFLT3jRzAtqeBPVO15xC3bGA6kDqCH8m/v7BKCPH4czydXzz/1lPEGLvew7GjOO3Qw==}
+  '@reduxjs/toolkit@2.9.2':
+    resolution: {integrity: sha512-ZAYu/NXkl/OhqTz7rfPaAhY0+e8Fr15jqNxte/2exKUxvHyQ/hcqmdekiN1f+Lcw3pE+34FCgX+26zcUE3duCg==}
     peerDependencies:
       react: ^16.9.0 || ^17.0.0 || ^18 || ^19
       react-redux: ^7.2.1 || ^8.1.3 || ^9.0.0
@@ -5645,8 +5645,8 @@ packages:
   linkifyjs@4.3.2:
     resolution: {integrity: sha512-NT1CJtq3hHIreOianA8aSXn6Cw0JzYOuDQbOrSPe7gqFnCpKP++MQe3ODgO3oh2GJFORkAAdqredOa60z63GbA==}
 
-  lint-staged@16.2.4:
-    resolution: {integrity: sha512-Pkyr/wd90oAyXk98i/2KwfkIhoYQUMtss769FIT9hFM5ogYZwrk+GRE46yKXSg2ZGhcJ1p38Gf5gmI5Ohjg2yg==}
+  lint-staged@16.2.6:
+    resolution: {integrity: sha512-s1gphtDbV4bmW1eylXpVMk2u7is7YsrLl8hzrtvC70h4ByhcMLZFY01Fx05ZUDNuv1H8HO4E+e2zgejV1jVwNw==}
     engines: {node: '>=20.17'}
     hasBin: true
 
@@ -9725,7 +9725,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@reduxjs/toolkit@2.9.1(react-redux@9.2.0(@types/react@19.2.2)(react@19.2.0)(redux@5.0.1))(react@19.2.0)':
+  '@reduxjs/toolkit@2.9.2(react-redux@9.2.0(@types/react@19.2.2)(react@19.2.0)(redux@5.0.1))(react@19.2.0)':
     dependencies:
       '@standard-schema/spec': 1.0.0
       '@standard-schema/utils': 0.3.0
@@ -13964,7 +13964,7 @@ snapshots:
 
   linkifyjs@4.3.2: {}
 
-  lint-staged@16.2.4:
+  lint-staged@16.2.6:
     dependencies:
       commander: 14.0.1
       listr2: 9.0.5
@@ -15233,7 +15233,7 @@ snapshots:
 
   recharts@3.2.1(@types/react@19.2.2)(react-dom@19.2.0(react@19.2.0))(react-is@18.3.1)(react@19.2.0)(redux@5.0.1):
     dependencies:
-      '@reduxjs/toolkit': 2.9.1(react-redux@9.2.0(@types/react@19.2.2)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
+      '@reduxjs/toolkit': 2.9.2(react-redux@9.2.0(@types/react@19.2.2)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
       clsx: 2.1.1
       decimal.js-light: 2.5.1
       es-toolkit: 1.40.0
