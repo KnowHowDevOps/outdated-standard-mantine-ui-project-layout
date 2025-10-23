@@ -223,8 +223,8 @@ importers:
         specifier: ^4.2.2
         version: 4.2.2(typescript@5.9.3)
       '@kubb/core':
-        specifier: ^4.1.4
-        version: 4.1.4
+        specifier: ^4.2.2
+        version: 4.2.2
       '@kubb/swagger':
         specifier: ^2.28.4
         version: 2.28.4(encoding@0.1.13)
@@ -1340,10 +1340,6 @@ packages:
   '@kubb/core@2.28.4':
     resolution: {integrity: sha512-ceujy+nWvG2vavxS6tqbkKCsQQNAqhPRBaKJ3skJ1o4JgNfoOprjKM3E1u5Z1+XboRa8xp8GhzymZ94DDYeeuA==}
     engines: {node: '>=18'}
-
-  '@kubb/core@4.1.4':
-    resolution: {integrity: sha512-W4tBly3ukJAxwcWx/LzwWS9nvqB+0X9KF2pK0F+0ua0ktR28lAYnpAz2DXsTJmuyBBXUSFXFKwoG7wmhHtfVAg==}
-    engines: {node: '>=20'}
 
   '@kubb/core@4.2.2':
     resolution: {integrity: sha512-l5biTSvDo3jZ5m8umEoasUnfH9EsHnsUbTr23HaJrOcpf0jK3adqDwXwYQPV9+XD/FzL3fI/WAD6ulcciNcJBg==}
@@ -9069,21 +9065,6 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.3
       unraw: 3.0.0
-
-  '@kubb/core@4.1.4':
-    dependencies:
-      '@kubb/parser-ts': 4.1.4
-      camelcase: 8.0.0
-      find-up: 7.0.0
-      fs-extra: 11.3.2
-      js-runtime: 0.0.8
-      natural-orderby: 5.0.0
-      object-hash: 3.0.0
-      p-limit: 7.2.0
-      picocolors: 1.1.1
-      remeda: 2.32.0
-      seedrandom: 3.0.5
-      semver: 7.7.3
 
   '@kubb/core@4.2.2':
     dependencies:
