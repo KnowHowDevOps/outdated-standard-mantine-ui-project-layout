@@ -115,7 +115,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "@eslint-react/eslint-plugin": "^2.2.2",
+    "@eslint-react/eslint-plugin": "^2.2.3",
     "@eslint/js": "^9.38.0",
     "@kubb/cli": "^4.1.4",
     "@kubb/core": "^4.1.4",
