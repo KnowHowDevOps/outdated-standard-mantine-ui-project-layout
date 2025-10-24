@@ -220,8 +220,8 @@ importers:
         specifier: ^9.38.0
         version: 9.38.0
       '@kubb/cli':
-        specifier: ^4.2.2
-        version: 4.2.2(typescript@5.9.3)
+        specifier: ^4.3.0
+        version: 4.3.0(typescript@5.9.3)
       '@kubb/core':
         specifier: ^4.1.4
         version: 4.1.4
@@ -1332,8 +1332,8 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@kubb/cli@4.2.2':
-    resolution: {integrity: sha512-imhEMNcBtcN1oDE2Utk7OTpWeO5KgLOe1FbQ8yegDeW/RLJtvvL0k8mh/+y1FQoxHWBWDIhgyBVwJ37I+puz0g==}
+  '@kubb/cli@4.3.0':
+    resolution: {integrity: sha512-l3Uul8tfy9pwZtDyI3VST4k00maZTTx0VnkOj+GUgukqaz1NPQKho4RJoL4h2eTBz581qwT5ptZmFdiUK7wAKA==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1345,14 +1345,14 @@ packages:
     resolution: {integrity: sha512-W4tBly3ukJAxwcWx/LzwWS9nvqB+0X9KF2pK0F+0ua0ktR28lAYnpAz2DXsTJmuyBBXUSFXFKwoG7wmhHtfVAg==}
     engines: {node: '>=20'}
 
-  '@kubb/core@4.2.2':
-    resolution: {integrity: sha512-l5biTSvDo3jZ5m8umEoasUnfH9EsHnsUbTr23HaJrOcpf0jK3adqDwXwYQPV9+XD/FzL3fI/WAD6ulcciNcJBg==}
+  '@kubb/core@4.3.0':
+    resolution: {integrity: sha512-zObwGsQegohl8f+PKZwzZWM/Nlc1KCr+VxWfdi3PUhfWPqBpDp9w2Y/u5GDtalxr3ILy+sEVI6lqlovFVIFJfA==}
     engines: {node: '>=20'}
     peerDependencies:
       '@kubb/react': ^4.0.0
 
-  '@kubb/fabric-core@0.0.0-canary-20251021185909':
-    resolution: {integrity: sha512-tY0G/ptFuZFBmgy3J0Tolav0FSW9HHEo+33plOzpfYHlYqNzHZNgAJJuLcCbWAjIdpZAbC/ubIUYgPlqpEt7DA==}
+  '@kubb/fabric-core@0.1.5':
+    resolution: {integrity: sha512-JM6/++uT+vWEF3WQLyNijfp4Jw5mzgVEWswqAcSXtdNifl2qT1eZuqMhI6aB6/Qc4KlaE7k7QXfs8CUjuLs8GQ==}
     engines: {node: '>=20'}
 
   '@kubb/fs@2.28.4':
@@ -9036,9 +9036,9 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@kubb/cli@4.2.2(typescript@5.9.3)':
+  '@kubb/cli@4.3.0(typescript@5.9.3)':
     dependencies:
-      '@kubb/core': 4.2.2
+      '@kubb/core': 4.3.0
       chokidar: 4.0.3
       citty: 0.1.6
       cli-progress: 3.12.0
@@ -9085,9 +9085,9 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.3
 
-  '@kubb/core@4.2.2':
+  '@kubb/core@4.3.0':
     dependencies:
-      '@kubb/fabric-core': 0.0.0-canary-20251021185909
+      '@kubb/fabric-core': 0.1.5
       '@kubb/parser-ts': 4.1.4
       camelcase: 8.0.0
       find-up: 7.0.0
@@ -9101,7 +9101,7 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.3
 
-  '@kubb/fabric-core@0.0.0-canary-20251021185909':
+  '@kubb/fabric-core@0.1.5':
     dependencies:
       fs-extra: 11.3.2
       js-runtime: 0.0.8
