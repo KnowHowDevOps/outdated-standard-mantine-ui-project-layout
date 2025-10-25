@@ -39,8 +39,8 @@ React + TypeScript + Vite + TanStack Router + Mantine UI Template
 
 - 🔄 **TanStack Router** - Type-safe routing with code splitting and search params
 - 🔄 **TanStack Query** - Powerful data synchronization and caching
-- 🔄 **Axiosb** - Promise-based HTTP client for API calls
-- 🔍 **GDraphQL Request** - Lightweight GraphQL client
+- 🔄 **Axios** - Promise-based HTTP client for API calls
+- 🔍 **GraphQL Request** - Lightweight GraphQL client
 - ✅ **React Hook Form + Zod** - Type-safe form validation and management
 - 🍪 **JS Cookie** - Simple cookie management
 - 🔗 **nuqs** - Type-safe URL search params state management
@@ -193,6 +193,11 @@ After creating your project from this template, you'll want to customize it:
 | `pnpm test:coverage`    | Run tests with coverage report             |
 | `pnpm e2e`              | Run end-to-end tests with Playwright       |
 | `pnpm e2e:ui`           | Run e2e tests with UI interface            |
+| `pnpm e2e:headed`       | Run e2e tests in headed mode               |
+| `pnpm e2e:report`       | Open last Playwright HTML report           |
+| `pnpm e2e:update`       | Update Playwright snapshots                |
+| `pnpm e2e:debug`        | Debug e2e tests (PWDEBUG)                  |
+| `pnpm playwright:install`| Install Playwright browsers               |
 | `pnpm storybook`        | Start Storybook development server         |
 | `pnpm storybook:build`  | Build Storybook for production             |
 | `pnpm lint`             | Lint code with ESLint                      |
@@ -238,6 +243,17 @@ This project includes Cursor AI IDE rules for enhanced development experience:
 The rules are located in `.cursor/rules/` directory and are automatically applied when using Cursor IDE.
 
 ---
+
+## 🧪 E2E Testing (Playwright)
+
+- Install browsers (first time): `pnpm playwright:install`
+- Run tests: `pnpm e2e`
+- UI mode: `pnpm e2e:ui`
+- Headed: `pnpm e2e:headed`
+- Report: `pnpm e2e:report`
+
+The dev server is auto-started by Playwright via `webServer` in `playwright.config.ts`.
+CI runs Playwright on PRs/pushes via `.github/workflows/e2e-playwright.yml`.
 
 ## 📆 Changelog
 
