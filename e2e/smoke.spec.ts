@@ -6,14 +6,16 @@ test.describe("App smoke", () => {
 
     await expect(page).toHaveURL(/\/?$/);
 
-    await expect(
-      page.getByRole("heading", { name: "Welcome to Mantine UI Template" })
-    ).toBeVisible();
+    await expect(page.getByTestId("home-container")).toBeVisible();
+    await expect(page.getByTestId("home-title")).toHaveText(
+      "Welcome to Mantine UI Template"
+    );
+    await expect(page.getByTestId("home-subtitle")).toBeVisible();
 
-    await expect(page.getByText("A modern React template"))
-      .toBeVisible();
+    await expect(page.getByTestId("quick-start-card")).toBeVisible();
+    await expect(page.getByTestId("features-card")).toBeVisible();
+    await expect(page.getByTestId("try-components-card")).toBeVisible();
 
-    await expect(page.getByRole("button", { name: "Show Notification" }))
-      .toBeVisible();
+    await expect(page.getByTestId("show-notification-btn")).toBeVisible();
   });
 });
