@@ -22,7 +22,7 @@
     "messages:compile": "lingui compile",
     "messages:extract": "lingui extract",
     "node_modules:clear": "rm -rf node_modules",
-    "playwright:install": "playwright install",
+    "playwright:install": "playwright install --with-deps",
     "prepare": "husky",
     "prettier:check": "prettier . --check --ignore-unknown",
     "prettier:write": "prettier . --write",
