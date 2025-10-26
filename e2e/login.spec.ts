@@ -1,10 +1,16 @@
 import { test, expect, type Page } from "@playwright/test";
 
 test.describe("Login page", () => {
-  test("renders form fields and navigation link", async ({ page }: { page: Page }) => {
+  test("renders form fields and navigation link", async ({
+    page,
+  }: {
+    page: Page;
+  }) => {
     await page.goto("/login");
 
-    await expect(page.getByRole("heading", { name: "Welcome back!" })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "Welcome back!" })
+    ).toBeVisible();
     await expect(page.getByRole("heading", { name: "Sign In" })).toBeVisible();
 
     await expect(page.getByLabel("Email")).toBeVisible();

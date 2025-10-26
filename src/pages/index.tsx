@@ -31,12 +31,19 @@ function HomePage() {
   };
 
   return (
-    <Container component="main" size="lg" data-testid="home-container" aria-label="Home page">
+    <Container
+      component="main"
+      size="lg"
+      data-testid="home-container"
+      aria-label="Home page"
+    >
       <Stack gap="xl">
         <div>
           <Group mb="md">
             <IconRocket size="2rem" color="var(--mantine-color-blue-6)" />
-            <Title order={1} data-testid="home-title">Welcome to Mantine UI Template</Title>
+            <Title order={1} data-testid="home-title">
+              Welcome to Mantine UI Template
+            </Title>
           </Group>
           <Text size="lg" c="dimmed" data-testid="home-subtitle">
             A modern React template with TypeScript, Vite, TanStack Router, and
@@ -46,7 +53,13 @@ function HomePage() {
 
         <Grid>
           <Grid.Col span={{ base: 12, md: 6 }}>
-            <Card shadow="sm" padding="lg" radius="md" withBorder data-testid="quick-start-card">
+            <Card
+              shadow="sm"
+              padding="lg"
+              radius="md"
+              withBorder
+              data-testid="quick-start-card"
+            >
               <Group justify="space-between" mb="xs">
                 <Text fw={500}>Quick Start</Text>
                 <Badge color="pink" variant="light">
@@ -78,7 +91,13 @@ function HomePage() {
           </Grid.Col>
 
           <Grid.Col span={{ base: 12, md: 6 }}>
-            <Card shadow="sm" padding="lg" radius="md" withBorder data-testid="features-card">
+            <Card
+              shadow="sm"
+              padding="lg"
+              radius="md"
+              withBorder
+              data-testid="features-card"
+            >
               <Group justify="space-between" mb="xs">
                 <Text fw={500}>Features</Text>
                 <Badge color="blue" variant="light">
@@ -110,7 +129,13 @@ function HomePage() {
           </Grid.Col>
         </Grid>
 
-        <Card shadow="sm" padding="lg" radius="md" withBorder data-testid="try-components-card">
+        <Card
+          shadow="sm"
+          padding="lg"
+          radius="md"
+          withBorder
+          data-testid="try-components-card"
+        >
           <Group justify="space-between" mb="md">
             <div>
               <Text fw={500}>Try Mantine Components</Text>

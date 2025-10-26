@@ -183,32 +183,32 @@ After creating your project from this template, you'll want to customize it:
 
 ### 📃 Available Scripts
 
-| Command                 | Description                                |
-| ----------------------- | ------------------------------------------ |
-| `pnpm dev`              | Start development server                   |
-| `pnpm build`            | Build for production                       |
-| `pnpm preview`          | Preview production build                   |
-| `pnpm test`             | Run unit tests with Vitest                 |
-| `pnpm test:ui`          | Run tests with UI interface                |
-| `pnpm test:coverage`    | Run tests with coverage report             |
-| `pnpm e2e`              | Run end-to-end tests with Playwright       |
-| `pnpm e2e:ui`           | Run e2e tests with UI interface            |
-| `pnpm e2e:headed`       | Run e2e tests in headed mode               |
-| `pnpm e2e:report`       | Open last Playwright HTML report           |
-| `pnpm e2e:update`       | Update Playwright snapshots                |
-| `pnpm e2e:debug`        | Debug e2e tests (PWDEBUG)                  |
-| `pnpm playwright:install`| Install Playwright browsers               |
-| `pnpm storybook`        | Start Storybook development server         |
-| `pnpm storybook:build`  | Build Storybook for production             |
-| `pnpm lint`             | Lint code with ESLint                      |
-| `pnpm lint:fix`         | Fix linting issues automatically           |
-| `pnpm lint:stylelint`   | Lint CSS/SCSS files                        |
-| `pnpm prettier:check`   | Check code formatting                      |
-| `pnpm prettier:write`   | Format code with Prettier                  |
-| `pnpm type-check`       | Check TypeScript types                     |
-| `pnpm messages:extract` | Extract i18n messages                      |
-| `pnpm messages:compile` | Compile i18n messages                      |
-| `pnpm release`          | Automate versioning and package publishing |
+| Command                   | Description                                |
+| ------------------------- | ------------------------------------------ |
+| `pnpm dev`                | Start development server                   |
+| `pnpm build`              | Build for production                       |
+| `pnpm preview`            | Preview production build                   |
+| `pnpm test`               | Run unit tests with Vitest                 |
+| `pnpm test:ui`            | Run tests with UI interface                |
+| `pnpm test:coverage`      | Run tests with coverage report             |
+| `pnpm e2e`                | Run end-to-end tests with Playwright       |
+| `pnpm e2e:ui`             | Run e2e tests with UI interface            |
+| `pnpm e2e:headed`         | Run e2e tests in headed mode               |
+| `pnpm e2e:report`         | Open last Playwright HTML report           |
+| `pnpm e2e:update`         | Update Playwright snapshots                |
+| `pnpm e2e:debug`          | Debug e2e tests (PWDEBUG)                  |
+| `pnpm playwright:install` | Install Playwright browsers                |
+| `pnpm storybook`          | Start Storybook development server         |
+| `pnpm storybook:build`    | Build Storybook for production             |
+| `pnpm lint`               | Lint code with ESLint                      |
+| `pnpm lint:fix`           | Fix linting issues automatically           |
+| `pnpm lint:stylelint`     | Lint CSS/SCSS files                        |
+| `pnpm prettier:check`     | Check code formatting                      |
+| `pnpm prettier:write`     | Format code with Prettier                  |
+| `pnpm type-check`         | Check TypeScript types                     |
+| `pnpm messages:extract`   | Extract i18n messages                      |
+| `pnpm messages:compile`   | Compile i18n messages                      |
+| `pnpm release`            | Automate versioning and package publishing |
 
 ### 🏗️ **Feature-Sliced Design Architecture**
 

@@ -4,7 +4,9 @@ test.describe("About page", () => {
   test("renders core sections and links", async ({ page }: { page: Page }) => {
     await page.goto("/about");
 
-    await expect(page.getByRole("heading", { name: "About This Template" })).toBeVisible();
+    await expect(
+      page.getByRole("heading", { name: "About This Template" })
+    ).toBeVisible();
 
     await expect(page.getByText("Technology Stack")).toBeVisible();
     await expect(page.getByText("React 19")).toBeVisible();
