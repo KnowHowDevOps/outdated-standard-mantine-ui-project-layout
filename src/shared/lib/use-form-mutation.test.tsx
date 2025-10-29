@@ -9,13 +9,21 @@ vi.mock("./notifications", () => ({
   notificationService: {
     success: vi.fn(),
     error: vi.fn(),
+    errorFromAxios: vi.fn(),
   },
 }));
 
 vi.mock("./http-error", () => ({
-  normalizeAxiosError: vi.fn((error) => error),
+  normalizeAxiosError: vi.fn((error) => ({
+    type: "unknown",
+    message: error?.message || "An error occurred",
+    cause: error,
+    retryable: false,
+  })),
   toMantineErrors: vi.fn(() => ({})),
   getErrorMessage: vi.fn((error, fallback) => error?.message || fallback),
+  getErrorTitle: vi.fn(() => "Error"),
+  shouldShowError: vi.fn(() => true),
 }));
 
 const createWrapper = () => {
@@ -129,9 +137,8 @@ describe("useFormMutation", () => {
       expect(result.current.isError).toBe(true);
     });
 
-    expect(notificationService.error).toHaveBeenCalledWith({
+    expect(notificationService.errorFromAxios).toHaveBeenCalledWith(error, {
       title: "Error!",
-      message: "Test error",
     });
   });
 
@@ -196,7 +203,15 @@ describe("useFormMutation", () => {
       expect(result.current.isError).toBe(true);
     });
 
-    expect(onError).toHaveBeenCalledWith(error, "test data", undefined);
+    expect(onError).toHaveBeenCalledWith(
+      expect.objectContaining({
+        type: "unknown",
+        message: "Test error",
+        cause: error,
+      }),
+      "test data",
+      undefined
+    );
   });
 
   it("maps field errors using custom mapField function", async () => {

@@ -5,7 +5,11 @@ import {
   getFieldErrors,
   toMantineErrors,
   getErrorMessage,
+  createProblemDetail,
+  validateProblemDetail,
+  extractExtensionMembers,
   type AppError,
+  type ProblemDetail,
 } from "./http-error";
 import { beforeEach } from "node:test";
 
@@ -53,7 +57,7 @@ describe("HTTP Error Utilities", () => {
 
       expect(result.type).toBe("network");
       expect(result.message).toBe(
-        "Network error. Please check your connection"
+        "Network error. Please check your connection and try again."
       );
       expect(result.retryable).toBe(true);
     });
@@ -70,7 +74,7 @@ describe("HTTP Error Utilities", () => {
       const result = normalizeAxiosError(timeoutError);
 
       expect(result.type).toBe("timeout");
-      expect(result.message).toBe("Request timed out");
+      expect(result.message).toBe("Request timed out. Please try again.");
       expect(result.retryable).toBe(true);
     });
 
@@ -115,7 +119,88 @@ describe("HTTP Error Utilities", () => {
       expect(result.type).toBe("validation");
       expect(result.status).toBe(422);
       expect(result.message).toBe(
-        "Validation failed: Email is required, Name must be at least 2 characters"
+        "Validation failed. Email is required, Name must be at least 2 characters"
+      );
+    });
+
+    it("handles RFC 9457 Problem Details format", () => {
+      const problemDetail: ProblemDetail = {
+        type: "https://example.com/problems/validation-error",
+        title: "Validation Error",
+        status: 400,
+        detail: "The request contains invalid data",
+        instance: "/api/users",
+        code: "VALIDATION_ERROR",
+        correlationId: "corr-123",
+        requestId: "req-456",
+        fields: [
+          {
+            field: "email",
+            message: "Invalid email format",
+            rejectedValue: "invalid-email",
+          },
+        ],
+      };
+
+      const error = {
+        response: {
+          status: 400,
+          data: problemDetail,
+        },
+      } as unknown as AxiosError;
+
+      (axios.isAxiosError as any).mockReturnValue(true);
+      (axios.isCancel as any).mockReturnValue(false);
+
+      const result = normalizeAxiosError(error);
+
+      expect(result.type).toBe("validation");
+      expect(result.status).toBe(400);
+      expect(result.code).toBe("VALIDATION_ERROR");
+      expect(result.correlationId).toBe("corr-123");
+      expect(result.requestId).toBe("req-456");
+      expect(result.message).toBe(
+        "Validation Error. email: Invalid email format"
+      );
+    });
+
+    it("handles RFC 9457 Problem Details with violations", () => {
+      const problemDetail: ProblemDetail = {
+        type: "urn:problem-type:constraint-violation",
+        title: "Constraint Violation",
+        status: 422,
+        detail: "Request validation failed",
+        violations: [
+          {
+            field: "username",
+            message: "Username already exists",
+            code: "DUPLICATE_VALUE",
+          },
+          {
+            propertyPath: "user.password",
+            message: "Password too weak",
+            code: "WEAK_PASSWORD",
+          },
+        ],
+      };
+
+      const error = {
+        response: {
+          status: 422,
+          data: problemDetail,
+        },
+      } as unknown as AxiosError;
+
+      (axios.isAxiosError as any).mockReturnValue(true);
+      (axios.isCancel as any).mockReturnValue(false);
+
+      const result = normalizeAxiosError(error);
+
+      expect(result.type).toBe("validation");
+      expect(result.status).toBe(422);
+      expect(result.code).toBe("CONSTRAINT_VIOLATION");
+      expect(result.message).toBe(
+        "Constraint Violation. username: Username already exists, password: Password too weak"
       );
     });
 
@@ -363,6 +448,132 @@ describe("HTTP Error Utilities", () => {
       const result = getErrorMessage(error);
 
       expect(result).toBe("Request failed");
+    });
+  });
+
+  describe("RFC 9457 Utility Functions", () => {
+    describe("createProblemDetail", () => {
+      it("creates a valid Problem Details object", () => {
+        const result = createProblemDetail({
+          type: "https://example.com/problems/validation-error",
+          title: "Validation Error",
+          status: 400,
+          detail: "Invalid input data",
+          instance: "/api/users",
+          code: "VALIDATION_ERROR",
+          correlationId: "corr-123",
+          fields: [
+            {
+              field: "email",
+              message: "Invalid email format",
+            },
+          ],
+        });
+
+        expect(result.type).toBe(
+          "https://example.com/problems/validation-error"
+        );
+        expect(result.title).toBe("Validation Error");
+        expect(result.status).toBe(400);
+        expect(result.detail).toBe("Invalid input data");
+        expect(result.instance).toBe("/api/users");
+        expect(result.code).toBe("VALIDATION_ERROR");
+        expect(result.correlationId).toBe("corr-123");
+        expect(result.fields).toHaveLength(1);
+        expect(result.timestamp).toBeDefined();
+      });
+
+      it("includes extension members", () => {
+        const result = createProblemDetail({
+          title: "Error",
+          extensions: {
+            customField: "customValue",
+            metadata: { key: "value" },
+          },
+        });
+
+        expect(result.customField).toBe("customValue");
+        expect(result.metadata).toEqual({ key: "value" });
+      });
+    });
+
+    describe("validateProblemDetail", () => {
+      it("validates a correct Problem Details object", () => {
+        const problemDetail = {
+          type: "https://example.com/problems/error",
+          title: "Error",
+          status: 400,
+        };
+
+        const result = validateProblemDetail(problemDetail);
+
+        expect(result.valid).toBe(true);
+        expect(result.errors).toHaveLength(0);
+      });
+
+      it("rejects invalid Problem Details object", () => {
+        const invalidProblemDetail = {
+          type: 123, // Should be string
+          status: "400", // Should be number
+        };
+
+        const result = validateProblemDetail(invalidProblemDetail);
+
+        expect(result.valid).toBe(false);
+        expect(result.errors).toContain("'type' must be a string");
+        expect(result.errors).toContain("'status' must be a number");
+      });
+
+      it("rejects object without standard members", () => {
+        const invalidProblemDetail = {
+          customField: "value",
+        };
+
+        const result = validateProblemDetail(invalidProblemDetail);
+
+        expect(result.valid).toBe(false);
+        expect(result.errors).toContain(
+          "Problem detail must have at least one standard member (type, title, detail, status, or instance)"
+        );
+      });
+
+      it("validates status code range", () => {
+        const invalidProblemDetail = {
+          title: "Error",
+          status: 999, // Invalid status code
+        };
+
+        const result = validateProblemDetail(invalidProblemDetail);
+
+        expect(result.valid).toBe(false);
+        expect(result.errors).toContain(
+          "'status' must be a valid HTTP status code (100-599)"
+        );
+      });
+    });
+
+    describe("extractExtensionMembers", () => {
+      it("extracts extension members from Problem Details", () => {
+        const problemDetail: ProblemDetail = {
+          type: "https://example.com/problems/error",
+          title: "Error",
+          status: 400,
+          customField: "customValue",
+          metadata: { key: "value" },
+          correlationId: "corr-123",
+        };
+
+        const result = extractExtensionMembers(problemDetail);
+
+        expect(result).toEqual({
+          customField: "customValue",
+          metadata: { key: "value" },
+          correlationId: "corr-123",
+        });
+        expect(result.type).toBeUndefined();
+        expect(result.title).toBeUndefined();
+        expect(result.status).toBeUndefined();
+      });
     });
   });
 });
