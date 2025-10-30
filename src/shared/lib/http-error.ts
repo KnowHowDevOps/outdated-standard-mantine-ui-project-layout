@@ -150,7 +150,7 @@ function extractErrorCode(data: any, axiosCode?: string): string | undefined {
   if (data?.type && typeof data.type === "string") {
     // Handle various URI formats
     const uriPatterns = [
-      /^https?:\/\/[^\/]+\/problems\/(.+)$/, // https://example.com/problems/validation-error
+      /^https?:\/\/[^/]+\/problems\/(.+)$/, // https://example.com/problems/validation-error
       /^urn:problem-type:(.+)$/, // urn:problem-type:validation-error
       /^urn:problem:(.+)$/, // urn:problem:validation_error (legacy)
       /^about:blank#(.+)$/, // about:blank#validation-error
