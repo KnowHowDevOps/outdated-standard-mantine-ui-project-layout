@@ -12,6 +12,7 @@ import {
 } from "@tabler/icons-react";
 import { Link, useLocation } from "@tanstack/react-router";
 import { useAuthSessionContext } from "../../../processes/auth-session";
+import { t } from "@lingui/core/macro";
 
 export function Sidebar() {
   const location = useLocation();
@@ -20,13 +21,13 @@ export function Sidebar() {
   return (
     <Stack gap="md">
       <Text size="sm" fw={500}>
-        Navigation
+        {t`Navigation`}
       </Text>
 
       <NavLink
         component={Link}
         to="/"
-        label="Home"
+        label={t`Home`}
         leftSection={<IconHome size="1rem" />}
         active={location.pathname === "/"}
       />
@@ -34,7 +35,7 @@ export function Sidebar() {
       <NavLink
         component={Link}
         to="/about"
-        label="About"
+        label={t`About`}
         leftSection={<IconInfoCircle size="1rem" />}
         active={location.pathname === "/about"}
       />
@@ -42,7 +43,7 @@ export function Sidebar() {
       <NavLink
         component={Link}
         to="/examples"
-        label="Examples"
+        label={t`Examples`}
         leftSection={<IconExposure size="1rem" />}
         active={location.pathname === "/examples"}
       />
@@ -52,7 +53,7 @@ export function Sidebar() {
           <NavLink
             component={Link}
             to="/login"
-            label="Login"
+            label={t`Login`}
             leftSection={<IconLogin size="1rem" />}
             active={location.pathname === "/login"}
           />
@@ -64,7 +65,7 @@ export function Sidebar() {
           <NavLink
             component={Link}
             to="/register"
-            label="Register"
+            label={t`Register`}
             leftSection={<IconChevronRight size="1rem" />}
             active={location.pathname === "/register"}
           />
@@ -74,12 +75,12 @@ export function Sidebar() {
       {isAuthenticated && (
         <>
           <Text size="sm" fw={500} mt="md">
-            Account
+            {t`Account`}
           </Text>
           <NavLink
             component={Link}
             to="/profile"
-            label="Profile"
+            label={t`Profile`}
             leftSection={<IconUser size="1rem" />}
             active={location.pathname === "/profile"}
           />
@@ -89,12 +90,12 @@ export function Sidebar() {
       {isAuthenticated && (
         <>
           <Text size="sm" fw={500} mt="md">
-            Settings
+            {t`Settings`}
           </Text>
           <NavLink
             component={Link}
             to="/settings"
-            label="Settings"
+            label={t`Settings`}
             leftSection={<IconSettings size="1rem" />}
             active={location.pathname === "/settings"}
           />

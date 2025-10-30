@@ -17,6 +17,7 @@ import { createFileRoute, Navigate } from "@tanstack/react-router";
 import { useAuthSessionContext } from "@/processes/auth-session";
 import { FormField } from "@/shared/ui";
 import { useFormMutation } from "@/shared/lib";
+import { t } from "@lingui/core/macro";
 
 export const Route = createFileRoute("/settings")({
   component: SettingsPage,
@@ -51,12 +52,12 @@ function SettingsPage() {
     },
     {
       notifySuccess: {
-        title: "Settings Updated",
-        message: "Your preferences have been saved successfully",
+        title: t`Settings Updated`,
+        message: t`Your preferences have been saved successfully`,
       },
       notifyError: {
-        title: "Update Failed",
-        fallback: "Failed to update settings. Please try again.",
+        title: t`Update Failed`,
+        fallback: t`Failed to update settings. Please try again.`,
       },
     }
   );
@@ -72,18 +73,18 @@ function SettingsPage() {
 
   const timezones = [
     { value: "UTC", label: "UTC" },
-    { value: "America/New_York", label: "Eastern Time (ET)" },
-    { value: "America/Chicago", label: "Central Time (CT)" },
-    { value: "America/Denver", label: "Mountain Time (MT)" },
-    { value: "America/Los_Angeles", label: "Pacific Time (PT)" },
-    { value: "Europe/London", label: "London (GMT)" },
-    { value: "Europe/Paris", label: "Paris (CET)" },
-    { value: "Asia/Tokyo", label: "Tokyo (JST)" },
-    { value: "Australia/Sydney", label: "Sydney (AEST)" },
+    { value: "America/New_York", label: t`Eastern Time (ET)` },
+    { value: "America/Chicago", label: t`Central Time (CT)` },
+    { value: "America/Denver", label: t`Mountain Time (MT)` },
+    { value: "America/Los_Angeles", label: t`Pacific Time (PT)` },
+    { value: "Europe/London", label: t`London (GMT)` },
+    { value: "Europe/Paris", label: t`Paris (CET)` },
+    { value: "Asia/Tokyo", label: t`Tokyo (JST)` },
+    { value: "Australia/Sydney", label: t`Sydney (AEST)` },
   ];
 
   const locales = [
-    { value: "en", label: "English" },
+    { value: "en", label: t`English` },
     { value: "es", label: "Español" },
     { value: "fr", label: "Français" },
     { value: "de", label: "Deutsch" },
@@ -100,10 +101,10 @@ function SettingsPage() {
         <div>
           <Group mb="md">
             <IconSettings size="2rem" color="var(--mantine-color-blue-6)" />
-            <Title order={1}>Settings</Title>
+            <Title order={1}>{t`Settings`}</Title>
           </Group>
           <Text c="dimmed">
-            Manage your account preferences and notification settings
+            {t`Manage your account preferences and notification settings`}
           </Text>
         </div>
 
@@ -111,14 +112,14 @@ function SettingsPage() {
           <Stack gap="lg">
             <Card shadow="sm" padding="lg" radius="md" withBorder>
               <Title order={3} mb="md">
-                Regional Settings
+                {t`Regional Settings`}
               </Title>
 
               <Stack gap="md">
                 <FormField
                   type="select"
                   name="timezone"
-                  label="Timezone"
+                  label={t`Timezone`}
                   data={timezones}
                   form={form}
                   searchable
@@ -127,7 +128,7 @@ function SettingsPage() {
                 <FormField
                   type="select"
                   name="locale"
-                  label="Language"
+                  label={t`Language`}
                   data={locales}
                   form={form}
                   searchable
@@ -137,15 +138,15 @@ function SettingsPage() {
 
             <Card shadow="sm" padding="lg" radius="md" withBorder>
               <Title order={3} mb="md">
-                Notification Preferences
+                {t`Notification Preferences`}
               </Title>
 
               <Stack gap="md">
                 <Group justify="space-between">
                   <div>
-                    <Text fw={500}>Email Notifications</Text>
+                    <Text fw={500}>{t`Email Notifications`}</Text>
                     <Text size="sm" c="dimmed">
-                      Receive important updates via email
+                      {t`Receive important updates via email`}
                     </Text>
                   </div>
                   <Switch
@@ -159,9 +160,9 @@ function SettingsPage() {
 
                 <Group justify="space-between">
                   <div>
-                    <Text fw={500}>Push Notifications</Text>
+                    <Text fw={500}>{t`Push Notifications`}</Text>
                     <Text size="sm" c="dimmed">
-                      Get notified about activity in your browser
+                      {t`Get notified about activity in your browser`}
                     </Text>
                   </div>
                   <Switch
@@ -175,9 +176,9 @@ function SettingsPage() {
 
                 <Group justify="space-between">
                   <div>
-                    <Text fw={500}>Marketing Emails</Text>
+                    <Text fw={500}>{t`Marketing Emails`}</Text>
                     <Text size="sm" c="dimmed">
-                      Receive newsletters and promotional content
+                      {t`Receive newsletters and promotional content`}
                     </Text>
                   </div>
                   <Switch
@@ -191,21 +192,20 @@ function SettingsPage() {
 
             <Card shadow="sm" padding="lg" radius="md" withBorder>
               <Title order={3} mb="md">
-                Account Actions
+                {t`Account Actions`}
               </Title>
 
               <Stack gap="md">
                 <Alert icon={<IconInfoCircle size="1rem" />} color="blue">
-                  These actions will affect your account permanently. Please
-                  proceed with caution.
+                  {t`These actions will affect your account permanently. Please proceed with caution.`}
                 </Alert>
 
                 <Group>
                   <Button variant="outline" color="orange">
-                    Change Password
+                    {t`Change Password`}
                   </Button>
                   <Button variant="outline" color="red">
-                    Delete Account
+                    {t`Delete Account`}
                   </Button>
                 </Group>
               </Stack>
@@ -213,7 +213,7 @@ function SettingsPage() {
 
             <Group justify="flex-end">
               <Button type="submit" loading={mutation.isPending}>
-                Save Settings
+                {t`Save Settings`}
               </Button>
             </Group>
           </Stack>

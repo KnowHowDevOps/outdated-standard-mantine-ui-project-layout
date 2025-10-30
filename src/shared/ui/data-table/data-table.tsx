@@ -8,6 +8,7 @@ import {
 } from "@mantine/core";
 import { IconChevronUp, IconChevronDown } from "@tabler/icons-react";
 import { useState } from "react";
+import { t } from "@lingui/core/macro";
 
 export interface DataTableColumn<T = any> {
   key: string;
@@ -38,7 +39,7 @@ export function DataTable<T = any>({
   loading = false,
   pagination,
   onSort,
-  emptyText = "No data available",
+  emptyText = t`No data available`,
 }: DataTableProps<T>) {
   const [sortKey, setSortKey] = useState<string | null>(null);
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
@@ -81,7 +82,7 @@ export function DataTable<T = any>({
             <Table.Tr key={index}>
               {columns.map((column) => (
                 <Table.Td key={column.key}>
-                  <Text c="dimmed">Loading...</Text>
+                  <Text c="dimmed">{t`Loading...`}</Text>
                 </Table.Td>
               ))}
             </Table.Tr>

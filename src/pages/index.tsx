@@ -13,6 +13,7 @@ import {
 import { notifications } from "@mantine/notifications";
 import { IconCheck, IconRocket, IconStar } from "@tabler/icons-react";
 import { createFileRoute } from "@tanstack/react-router";
+import { t } from "@lingui/core/macro";
 
 import { SampleFormFeature } from "@/features/sample-form";
 
@@ -23,8 +24,8 @@ export const Route = createFileRoute("/")({
 function HomePage() {
   const showNotification = () => {
     notifications.show({
-      title: "Welcome!",
-      message: "This is a Mantine UI notification example",
+      title: t`Welcome!`,
+      message: t`This is a Mantine UI notification example`,
       icon: <IconCheck size="1rem" />,
       color: "green",
     });
@@ -42,12 +43,11 @@ function HomePage() {
           <Group mb="md">
             <IconRocket size="2rem" color="var(--mantine-color-blue-6)" />
             <Title order={1} data-testid="home-title">
-              Welcome to Mantine UI Template
+              {t`Welcome to Mantine UI Template`}
             </Title>
           </Group>
           <Text size="lg" c="dimmed" data-testid="home-subtitle">
-            A modern React template with TypeScript, Vite, TanStack Router, and
-            Mantine UI
+            {t`A modern React template with TypeScript, Vite, TanStack Router, and Mantine UI`}
           </Text>
         </div>
 
@@ -61,15 +61,14 @@ function HomePage() {
               data-testid="quick-start-card"
             >
               <Group justify="space-between" mb="xs">
-                <Text fw={500}>Quick Start</Text>
+                <Text fw={500}>{t`Quick Start`}</Text>
                 <Badge color="pink" variant="light">
-                  Ready
+                  {t`Ready`}
                 </Badge>
               </Group>
 
               <Text size="sm" c="dimmed" mb="md">
-                Everything is set up and ready to go. Start building your
-                application!
+                {t`Everything is set up and ready to go. Start building your application!`}
               </Text>
 
               <List
@@ -81,11 +80,11 @@ function HomePage() {
                   <IconCheck size="1rem" color="var(--mantine-color-green-6)" />
                 }
               >
-                <List.Item>TypeScript configured</List.Item>
-                <List.Item>Mantine UI components ready</List.Item>
-                <List.Item>TanStack Router setup</List.Item>
-                <List.Item>TanStack Query integrated</List.Item>
-                <List.Item>Testing environment ready</List.Item>
+                <List.Item>{t`TypeScript configured`}</List.Item>
+                <List.Item>{t`Mantine UI components ready`}</List.Item>
+                <List.Item>{t`TanStack Router setup`}</List.Item>
+                <List.Item>{t`TanStack Query integrated`}</List.Item>
+                <List.Item>{t`Testing environment ready`}</List.Item>
               </List>
             </Card>
           </Grid.Col>
@@ -99,15 +98,14 @@ function HomePage() {
               data-testid="features-card"
             >
               <Group justify="space-between" mb="xs">
-                <Text fw={500}>Features</Text>
+                <Text fw={500}>{t`Features`}</Text>
                 <Badge color="blue" variant="light">
-                  Modern
+                  {t`Modern`}
                 </Badge>
               </Group>
 
               <Text size="sm" c="dimmed" mb="md">
-                Built with the latest tools and best practices for modern web
-                development.
+                {t`Built with the latest tools and best practices for modern web development.`}
               </Text>
 
               <List
@@ -119,11 +117,11 @@ function HomePage() {
                   <IconStar size="1rem" color="var(--mantine-color-yellow-6)" />
                 }
               >
-                <List.Item>React 19 with concurrent features</List.Item>
-                <List.Item>Vite for lightning-fast development</List.Item>
-                <List.Item>Feature-Sliced Design architecture</List.Item>
-                <List.Item>Testing setup</List.Item>
-                <List.Item>CI/CD with GitHub Actions</List.Item>
+                <List.Item>{t`React 19 with concurrent features`}</List.Item>
+                <List.Item>{t`Vite for lightning-fast development`}</List.Item>
+                <List.Item>{t`Feature-Sliced Design architecture`}</List.Item>
+                <List.Item>{t`Testing setup`}</List.Item>
+                <List.Item>{t`CI/CD with GitHub Actions`}</List.Item>
               </List>
             </Card>
           </Grid.Col>
@@ -138,9 +136,9 @@ function HomePage() {
         >
           <Group justify="space-between" mb="md">
             <div>
-              <Text fw={500}>Try Mantine Components</Text>
+              <Text fw={500}>{t`Try Mantine Components`}</Text>
               <Text size="sm" c="dimmed">
-                Test the notification system and other Mantine features
+                {t`Test the notification system and other Mantine features`}
               </Text>
             </div>
             <Button
@@ -148,7 +146,7 @@ function HomePage() {
               leftSection={<IconCheck size="1rem" />}
               data-testid="show-notification-btn"
             >
-              Show Notification
+              {t`Show Notification`}
             </Button>
           </Group>
         </Card>

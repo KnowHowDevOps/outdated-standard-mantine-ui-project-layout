@@ -18,17 +18,136 @@ msgstr ""
 msgid "{0}"
 msgstr "{0}"
 
+#: src/pages/examples.tsx:160
+#~ msgid "{0} deleted successfully"
+#~ msgstr "{0} deleted successfully"
+
+#: src/pages/examples.tsx:163
+msgid "{userName} deleted successfully"
+msgstr "{userName} deleted successfully"
+
+#: src/pages/index.tsx:50
+msgid "A modern React template with TypeScript, Vite, TanStack Router, and Mantine UI"
+msgstr "A modern React template with TypeScript, Vite, TanStack Router, and Mantine UI"
+
+#: src/widgets/sidebar/ui/sidebar.tsx:38
+msgid "About"
+msgstr "About"
+
+#: src/pages/about.tsx:27
+msgid "About This Template"
+msgstr "About This Template"
+
+#: src/pages/profile.tsx:226
+#: src/widgets/header/ui/header.tsx:45
+#: src/widgets/sidebar/ui/sidebar.tsx:78
+msgid "Account"
+msgstr "Account"
+
+#: src/pages/settings.tsx:195
+msgid "Account Actions"
+msgstr "Account Actions"
+
+#: src/pages/profile.tsx:103
+msgid "Account Information"
+msgstr "Account Information"
+
+#: src/pages/profile.tsx:239
+msgid "Account owner"
+msgstr "Account owner"
+
+#: src/pages/profile.tsx:191
+msgid "Account Status"
+msgstr "Account Status"
+
+#: src/pages/examples.tsx:133
+msgid "Actions"
+msgstr "Actions"
+
+#: src/pages/profile.tsx:226
+msgid "active"
+msgstr "active"
+
+#: src/pages/profile.tsx:79
+msgid "Active"
+msgstr "Active"
+
+#: src/pages/examples.tsx:266
+msgid "Add new user clicked"
+msgstr "Add new user clicked"
+
+#: src/pages/examples.tsx:269
+msgid "Add User"
+msgstr "Add User"
+
+#: src/pages/profile.tsx:83
+msgid "Admin"
+msgstr "Admin"
+
+#: src/pages/register.tsx:25
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+#: src/shared/ui/error-boundary/error-boundary.tsx:70
+msgid "An unexpected error occurred"
+msgstr "An unexpected error occurred"
+
+#: src/shared/ui/error-boundary/error-boundary.tsx:66
+msgid "Application Error"
+msgstr "Application Error"
+
+#: src/pages/about.tsx:70
+msgid "Architecture"
+msgstr "Architecture"
+
+#: src/pages/examples.tsx:48
+msgid "Are you sure you want to delete this user? This action cannot be undone."
+msgstr "Are you sure you want to delete this user? This action cannot be undone."
+
 #: src/shared/ui/confirmation-modal/confirm-context-modal.tsx:23
 #: src/shared/ui/confirmation-modal/confirmation-modal.tsx:23
 #: src/shared/ui/confirmation-modal/open-confirm.ts:16
 msgid "Are you sure you want to proceed?"
 msgstr "Are you sure you want to proceed?"
 
+#: src/pages/about.tsx:77
+msgid "Built following Feature-Sliced Design methodology for maintainable and scalable frontend architecture."
+msgstr "Built following Feature-Sliced Design methodology for maintainable and scalable frontend architecture."
+
+#: src/pages/index.tsx:108
+msgid "Built with the latest tools and best practices for modern web development."
+msgstr "Built with the latest tools and best practices for modern web development."
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:92
 #: src/shared/ui/confirmation-modal/confirm-context-modal.tsx:25
 #: src/shared/ui/confirmation-modal/confirmation-modal.tsx:25
 #: src/shared/ui/confirmation-modal/open-confirm.ts:18
 msgid "Cancel"
 msgstr "Cancel"
+
+#: src/pages/settings.tsx:77
+msgid "Central Time (CT)"
+msgstr "Central Time (CT)"
+
+#: src/pages/settings.tsx:205
+msgid "Change Password"
+msgstr "Change Password"
+
+#: src/pages/index.tsx:124
+msgid "CI/CD with GitHub Actions"
+msgstr "CI/CD with GitHub Actions"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:65
+msgid "Click the plus button to open a modal with a sample form using Mantine components. This demonstrates Feature-Sliced Design architecture."
+msgstr "Click the plus button to open a modal with a sample form using Mantine components. This demonstrates Feature-Sliced Design architecture."
+
+#: src/pages/about.tsx:91
+msgid "Code Quality:"
+msgstr "Code Quality:"
+
+#: src/pages/examples.tsx:186
+msgid "Component Examples"
+msgstr "Component Examples"
 
 #: src/shared/ui/confirmation-modal/confirm-context-modal.tsx:24
 #: src/shared/ui/confirmation-modal/confirmation-modal.tsx:24
@@ -41,3 +160,741 @@ msgstr "Confirm"
 #: src/shared/ui/confirmation-modal/open-confirm.ts:15
 msgid "Confirm Action"
 msgstr "Confirm Action"
+
+#: src/features/authentication/ui/register-form.tsx:52
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+#: src/features/authentication/ui/register-form.tsx:53
+msgid "Confirm your password"
+msgstr "Confirm your password"
+
+#: src/pages/examples.tsx:237
+msgid "Confirmation modals, notifications, loading states, and error boundaries."
+msgstr "Confirmation modals, notifications, loading states, and error boundaries."
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:42
+msgid "Could not submit the form"
+msgstr "Could not submit the form"
+
+#: src/pages/login.tsx:35
+msgid "Create account"
+msgstr "Create account"
+
+#: src/features/authentication/ui/register-form.tsx:18
+#: src/features/authentication/ui/register-form.tsx:59
+msgid "Create Account"
+msgstr "Create Account"
+
+#: src/pages/register.tsx:22
+msgid "Create your account"
+msgstr "Create your account"
+
+#: src/pages/examples.tsx:259
+msgid "Data Table Example"
+msgstr "Data Table Example"
+
+#: src/pages/examples.tsx:216
+msgid "Data Tables"
+msgstr "Data Tables"
+
+#: src/pages/examples.tsx:49
+msgid "Delete"
+msgstr "Delete"
+
+#: src/pages/settings.tsx:208
+msgid "Delete Account"
+msgstr "Delete Account"
+
+#: src/pages/examples.tsx:47
+msgid "Delete User"
+msgstr "Delete User"
+
+#: src/pages/login.tsx:44
+msgid "Demo Credentials (if available):"
+msgstr "Demo Credentials (if available):"
+
+#: src/pages/login.tsx:33
+msgid "Do not have an account yet?"
+msgstr "Do not have an account yet?"
+
+#: src/features/authentication/ui/register-form.tsx:32
+msgid "Doe"
+msgstr "Doe"
+
+#: src/pages/settings.tsx:76
+msgid "Eastern Time (ET)"
+msgstr "Eastern Time (ET)"
+
+#: src/pages/about.tsx:100
+msgid "Easy"
+msgstr "Easy"
+
+#: src/pages/profile.tsx:93
+msgid "Edit Profile"
+msgstr "Edit Profile"
+
+#: src/pages/examples.tsx:149
+#~ msgid "Editing {0}"
+#~ msgstr "Editing {0}"
+
+#: src/pages/examples.tsx:151
+msgid "Editing {userName}"
+msgstr "Editing {userName}"
+
+#: src/features/authentication/ui/login-form.tsx:20
+#: src/features/authentication/ui/register-form.tsx:38
+#: src/features/sample-form/ui/sample-form-feature.tsx:82
+#: src/pages/profile.tsx:208
+msgid "Email"
+msgstr "Email"
+
+#: src/pages/profile.tsx:131
+msgid "Email Address"
+msgstr "Email Address"
+
+#: src/pages/profile.tsx:149
+msgid "Email not verified"
+msgstr "Email not verified"
+
+#: src/pages/settings.tsx:147
+msgid "Email Notifications"
+msgstr "Email Notifications"
+
+#: src/pages/login.tsx:47
+msgid "Email: demo@example.com"
+msgstr "Email: demo@example.com"
+
+#: src/pages/about.tsx:85
+msgid "End-to-end type safety from API to UI components"
+msgstr "End-to-end type safety from API to UI components"
+
+#: src/pages/settings.tsx:87
+msgid "English"
+msgstr "English"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:83
+msgid "Enter your email"
+msgstr "Enter your email"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:76
+msgid "Enter your name"
+msgstr "Enter your name"
+
+#: src/pages/examples.tsx:306
+msgid "Error"
+msgstr "Error"
+
+#: src/pages/examples.tsx:303
+msgid "Error notification!"
+msgstr "Error notification!"
+
+#: src/pages/about.tsx:91
+msgid "ESLint, Prettier, and automated quality checks"
+msgstr "ESLint, Prettier, and automated quality checks"
+
+#: src/pages/index.tsx:71
+msgid "Everything is set up and ready to go. Start building your application!"
+msgstr "Everything is set up and ready to go. Start building your application!"
+
+#: src/widgets/sidebar/ui/sidebar.tsx:46
+msgid "Examples"
+msgstr "Examples"
+
+#: src/pages/examples.tsx:189
+msgid "Explore the various components and features available in this template"
+msgstr "Explore the various components and features available in this template"
+
+#: src/widgets/header/ui/header.tsx:24
+msgid "Failed to logout. Please try again."
+msgstr "Failed to logout. Please try again."
+
+#: src/pages/settings.tsx:60
+msgid "Failed to update settings. Please try again."
+msgstr "Failed to update settings. Please try again."
+
+#: src/pages/index.tsx:122
+msgid "Feature-Sliced Design architecture"
+msgstr "Feature-Sliced Design architecture"
+
+#: src/pages/about.tsx:82
+msgid "Feature-Sliced Design:"
+msgstr "Feature-Sliced Design:"
+
+#: src/pages/index.tsx:101
+msgid "Features"
+msgstr "Features"
+
+#: src/features/authentication/ui/register-form.tsx:24
+msgid "First Name"
+msgstr "First Name"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:37
+msgid "Form submitted!"
+msgstr "Form submitted!"
+
+#: src/pages/examples.tsx:198
+msgid "Forms"
+msgstr "Forms"
+
+#: src/pages/profile.tsx:115
+msgid "Full Name"
+msgstr "Full Name"
+
+#: src/pages/examples.tsx:222
+msgid "Functional"
+msgstr "Functional"
+
+#: src/pages/settings.tsx:165
+msgid "Get notified about activity in your browser"
+msgstr "Get notified about activity in your browser"
+
+#: src/pages/about.tsx:98
+msgid "Getting Started"
+msgstr "Getting Started"
+
+#: src/pages/404.tsx:46
+msgid "Go Back"
+msgstr "Go Back"
+
+#: src/pages/404.tsx:53
+msgid "Go Home"
+msgstr "Go Home"
+
+#: src/widgets/sidebar/ui/sidebar.tsx:30
+msgid "Home"
+msgstr "Home"
+
+#: src/pages/profile.tsx:226
+msgid "inactive"
+msgstr "inactive"
+
+#: src/pages/profile.tsx:79
+msgid "Inactive"
+msgstr "Inactive"
+
+#: src/pages/examples.tsx:324
+msgid "Info"
+msgstr "Info"
+
+#: src/pages/examples.tsx:321
+msgid "Info notification!"
+msgstr "Info notification!"
+
+#: src/pages/examples.tsx:204
+msgid "Interactive"
+msgstr "Interactive"
+
+#: src/pages/examples.tsx:261
+msgid "Interactive data table with sorting, actions, and custom rendering"
+msgstr "Interactive data table with sorting, actions, and custom rendering"
+
+#: src/entities/form/model/validation-rules.ts:13
+msgid "Invalid email address"
+msgstr "Invalid email address"
+
+#: src/entities/form/model/validation-rules.ts:67
+msgid "Invalid phone number"
+msgstr "Invalid phone number"
+
+#: src/entities/form/model/validation-rules.ts:78
+msgid "Invalid URL"
+msgstr "Invalid URL"
+
+#: src/features/authentication/ui/register-form.tsx:25
+msgid "John"
+msgstr "John"
+
+#: src/pages/settings.tsx:131
+msgid "Language"
+msgstr "Language"
+
+#: src/features/authentication/ui/register-form.tsx:31
+msgid "Last Name"
+msgstr "Last Name"
+
+#: src/pages/about.tsx:48
+msgid "Latest React with concurrent features and improved performance"
+msgstr "Latest React with concurrent features and improved performance"
+
+#: src/pages/about.tsx:30
+msgid "Learn more about the technologies and architecture used in this project"
+msgstr "Learn more about the technologies and architecture used in this project"
+
+#: src/pages/about.tsx:54
+msgid "Lightning-fast development server with instant HMR"
+msgstr "Lightning-fast development server with instant HMR"
+
+#: src/shared/ui/data-table/data-table.tsx:85
+msgid "Loading..."
+msgstr "Loading..."
+
+#: src/widgets/sidebar/ui/sidebar.tsx:56
+msgid "Login"
+msgstr "Login"
+
+#: src/widgets/header/ui/header.tsx:58
+msgid "Logout"
+msgstr "Logout"
+
+#: src/widgets/header/ui/header.tsx:23
+msgid "Logout Failed"
+msgstr "Logout Failed"
+
+#: src/pages/settings.tsx:80
+msgid "London (GMT)"
+msgstr "London (GMT)"
+
+#: src/pages/profile.tsx:55
+msgid "Manage your account information and preferences"
+msgstr "Manage your account information and preferences"
+
+#: src/pages/settings.tsx:107
+msgid "Manage your account preferences and notification settings"
+msgstr "Manage your account preferences and notification settings"
+
+#: src/pages/index.tsx:84
+msgid "Mantine UI components ready"
+msgstr "Mantine UI components ready"
+
+#: src/widgets/header/ui/header.tsx:12
+msgid "Mantine UI Template"
+msgstr "Mantine UI Template"
+
+#: src/pages/about.tsx:57
+msgid "Mantine UI:"
+msgstr "Mantine UI:"
+
+#: src/pages/settings.tsx:179
+msgid "Marketing Emails"
+msgstr "Marketing Emails"
+
+#: src/pages/about.tsx:38
+#: src/pages/index.tsx:103
+msgid "Modern"
+msgstr "Modern"
+
+#: src/pages/about.tsx:57
+msgid "Modern React components library with comprehensive theming"
+msgstr "Modern React components library with comprehensive theming"
+
+#: src/pages/settings.tsx:78
+msgid "Mountain Time (MT)"
+msgstr "Mountain Time (MT)"
+
+#: src/entities/form/model/validation-rules.ts:86
+msgid "Must be a number"
+msgstr "Must be a number"
+
+#: src/entities/form/model/validation-rules.ts:22
+msgid "Must be at least {min} characters"
+msgstr "Must be at least {min} characters"
+
+#: src/entities/form/model/validation-rules.ts:31
+msgid "Must be no more than {max} characters"
+msgstr "Must be no more than {max} characters"
+
+#: src/entities/form/model/validation-rules.ts:95
+msgid "Must contain only letters and numbers"
+msgstr "Must contain only letters and numbers"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:75
+msgid "Name"
+msgstr "Name"
+
+#: src/widgets/sidebar/ui/sidebar.tsx:24
+msgid "Navigation"
+msgstr "Navigation"
+
+#: src/shared/ui/data-table/data-table.tsx:42
+msgid "No data available"
+msgstr "No data available"
+
+#: src/pages/examples.tsx:277
+msgid "No users found"
+msgstr "No users found"
+
+#: src/widgets/header/ui/header.tsx:64
+msgid "Not authenticated"
+msgstr "Not authenticated"
+
+#: src/pages/profile.tsx:209
+msgid "not verified"
+msgstr "not verified"
+
+#: src/pages/examples.tsx:283
+msgid "Notification Examples"
+msgstr "Notification Examples"
+
+#: src/pages/settings.tsx:141
+msgid "Notification Preferences"
+msgstr "Notification Preferences"
+
+#: src/pages/about.tsx:82
+msgid "Organized by business features rather than technical layers"
+msgstr "Organized by business features rather than technical layers"
+
+#: src/pages/settings.tsx:79
+msgid "Pacific Time (PT)"
+msgstr "Pacific Time (PT)"
+
+#: src/pages/404.tsx:33
+msgid "Page Not Found"
+msgstr "Page Not Found"
+
+#: src/pages/settings.tsx:81
+msgid "Paris (CET)"
+msgstr "Paris (CET)"
+
+#: src/features/authentication/ui/login-form.tsx:29
+#: src/features/authentication/ui/register-form.tsx:45
+msgid "Password"
+msgstr "Password"
+
+#: src/entities/form/model/validation-rules.ts:39
+msgid "Password must be at least 8 characters"
+msgstr "Password must be at least 8 characters"
+
+#: src/entities/form/model/validation-rules.ts:42
+msgid "Password must contain at least one lowercase letter"
+msgstr "Password must contain at least one lowercase letter"
+
+#: src/entities/form/model/validation-rules.ts:48
+msgid "Password must contain at least one number"
+msgstr "Password must contain at least one number"
+
+#: src/entities/form/model/validation-rules.ts:45
+msgid "Password must contain at least one uppercase letter"
+msgstr "Password must contain at least one uppercase letter"
+
+#: src/pages/login.tsx:50
+msgid "Password: password123"
+msgstr "Password: password123"
+
+#: src/entities/form/model/validation-rules.ts:57
+msgid "Passwords do not match"
+msgstr "Passwords do not match"
+
+#: src/pages/about.tsx:63
+msgid "Powerful data synchronization and caching"
+msgstr "Powerful data synchronization and caching"
+
+#: src/pages/profile.tsx:52
+#: src/widgets/header/ui/header.tsx:46
+#: src/widgets/sidebar/ui/sidebar.tsx:83
+msgid "Profile"
+msgstr "Profile"
+
+#: src/pages/settings.tsx:163
+msgid "Push Notifications"
+msgstr "Push Notifications"
+
+#: src/pages/index.tsx:64
+msgid "Quick Start"
+msgstr "Quick Start"
+
+#: src/pages/index.tsx:120
+msgid "React 19 with concurrent features"
+msgstr "React 19 with concurrent features"
+
+#: src/pages/about.tsx:48
+msgid "React 19:"
+msgstr "React 19:"
+
+#: src/pages/index.tsx:66
+msgid "Ready"
+msgstr "Ready"
+
+#: src/pages/about.tsx:105
+msgid "Ready to start building? Check out the documentation and source code."
+msgstr "Ready to start building? Check out the documentation and source code."
+
+#: src/pages/settings.tsx:149
+msgid "Receive important updates via email"
+msgstr "Receive important updates via email"
+
+#: src/pages/settings.tsx:181
+msgid "Receive newsletters and promotional content"
+msgstr "Receive newsletters and promotional content"
+
+#: src/pages/settings.tsx:115
+msgid "Regional Settings"
+msgstr "Regional Settings"
+
+#: src/widgets/sidebar/ui/sidebar.tsx:68
+msgid "Register"
+msgstr "Register"
+
+#: src/pages/examples.tsx:240
+msgid "Reusable"
+msgstr "Reusable"
+
+#: src/pages/examples.tsx:201
+msgid "Reusable form components with validation, built using Mantine Form and custom validation rules."
+msgstr "Reusable form components with validation, built using Mantine Form and custom validation rules."
+
+#: src/pages/examples.tsx:110
+#: src/pages/profile.tsx:180
+msgid "Role"
+msgstr "Role"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:69
+msgid "Sample Form"
+msgstr "Sample Form"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:59
+#: src/pages/examples.tsx:248
+msgid "Sample Form Feature"
+msgstr "Sample Form Feature"
+
+#: src/pages/settings.tsx:216
+msgid "Save Settings"
+msgstr "Save Settings"
+
+#: src/pages/about.tsx:72
+msgid "Scalable"
+msgstr "Scalable"
+
+#: src/pages/settings.tsx:104
+#: src/widgets/header/ui/header.tsx:48
+#: src/widgets/sidebar/ui/sidebar.tsx:93
+#: src/widgets/sidebar/ui/sidebar.tsx:98
+msgid "Settings"
+msgstr "Settings"
+
+#: src/pages/settings.tsx:55
+msgid "Settings Updated"
+msgstr "Settings Updated"
+
+#: src/pages/index.tsx:149
+msgid "Show Notification"
+msgstr "Show Notification"
+
+#: src/pages/register.tsx:27
+msgid "Sign in"
+msgstr "Sign in"
+
+#: src/features/authentication/ui/login-form.tsx:12
+#: src/features/authentication/ui/login-form.tsx:36
+msgid "Sign In"
+msgstr "Sign In"
+
+#: src/shared/ui/error-boundary/error-boundary.tsx:62
+msgid "Something went wrong"
+msgstr "Something went wrong"
+
+#: src/pages/examples.tsx:219
+msgid "Sortable, filterable data tables with pagination and custom cell rendering."
+msgstr "Sortable, filterable data tables with pagination and custom cell rendering."
+
+#: src/pages/examples.tsx:177
+msgid "Sorting by {key} in {direction} order"
+msgstr "Sorting by {key} in {direction} order"
+
+#: src/pages/examples.tsx:124
+msgid "Status"
+msgstr "Status"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:99
+msgid "Submit"
+msgstr "Submit"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:41
+msgid "Submit Failed"
+msgstr "Submit Failed"
+
+#: src/pages/examples.tsx:298
+msgid "Success"
+msgstr "Success"
+
+#: src/pages/examples.tsx:294
+msgid "Success notification!"
+msgstr "Success notification!"
+
+#: src/pages/settings.tsx:83
+msgid "Sydney (AEST)"
+msgstr "Sydney (AEST)"
+
+#: src/pages/index.tsx:86
+msgid "TanStack Query integrated"
+msgstr "TanStack Query integrated"
+
+#: src/pages/about.tsx:63
+msgid "TanStack Query:"
+msgstr "TanStack Query:"
+
+#: src/pages/index.tsx:85
+msgid "TanStack Router setup"
+msgstr "TanStack Router setup"
+
+#: src/pages/about.tsx:60
+msgid "TanStack Router:"
+msgstr "TanStack Router:"
+
+#: src/pages/about.tsx:36
+msgid "Technology Stack"
+msgstr "Technology Stack"
+
+#: src/pages/examples.tsx:286
+msgid "Test different types of notifications"
+msgstr "Test different types of notifications"
+
+#: src/pages/index.tsx:141
+msgid "Test the notification system and other Mantine features"
+msgstr "Test the notification system and other Mantine features"
+
+#: src/pages/index.tsx:87
+msgid "Testing environment ready"
+msgstr "Testing environment ready"
+
+#: src/pages/about.tsx:88
+msgid "Testing Ready:"
+msgstr "Testing Ready:"
+
+#: src/pages/index.tsx:123
+msgid "Testing setup"
+msgstr "Testing setup"
+
+#: src/pages/about.tsx:88
+msgid "testing setup with Vitest and Playwright"
+msgstr "testing setup with Vitest and Playwright"
+
+#: src/pages/404.tsx:36
+msgid "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+msgstr "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+
+#: src/pages/settings.tsx:200
+msgid "These actions will affect your account permanently. Please proceed with caution."
+msgstr "These actions will affect your account permanently. Please proceed with caution."
+
+#: src/pages/examples.tsx:251
+msgid "This demonstrates a complete feature implementation following Feature-Sliced Design principles."
+msgstr "This demonstrates a complete feature implementation following Feature-Sliced Design principles."
+
+#: src/entities/form/model/validation-rules.ts:6
+msgid "This field is required"
+msgstr "This field is required"
+
+#: src/pages/index.tsx:28
+msgid "This is a Mantine UI notification example"
+msgstr "This is a Mantine UI notification example"
+
+#: src/pages/about.tsx:43
+msgid "This template is built with cutting-edge technologies for optimal developer experience and performance."
+msgstr "This template is built with cutting-edge technologies for optimal developer experience and performance."
+
+#: src/pages/profile.tsx:164
+#: src/pages/settings.tsx:122
+msgid "Timezone"
+msgstr "Timezone"
+
+#: src/pages/settings.tsx:82
+msgid "Tokyo (JST)"
+msgstr "Tokyo (JST)"
+
+#: src/shared/ui/error-boundary/error-boundary.tsx:77
+msgid "Try Again"
+msgstr "Try Again"
+
+#: src/pages/index.tsx:139
+msgid "Try Mantine Components"
+msgstr "Try Mantine Components"
+
+#: src/pages/about.tsx:85
+msgid "Type Safety:"
+msgstr "Type Safety:"
+
+#: src/pages/about.tsx:51
+msgid "Type-safe development with enhanced developer experience"
+msgstr "Type-safe development with enhanced developer experience"
+
+#: src/pages/about.tsx:60
+msgid "Type-safe routing with code splitting"
+msgstr "Type-safe routing with code splitting"
+
+#: src/pages/index.tsx:83
+msgid "TypeScript configured"
+msgstr "TypeScript configured"
+
+#: src/pages/about.tsx:51
+msgid "TypeScript:"
+msgstr "TypeScript:"
+
+#: src/pages/examples.tsx:234
+msgid "UI Components"
+msgstr "UI Components"
+
+#: src/pages/settings.tsx:59
+msgid "Update Failed"
+msgstr "Update Failed"
+
+#: src/pages/examples.tsx:88
+#: src/pages/profile.tsx:182
+msgid "User"
+msgstr "User"
+
+#: src/pages/profile.tsx:209
+msgid "verified"
+msgstr "verified"
+
+#: src/pages/about.tsx:116
+msgid "View on GitHub"
+msgstr "View on GitHub"
+
+#: src/pages/examples.tsx:140
+#~ msgid "Viewing {0}"
+#~ msgstr "Viewing {0}"
+
+#: src/pages/examples.tsx:141
+msgid "Viewing {userName}"
+msgstr "Viewing {userName}"
+
+#: src/pages/index.tsx:121
+msgid "Vite for lightning-fast development"
+msgstr "Vite for lightning-fast development"
+
+#: src/pages/about.tsx:54
+msgid "Vite:"
+msgstr "Vite:"
+
+#: src/pages/examples.tsx:316
+msgid "Warning"
+msgstr "Warning"
+
+#: src/pages/examples.tsx:312
+msgid "Warning notification!"
+msgstr "Warning notification!"
+
+#: src/features/sample-form/ui/sample-form-feature.tsx:38
+msgid "We have received your submission."
+msgstr "We have received your submission."
+
+#: src/pages/login.tsx:30
+msgid "Welcome back!"
+msgstr "Welcome back!"
+
+#: src/pages/index.tsx:46
+msgid "Welcome to Mantine UI Template"
+msgstr "Welcome to Mantine UI Template"
+
+#: src/pages/index.tsx:27
+msgid "Welcome!"
+msgstr "Welcome!"
+
+#: src/widgets/header/ui/header.tsx:19
+msgid "You have been logged out successfully"
+msgstr "You have been logged out successfully"
+
+#: src/features/authentication/ui/login-form.tsx:30
+#: src/features/authentication/ui/register-form.tsx:46
+msgid "Your password"
+msgstr "Your password"
+
+#: src/pages/settings.tsx:56
+msgid "Your preferences have been saved successfully"
+msgstr "Your preferences have been saved successfully"
+
+#: src/features/authentication/ui/login-form.tsx:21
+#: src/features/authentication/ui/register-form.tsx:39
+msgid "your@email.com"
+msgstr "your@email.com"

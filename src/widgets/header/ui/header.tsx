@@ -3,24 +3,25 @@ import { IconLogout, IconSettings, IconUser } from "@tabler/icons-react";
 import { useAuthSessionContext } from "@/processes/auth-session";
 import { getUserDisplayName, getUserInitials } from "@/entities/user";
 import { notificationService } from "@/shared/lib";
+import { t } from "@lingui/core/macro";
 
 interface HeaderProps {
   title?: string;
 }
 
-export function Header({ title = "Mantine UI Template" }: HeaderProps) {
+export function Header({ title = t`Mantine UI Template` }: HeaderProps) {
   const { user, logout, isAuthenticated } = useAuthSessionContext();
 
   const handleLogout = async () => {
     try {
       await logout();
       notificationService.success({
-        message: "You have been logged out successfully",
+        message: t`You have been logged out successfully`,
       });
     } catch (error) {
       notificationService.error({
-        title: "Logout Failed",
-        message: "Failed to logout. Please try again.",
+        title: t`Logout Failed`,
+        message: t`Failed to logout. Please try again.`,
       });
     }
   };
@@ -41,10 +42,12 @@ export function Header({ title = "Mantine UI Template" }: HeaderProps) {
           </Menu.Target>
 
           <Menu.Dropdown>
-            <Menu.Label>Account</Menu.Label>
-            <Menu.Item leftSection={<IconUser size={14} />}>Profile</Menu.Item>
+            <Menu.Label>{t`Account`}</Menu.Label>
+            <Menu.Item
+              leftSection={<IconUser size={14} />}
+            >{t`Profile`}</Menu.Item>
             <Menu.Item leftSection={<IconSettings size={14} />}>
-              Settings
+              {t`Settings`}
             </Menu.Item>
 
             <Menu.Divider />
@@ -54,13 +57,13 @@ export function Header({ title = "Mantine UI Template" }: HeaderProps) {
               onClick={handleLogout}
               color="red"
             >
-              Logout
+              {t`Logout`}
             </Menu.Item>
           </Menu.Dropdown>
         </Menu>
       ) : (
         <Text size="sm" c="dimmed">
-          Not authenticated
+          {t`Not authenticated`}
         </Text>
       )}
     </Group>

@@ -1,6 +1,7 @@
 import { Button, Paper, Stack, Title } from "@mantine/core";
 import { FormField } from "@/shared/ui";
 import { useLoginForm } from "../model/use-login-form";
+import { t } from "@lingui/core/macro";
 
 export function LoginForm() {
   const { form, handleSubmit, isPending } = useLoginForm();
@@ -8,7 +9,7 @@ export function LoginForm() {
   return (
     <Paper withBorder shadow="md" p={30} mt={30} radius="md">
       <Title order={2} ta="center" mb="md">
-        Sign In
+        {t`Sign In`}
       </Title>
 
       <form onSubmit={form.onSubmit(handleSubmit)}>
@@ -16,8 +17,8 @@ export function LoginForm() {
           <FormField
             type="email"
             name="email"
-            label="Email"
-            placeholder="your@email.com"
+            label={t`Email`}
+            placeholder={t`your@email.com`}
             required
             form={form}
           />
@@ -25,14 +26,14 @@ export function LoginForm() {
           <FormField
             type="password"
             name="password"
-            label="Password"
-            placeholder="Your password"
+            label={t`Password`}
+            placeholder={t`Your password`}
             required
             form={form}
           />
 
           <Button type="submit" fullWidth loading={isPending}>
-            Sign In
+            {t`Sign In`}
           </Button>
         </Stack>
       </form>

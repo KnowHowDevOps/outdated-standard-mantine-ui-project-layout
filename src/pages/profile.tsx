@@ -30,6 +30,7 @@ import {
   isUserAdmin,
   isUserEmailVerified,
 } from "@/entities/user";
+import { t } from "@lingui/core/macro";
 
 export const Route = createFileRoute("/profile")({
   component: ProfilePage,
@@ -48,10 +49,10 @@ function ProfilePage() {
       <Stack gap="xl">
         <div>
           <Title order={1} mb="md">
-            Profile
+            {t`Profile`}
           </Title>
           <Text c="dimmed">
-            Manage your account information and preferences
+            {t`Manage your account information and preferences`}
           </Text>
         </div>
 
@@ -75,11 +76,11 @@ function ProfilePage() {
                     color={isUserActive(user) ? "green" : "red"}
                     variant="light"
                   >
-                    {isUserActive(user) ? "Active" : "Inactive"}
+                    {isUserActive(user) ? t`Active` : t`Inactive`}
                   </Badge>
                   {isUserAdmin(user) && (
                     <Badge color="blue" variant="light">
-                      Admin
+                      {t`Admin`}
                     </Badge>
                   )}
                 </Group>
@@ -89,7 +90,7 @@ function ProfilePage() {
                   variant="light"
                   fullWidth
                 >
-                  Edit Profile
+                  {t`Edit Profile`}
                 </Button>
               </Stack>
             </Card>
@@ -99,7 +100,7 @@ function ProfilePage() {
             <Stack gap="md">
               <Card shadow="sm" padding="lg" radius="md" withBorder>
                 <Title order={4} mb="md">
-                  Account Information
+                  {t`Account Information`}
                 </Title>
 
                 <List spacing="md">
@@ -111,7 +112,7 @@ function ProfilePage() {
                     }
                   >
                     <div>
-                      <Text fw={500}>Full Name</Text>
+                      <Text fw={500}>{t`Full Name`}</Text>
                       <Text size="sm" c="dimmed">
                         {user.first_name} {user.last_name}
                       </Text>
@@ -127,7 +128,7 @@ function ProfilePage() {
                   >
                     <div>
                       <Group gap="xs">
-                        <Text fw={500}>Email Address</Text>
+                        <Text fw={500}>{t`Email Address`}</Text>
                         {isUserEmailVerified(user) ? (
                           <IconCheck
                             size="1rem"
@@ -145,7 +146,7 @@ function ProfilePage() {
                       </Text>
                       {!isUserEmailVerified(user) && (
                         <Text size="xs" c="red">
-                          Email not verified
+                          {t`Email not verified`}
                         </Text>
                       )}
                     </div>
@@ -160,7 +161,7 @@ function ProfilePage() {
                       }
                     >
                       <div>
-                        <Text fw={500}>Timezone</Text>
+                        <Text fw={500}>{t`Timezone`}</Text>
                         <Text size="sm" c="dimmed">
                           {user.timezone}
                         </Text>
@@ -176,9 +177,9 @@ function ProfilePage() {
                     }
                   >
                     <div>
-                      <Text fw={500}>Role</Text>
+                      <Text fw={500}>{t`Role`}</Text>
                       <Text size="sm" c="dimmed">
-                        {user.role || "User"}
+                        {user.role || t`User`}
                       </Text>
                     </div>
                   </List.Item>
@@ -187,7 +188,7 @@ function ProfilePage() {
 
               <Card shadow="sm" padding="lg" radius="md" withBorder>
                 <Title order={4} mb="md">
-                  Account Status
+                  {t`Account Status`}
                 </Title>
 
                 <List spacing="sm">
@@ -204,8 +205,10 @@ function ProfilePage() {
                     }
                   >
                     <Text size="sm">
-                      Email{" "}
-                      {isUserEmailVerified(user) ? "verified" : "not verified"}
+                      {t`Email`}{" "}
+                      {isUserEmailVerified(user)
+                        ? t`verified`
+                        : t`not verified`}
                     </Text>
                   </List.Item>
 
@@ -222,7 +225,8 @@ function ProfilePage() {
                     }
                   >
                     <Text size="sm">
-                      Account {isUserActive(user) ? "active" : "inactive"}
+                      {t`Account`}{" "}
+                      {isUserActive(user) ? t`active` : t`inactive`}
                     </Text>
                   </List.Item>
 
@@ -235,7 +239,7 @@ function ProfilePage() {
                         />
                       }
                     >
-                      <Text size="sm">Account owner</Text>
+                      <Text size="sm">{t`Account owner`}</Text>
                     </List.Item>
                   )}
                 </List>

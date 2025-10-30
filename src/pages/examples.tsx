@@ -27,6 +27,7 @@ import {
   type DataTableColumn,
 } from "@/shared/ui";
 import { notificationService } from "@/shared/lib";
+import { t } from "@lingui/core/macro";
 
 export const Route = createFileRoute("/examples")({
   component: ExamplesPage,
@@ -43,10 +44,9 @@ interface User {
 
 function ExamplesPage() {
   const confirmationModal = useConfirmationModal({
-    title: "Delete User",
-    message:
-      "Are you sure you want to delete this user? This action cannot be undone.",
-    confirmLabel: "Delete",
+    title: t`Delete User`,
+    message: t`Are you sure you want to delete this user? This action cannot be undone.`,
+    confirmLabel: t`Delete`,
     danger: true,
   });
 
@@ -85,7 +85,7 @@ function ExamplesPage() {
   const columns: DataTableColumn<User>[] = [
     {
       key: "name",
-      title: "User",
+      title: t`User`,
       render: (_, record) => (
         <Group gap="sm">
           <Avatar size="sm" radius="xl">
@@ -107,7 +107,7 @@ function ExamplesPage() {
     },
     {
       key: "role",
-      title: "Role",
+      title: t`Role`,
       render: (value) => (
         <Badge
           color={
@@ -121,7 +121,7 @@ function ExamplesPage() {
     },
     {
       key: "status",
-      title: "Status",
+      title: t`Status`,
       render: (value) => (
         <Badge color={value === "active" ? "green" : "gray"} variant="light">
           {value}
@@ -130,24 +130,26 @@ function ExamplesPage() {
     },
     {
       key: "actions",
-      title: "Actions",
+      title: t`Actions`,
       render: (_, record) => (
         <Group gap="xs">
           <ActionIcon
             variant="subtle"
             color="blue"
-            onClick={() =>
-              notificationService.info({ message: `Viewing ${record.name}` })
-            }
+            onClick={() => {
+              const userName = record.name;
+              notificationService.info({ message: t`Viewing ${userName}` });
+            }}
           >
             <IconEye size="1rem" />
           </ActionIcon>
           <ActionIcon
             variant="subtle"
             color="orange"
-            onClick={() =>
-              notificationService.info({ message: `Editing ${record.name}` })
-            }
+            onClick={() => {
+              const userName = record.name;
+              notificationService.info({ message: t`Editing ${userName}` });
+            }}
           >
             <IconEdit size="1rem" />
           </ActionIcon>
@@ -156,8 +158,9 @@ function ExamplesPage() {
             color="red"
             onClick={() =>
               confirmationModal.confirm(() => {
+                const userName = record.name;
                 notificationService.success({
-                  message: `${record.name} deleted successfully`,
+                  message: t`${userName} deleted successfully`,
                 });
               })
             }
@@ -171,7 +174,7 @@ function ExamplesPage() {
 
   const handleSort = (key: string, direction: "asc" | "desc") => {
     notificationService.info({
-      message: `Sorting by ${key} in ${direction} order`,
+      message: t`Sorting by ${key} in ${direction} order`,
     });
   };
 
@@ -180,11 +183,10 @@ function ExamplesPage() {
       <Stack gap="xl">
         <div>
           <Title order={1} mb="md">
-            Component Examples
+            {t`Component Examples`}
           </Title>
           <Text c="dimmed">
-            Explore the various components and features available in this
-            template
+            {t`Explore the various components and features available in this template`}
           </Text>
         </div>
 
@@ -193,14 +195,13 @@ function ExamplesPage() {
             <Card shadow="sm" padding="lg" radius="md" withBorder h="100%">
               <Group mb="md">
                 <IconCode size="1.5rem" color="var(--mantine-color-blue-6)" />
-                <Title order={3}>Forms</Title>
+                <Title order={3}>{t`Forms`}</Title>
               </Group>
               <Text size="sm" c="dimmed" mb="md">
-                Reusable form components with validation, built using Mantine
-                Form and custom validation rules.
+                {t`Reusable form components with validation, built using Mantine Form and custom validation rules.`}
               </Text>
               <Badge color="blue" variant="light">
-                Interactive
+                {t`Interactive`}
               </Badge>
             </Card>
           </Grid.Col>
@@ -212,14 +213,13 @@ function ExamplesPage() {
                   size="1.5rem"
                   color="var(--mantine-color-green-6)"
                 />
-                <Title order={3}>Data Tables</Title>
+                <Title order={3}>{t`Data Tables`}</Title>
               </Group>
               <Text size="sm" c="dimmed" mb="md">
-                Sortable, filterable data tables with pagination and custom cell
-                rendering.
+                {t`Sortable, filterable data tables with pagination and custom cell rendering.`}
               </Text>
               <Badge color="green" variant="light">
-                Functional
+                {t`Functional`}
               </Badge>
             </Card>
           </Grid.Col>
@@ -231,14 +231,13 @@ function ExamplesPage() {
                   size="1.5rem"
                   color="var(--mantine-color-orange-6)"
                 />
-                <Title order={3}>UI Components</Title>
+                <Title order={3}>{t`UI Components`}</Title>
               </Group>
               <Text size="sm" c="dimmed" mb="md">
-                Confirmation modals, notifications, loading states, and error
-                boundaries.
+                {t`Confirmation modals, notifications, loading states, and error boundaries.`}
               </Text>
               <Badge color="orange" variant="light">
-                Reusable
+                {t`Reusable`}
               </Badge>
             </Card>
           </Grid.Col>
@@ -246,11 +245,10 @@ function ExamplesPage() {
 
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Title order={3} mb="md">
-            Sample Form Feature
+            {t`Sample Form Feature`}
           </Title>
           <Text size="sm" c="dimmed" mb="md">
-            This demonstrates a complete feature implementation following
-            Feature-Sliced Design principles.
+            {t`This demonstrates a complete feature implementation following Feature-Sliced Design principles.`}
           </Text>
           <SampleFormFeature />
         </Card>
@@ -258,18 +256,17 @@ function ExamplesPage() {
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Group justify="space-between" mb="md">
             <div>
-              <Title order={3}>Data Table Example</Title>
+              <Title order={3}>{t`Data Table Example`}</Title>
               <Text size="sm" c="dimmed">
-                Interactive data table with sorting, actions, and custom
-                rendering
+                {t`Interactive data table with sorting, actions, and custom rendering`}
               </Text>
             </div>
             <Button
               onClick={() =>
-                notificationService.info({ message: "Add new user clicked" })
+                notificationService.info({ message: t`Add new user clicked` })
               }
             >
-              Add User
+              {t`Add User`}
             </Button>
           </Group>
 
@@ -277,16 +274,16 @@ function ExamplesPage() {
             data={users}
             columns={columns}
             onSort={handleSort}
-            emptyText="No users found"
+            emptyText={t`No users found`}
           />
         </Card>
 
         <Card shadow="sm" padding="lg" radius="md" withBorder>
           <Title order={3} mb="md">
-            Notification Examples
+            {t`Notification Examples`}
           </Title>
           <Text size="sm" c="dimmed" mb="md">
-            Test different types of notifications
+            {t`Test different types of notifications`}
           </Text>
 
           <Group>
@@ -294,37 +291,37 @@ function ExamplesPage() {
               color="green"
               onClick={() =>
                 notificationService.success({
-                  message: "Success notification!",
+                  message: t`Success notification!`,
                 })
               }
             >
-              Success
+              {t`Success`}
             </Button>
             <Button
               color="red"
               onClick={() =>
-                notificationService.error({ message: "Error notification!" })
+                notificationService.error({ message: t`Error notification!` })
               }
             >
-              Error
+              {t`Error`}
             </Button>
             <Button
               color="yellow"
               onClick={() =>
                 notificationService.warning({
-                  message: "Warning notification!",
+                  message: t`Warning notification!`,
                 })
               }
             >
-              Warning
+              {t`Warning`}
             </Button>
             <Button
               color="blue"
               onClick={() =>
-                notificationService.info({ message: "Info notification!" })
+                notificationService.info({ message: t`Info notification!` })
               }
             >
-              Info
+              {t`Info`}
             </Button>
           </Group>
         </Card>

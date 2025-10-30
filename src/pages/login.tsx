@@ -10,6 +10,7 @@ import {
 import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { LoginForm } from "@/features/authentication";
 import { useAuthSessionContext } from "@/processes/auth-session";
+import { t } from "@lingui/core/macro";
 
 export const Route = createFileRoute("/login")({
   component: LoginPage,
@@ -26,12 +27,12 @@ function LoginPage() {
   return (
     <Container size={420} my={40}>
       <Title ta="center" order={1} mb="md">
-        Welcome back!
+        {t`Welcome back!`}
       </Title>
       <Text c="dimmed" size="sm" ta="center" mt={5}>
-        Do not have an account yet?{" "}
+        {t`Do not have an account yet?`}{" "}
         <Anchor size="sm" component={Link} to="/register">
-          Create account
+          {t`Create account`}
         </Anchor>
       </Text>
 
@@ -40,13 +41,13 @@ function LoginPage() {
       <Paper withBorder shadow="md" p={30} mt={30} radius="md">
         <Stack gap="sm">
           <Text size="sm" c="dimmed" ta="center">
-            Demo Credentials (if available):
+            {t`Demo Credentials (if available):`}
           </Text>
           <Text size="xs" c="dimmed" ta="center">
-            Email: demo@example.com
+            {t`Email: demo@example.com`}
           </Text>
           <Text size="xs" c="dimmed" ta="center">
-            Password: password123
+            {t`Password: password123`}
           </Text>
         </Stack>
       </Paper>

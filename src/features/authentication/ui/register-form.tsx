@@ -7,6 +7,7 @@ import {
   Title,
 } from "@mantine/core";
 import { useRegisterForm } from "../model/use-register-form";
+import { t } from "@lingui/core/macro";
 
 export function RegisterForm() {
   const { form, handleSubmit, isPending } = useRegisterForm();
@@ -14,48 +15,48 @@ export function RegisterForm() {
   return (
     <Paper withBorder shadow="md" p={30} mt={30} radius="md">
       <Title order={2} ta="center" mb="md">
-        Create Account
+        {t`Create Account`}
       </Title>
 
       <form onSubmit={form.onSubmit(handleSubmit)}>
         <Stack>
           <TextInput
-            label="First Name"
-            placeholder="John"
+            label={t`First Name`}
+            placeholder={t`John`}
             required
             {...form.getInputProps("first_name")}
           />
 
           <TextInput
-            label="Last Name"
-            placeholder="Doe"
+            label={t`Last Name`}
+            placeholder={t`Doe`}
             required
             {...form.getInputProps("last_name")}
           />
 
           <TextInput
-            label="Email"
-            placeholder="your@email.com"
+            label={t`Email`}
+            placeholder={t`your@email.com`}
             required
             {...form.getInputProps("email")}
           />
 
           <PasswordInput
-            label="Password"
-            placeholder="Your password"
+            label={t`Password`}
+            placeholder={t`Your password`}
             required
             {...form.getInputProps("password")}
           />
 
           <PasswordInput
-            label="Confirm Password"
-            placeholder="Confirm your password"
+            label={t`Confirm Password`}
+            placeholder={t`Confirm your password`}
             required
             {...form.getInputProps("password_confirmation")}
           />
 
           <Button type="submit" fullWidth loading={isPending}>
-            Create Account
+            {t`Create Account`}
           </Button>
         </Stack>
       </form>
