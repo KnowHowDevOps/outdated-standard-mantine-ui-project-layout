@@ -13,3 +13,6 @@ export * from "./use-form-mutation";
 export * from "./error-utils";
 export * from "./use-error-handler";
 export * from "./rfc9457-examples";
+
+// MSW (Mock Service Worker) utilities
+export * from "./msw";

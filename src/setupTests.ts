@@ -1,4 +1,20 @@
 import "@testing-library/jest-dom";
+import { setupMocks, stopMocks, resetMocks } from "@/shared/lib/msw";
+
+// Setup MSW for testing
+beforeAll(async () => {
+  await setupMocks();
+});
+
+// Reset handlers after each test
+afterEach(() => {
+  resetMocks();
+});
+
+// Clean up MSW after all tests
+afterAll(() => {
+  stopMocks();
+});
 
 // Mock window.matchMedia for Mantine components
 Object.defineProperty(window, "matchMedia", {

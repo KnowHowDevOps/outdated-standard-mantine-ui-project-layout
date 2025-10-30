@@ -72,7 +72,7 @@ describe("ErrorBoundary", () => {
     expect(screen.getByText("Application Error")).toBeInTheDocument();
     expect(screen.getByText("Test error message")).toBeInTheDocument();
     expect(
-      screen.getByRole("button", { name: /reload page/i })
+      screen.getByRole("button", { name: /try again/i })
     ).toBeInTheDocument();
   });
 
@@ -109,21 +109,39 @@ describe("ErrorBoundary", () => {
     ).toBeInTheDocument();
   });
 
-  it("reloads page when reload button is clicked", async () => {
+  it("resets error state when try again button is clicked", async () => {
     const user = userEvent.setup();
+    let shouldThrow = true;
+
+    function ConditionalThrowError() {
+      if (shouldThrow) {
+        throw new Error("Test error message");
+      }
+      return <div>Component rendered successfully</div>;
+    }
 
     render(
       <TestWrapper>
         <ErrorBoundary>
-          <ThrowError shouldThrow />
+          <ConditionalThrowError />
         </ErrorBoundary>
       </TestWrapper>
     );
 
-    const reloadButton = screen.getByRole("button", { name: /reload page/i });
-    await user.click(reloadButton);
+    // Verify error UI is shown
+    expect(screen.getByText("Something went wrong")).toBeInTheDocument();
 
-    expect(mockReload).toHaveBeenCalledTimes(1);
+    // Stop throwing error
+    shouldThrow = false;
+
+    const retryButton = screen.getByRole("button", { name: /try again/i });
+    await user.click(retryButton);
+
+    // After clicking retry, the component should render successfully
+    expect(
+      screen.getByText("Component rendered successfully")
+    ).toBeInTheDocument();
+    expect(screen.queryByText("Something went wrong")).not.toBeInTheDocument();
   });
 
   it("logs error to console", () => {
