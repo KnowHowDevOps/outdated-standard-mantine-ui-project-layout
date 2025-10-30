@@ -7,13 +7,21 @@ const config = getMockConfig();
 /**
  * Create a mock HTTP response with consistent formatting
  */
-export function createMockResponse<T = any>(
+export function createMockResponse<
+  T extends
+    | Record<string, any>
+    | any[]
+    | string
+    | number
+    | boolean
+    | null = any,
+>(
   data: T,
   options: {
     status?: number;
     headers?: Record<string, string>;
   } = {}
-): HttpResponse {
+): HttpResponse<T> {
   const { status = 200, headers = {} } = options;
 
   // Add delay if configured
@@ -46,7 +54,7 @@ export function createMockResponse<T = any>(
 /**
  * Create a mock HTTP error response with RFC 9457 Problem Details format
  */
-export function createMockError(error: MockError): HttpResponse {
+export function createMockError(error: MockError): HttpResponse<any> {
   const { message, status, code, type } = error;
 
   const problemDetails = {
@@ -95,11 +103,19 @@ function getStatusText(status: number): string {
 /**
  * Create a delayed response (useful for testing loading states)
  */
-export function createDelayedResponse<T>(
+export function createDelayedResponse<
+  T extends
+    | Record<string, any>
+    | any[]
+    | string
+    | number
+    | boolean
+    | null = any,
+>(
   data: T,
   delay: number,
   options?: { status?: number; headers?: Record<string, string> }
-): Promise<HttpResponse> {
+): Promise<HttpResponse<T>> {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(createMockResponse(data, options));

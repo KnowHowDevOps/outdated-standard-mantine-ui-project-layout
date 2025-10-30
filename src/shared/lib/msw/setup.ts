@@ -2,16 +2,13 @@
  * MSW setup and initialization
  */
 
-import { setupWorker } from "msw/browser";
-import { setupServer } from "msw/node";
-import { handlers } from "./handlers";
 import { getMockConfig, isMockingEnabled } from "./config";
 
 // Browser worker for development and Storybook
-let worker: ReturnType<typeof setupWorker> | null = null;
+let worker: any = null;
 
 // Node server for testing
-let server: ReturnType<typeof setupServer> | null = null;
+let server: any = null;
 
 /**
  * Setup MSW based on environment
@@ -24,6 +21,9 @@ export async function setupMocks(): Promise<void> {
 
   const config = getMockConfig();
 
+  // Lazy load handlers
+  const { handlers } = await import("./handlers");
+
   // Check if we're in a test environment (Node.js with jsdom/happy-dom)
   const isTestEnvironment =
     config.environment === "test" ||
@@ -33,6 +33,7 @@ export async function setupMocks(): Promise<void> {
   // Browser environment (development, Storybook) - but not tests
   if (typeof window !== "undefined" && !isTestEnvironment) {
     if (!worker) {
+      const { setupWorker } = await import("msw/browser");
       worker = setupWorker(...handlers);
     }
 
@@ -56,6 +57,7 @@ export async function setupMocks(): Promise<void> {
   // Node environment (testing) or test environment
   else {
     if (!server) {
+      const { setupServer } = await import("msw/node");
       server = setupServer(...handlers);
     }
 
@@ -113,9 +115,7 @@ export function resetMocks(): void {
 /**
  * Add runtime handlers (useful for dynamic mocking)
  */
-export function addMockHandlers(
-  ...newHandlers: Parameters<typeof setupWorker>[0][]
-): void {
+export function addMockHandlers(...newHandlers: any[]): void {
   if (worker) {
     worker.use(...newHandlers);
   }

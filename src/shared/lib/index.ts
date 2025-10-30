@@ -14,5 +14,5 @@ export * from "./error-utils";
 export * from "./use-error-handler";
 export * from "./rfc9457-examples";
 
-// MSW (Mock Service Worker) utilities
-export * from "./msw";
+// MSW (Mock Service Worker) utilities - only available via direct import
+// export * from "./msw"; // Commented out to prevent inclusion in production build
