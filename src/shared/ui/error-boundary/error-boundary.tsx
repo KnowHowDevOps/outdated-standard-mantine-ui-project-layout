@@ -4,12 +4,16 @@ import { Component, ErrorInfo, ReactNode } from "react";
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
+  fallback?:
+    | ReactNode
+    | ((error: Error, errorInfo: ErrorInfo, retry: () => void) => ReactNode);
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
   error?: Error;
+  errorInfo?: ErrorInfo;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
@@ -24,11 +28,30 @@ export class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error("Error caught by boundary:", error, errorInfo);
+    this.setState({ errorInfo });
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
   }
 
+  private retry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
+
   render() {
-    if (this.state.hasError) {
+    if (this.state.hasError && this.state.error) {
       if (this.props.fallback) {
+        // If fallback is a function, call it with error details
+        if (typeof this.props.fallback === "function") {
+          return this.props.fallback(
+            this.state.error,
+            this.state.errorInfo || ({} as ErrorInfo),
+            this.retry
+          );
+        }
+        // Otherwise, render the fallback ReactNode directly
         return this.props.fallback;
       }
 
@@ -48,9 +71,9 @@ export class ErrorBoundary extends Component<Props, State> {
 
             <Button
               leftSection={<IconRefresh size="1rem" />}
-              onClick={() => window.location.reload()}
+              onClick={this.retry}
             >
-              Reload Page
+              Try Again
             </Button>
           </Stack>
         </Container>
