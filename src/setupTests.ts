@@ -1,9 +1,14 @@
 import "@testing-library/jest-dom";
 import { setupMocks, stopMocks, resetMocks } from "@/shared/lib/msw";
+import { i18n } from "@lingui/core";
+import { messages } from "../locales/en";
 
 // Setup MSW for testing
 beforeAll(async () => {
   await setupMocks();
+  // Setup Lingui for tests
+  i18n.load("en", messages);
+  i18n.activate("en");
 });
 
 // Reset handlers after each test
