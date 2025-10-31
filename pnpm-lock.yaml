@@ -220,8 +220,8 @@ importers:
         specifier: ^9.38.0
         version: 9.38.0
       '@kubb/cli':
-        specifier: ^4.3.1
-        version: 4.3.1(typescript@5.9.3)
+        specifier: ^4.4.1
+        version: 4.4.1(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))(typescript@5.9.3)
       '@kubb/core':
         specifier: ^4.3.1
         version: 4.3.1
@@ -1336,8 +1336,8 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@kubb/cli@4.3.1':
-    resolution: {integrity: sha512-MVgw/WD0+2huiQkedy5FQJ/M7m3G1bwGHIv6k8l2mgUDAFL+hTOz0tJxqPaKGbeR12d1qqIID8UzrTu3ouOT2w==}
+  '@kubb/cli@4.4.1':
+    resolution: {integrity: sha512-2/sZYqKHInjTcwPXjIW0e/MD7wP8jPMiwGkISxxuZiMURAf+kYLKWJJPbgrgZ2jJpM3NYetim2U95xYLTB0G+Q==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1351,8 +1351,18 @@ packages:
     peerDependencies:
       '@kubb/react': ^4.3.0
 
+  '@kubb/core@4.4.1':
+    resolution: {integrity: sha512-tZW/BSigoPocPL/rjRkzGHzzTtFkkuWdtd4YFwfXxVS75qTaqxg4RC9UHSCWmaiGnIxeP0Df/1rq5oPjuIELfg==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@kubb/react-fabric': 0.2.10
+
   '@kubb/fabric-core@0.1.8':
     resolution: {integrity: sha512-z16Ih8+5Yeb9PKi+Y7Xs2AhbViJiTla+6dJdgmz+laS5kTkWcIka8I8c4yXrMVqq/e5VUa8pjj/uesekADMrIw==}
+    engines: {node: '>=20'}
+
+  '@kubb/fabric-core@0.2.10':
+    resolution: {integrity: sha512-BPK4twzQ7DwsRaCUUWqQsmKdd3AFLVF+T4G+XrdyK60yCpe5LbFunEnWq8PQALw1l4SpX/OGpZzqVzGbCea1Vg==}
     engines: {node: '>=20'}
 
   '@kubb/fs@2.28.4':
@@ -1376,6 +1386,10 @@ packages:
     engines: {node: '>=18'}
     peerDependencies:
       '@kubb/react': 2.28.4
+
+  '@kubb/react-fabric@0.2.10':
+    resolution: {integrity: sha512-gLHSoI/yLa5yAe0ZFOXlRqGXYuoZz/lkVKh1XE5x0qZ0XCdpJTgIgF5NmcQzSnR05RvVi6Kz4giKErm8VbcBnw==}
+    engines: {node: '>=20'}
 
   '@kubb/swagger-client@2.28.4':
     resolution: {integrity: sha512-xXDYBiP9qs1zCAKbIW/zGPb3VG+JZEGz85JYdR1fIyJZaPFbKMMZ9IUIQzlA41MmwU0m5El3nDRTsbyrXCq4aQ==}
@@ -4058,6 +4072,14 @@ packages:
   dedent@0.7.0:
     resolution: {integrity: sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==}
 
+  dedent@1.7.0:
+    resolution: {integrity: sha512-HGFtf8yhuhGhqO07SV79tRp+br4MnbdjeVxotpn1QBl30pcLLCQjX5b2295ll0fv8RKDKsmWYrl05usHM9CewQ==}
+    peerDependencies:
+      babel-plugin-macros: ^3.1.0
+    peerDependenciesMeta:
+      babel-plugin-macros:
+        optional: true
+
   deep-eql@5.0.2:
     resolution: {integrity: sha512-h5k/5U50IJJFpzfL6nO9jaaumfjO/f2NjK/oYB2Djzm4p9L+3T9qWpZqZ2hAbLPuuYq9wrU08WQyBTL5GbPk5Q==}
     engines: {node: '>=6'}
@@ -5123,6 +5145,10 @@ packages:
   indent-string@4.0.0:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
     engines: {node: '>=8'}
+
+  indent-string@5.0.0:
+    resolution: {integrity: sha512-m6FAo/spmsW2Ab2fU35JTYwtOKa2yAwXSwgjSv1TJzh4Mh7mC3lzAOVLBprb72XsTrgkEIsl7YrFNAiDiRhIGg==}
+    engines: {node: '>=12'}
 
   index-to-position@1.2.0:
     resolution: {integrity: sha512-Yg7+ztRkqslMAS2iFaU+Oa4KTSidr63OsFGlOrJoW981kIYO3CGCS3wA95P1mUi/IVSJkn0D479KTJpVpvFNuw==}
@@ -6657,6 +6683,9 @@ packages:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
 
+  react-devtools-core@6.1.2:
+    resolution: {integrity: sha512-ldFwzufLletzCikNJVYaxlxMLu7swJ3T2VrGfzXlMsVhZhPDKXA38DEROidaYZVgMAmQnIjymrmqto5pyfrwPA==}
+
   react-docgen-typescript@2.4.0:
     resolution: {integrity: sha512-ZtAp5XTO5HRzQctjPU0ybY0RRCQO19X/8fxn3w7y2VVTUbGHDKULPTL4ky3vB05euSgG5NpALhEhDPvQ56wvXg==}
     peerDependencies:
@@ -6720,6 +6749,12 @@ packages:
     peerDependencies:
       react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  react-reconciler@0.32.0:
+    resolution: {integrity: sha512-2NPMOzgTlG0ZWdIf3qG+dcbLSoAc/uLfOwckc3ofy5sSK0pLJqnQLpUFxvGcN2rlXSjnVtGeeFLNimCQEj5gOQ==}
+    engines: {node: '>=0.10.0'}
+    peerDependencies:
+      react: ^19.1.0
 
   react-redux@9.2.0:
     resolution: {integrity: sha512-ROY9fvHhwOD9ySfrF0wmvu//bKCQ6AeZZq1nJNtbDC+kk5DuSuNX/n6YWYF/SYy7bSba4D4FSz8DJeKY/S/r+g==}
@@ -7009,6 +7044,9 @@ packages:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
 
+  scheduler@0.26.0:
+    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
+
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
@@ -7071,6 +7109,10 @@ packages:
   shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+
+  shell-quote@1.8.3:
+    resolution: {integrity: sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==}
+    engines: {node: '>= 0.4'}
 
   should-equal@2.0.0:
     resolution: {integrity: sha512-ZP36TMrK9euEuWQYBig9W55WPC7uo37qzAEmbjHz4gfyuXrEUgF8cUvQVO+w+d3OMfPvSRQJ22lSm8MQJ43LTA==}
@@ -8043,6 +8085,30 @@ packages:
   write-file-atomic@5.0.1:
     resolution: {integrity: sha512-+QU2zd6OTD8XWIJCbffaiQeH9U73qIqafo1x6V1snCWYGJf6cVE0cDR4D8xRzcEnfI21IFrUPzPGtcPf8AC+Rw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+
+  ws@7.5.10:
+    resolution: {integrity: sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==}
+    engines: {node: '>=8.3.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: ^5.0.2
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
+  ws@8.18.0:
+    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
 
   ws@8.18.3:
     resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
@@ -9053,9 +9119,9 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@kubb/cli@4.3.1(typescript@5.9.3)':
+  '@kubb/cli@4.4.1(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))(typescript@5.9.3)':
     dependencies:
-      '@kubb/core': 4.3.1
+      '@kubb/core': 4.4.1(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))
       chokidar: 4.0.3
       citty: 0.1.6
       cli-progress: 3.12.0
@@ -9069,7 +9135,7 @@ snapshots:
       semver: 7.7.3
       string-argv: 0.3.2
     transitivePeerDependencies:
-      - '@kubb/react'
+      - '@kubb/react-fabric'
       - typescript
 
   '@kubb/core@2.28.4':
@@ -9103,6 +9169,23 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.3
 
+  '@kubb/core@4.4.1(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))':
+    dependencies:
+      '@kubb/react-fabric': 0.2.10(babel-plugin-macros@3.1.0)
+      camelcase: 8.0.0
+      find-up: 7.0.0
+      fs-extra: 11.3.2
+      js-runtime: 0.0.8
+      natural-orderby: 5.0.0
+      object-hash: 3.0.0
+      p-limit: 7.2.0
+      picocolors: 1.1.1
+      remeda: 2.32.0
+      seedrandom: 3.0.5
+      semver: 7.7.3
+    optionalDependencies:
+      '@kubb/fabric-core': 0.2.10
+
   '@kubb/fabric-core@0.1.8':
     dependencies:
       cli-progress: 3.12.0
@@ -9112,6 +9195,15 @@ snapshots:
       p-limit: 7.2.0
       serve-handler: 6.1.6
       tiny-open: 1.2.0
+      typescript: 5.9.3
+
+  '@kubb/fabric-core@0.2.10':
+    dependencies:
+      cli-progress: 3.12.0
+      fs-extra: 11.3.2
+      natural-orderby: 5.0.0
+      p-limit: 7.2.0
+      serve-handler: 6.1.6
       typescript: 5.9.3
 
   '@kubb/fs@2.28.4':
@@ -9157,6 +9249,23 @@ snapshots:
     transitivePeerDependencies:
       - encoding
       - supports-color
+
+  '@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0)':
+    dependencies:
+      '@kubb/fabric-core': 0.2.10
+      dedent: 1.7.0(babel-plugin-macros@3.1.0)
+      execa: 9.6.0
+      indent-string: 5.0.0
+      natural-orderby: 5.0.0
+      react: 19.2.0
+      react-devtools-core: 6.1.2
+      react-reconciler: 0.32.0(react@19.2.0)
+      signal-exit: 4.1.0
+      ws: 8.18.0
+    transitivePeerDependencies:
+      - babel-plugin-macros
+      - bufferutil
+      - utf-8-validate
 
   '@kubb/swagger-client@2.28.4(axios@1.13.1)(encoding@0.1.13)':
     dependencies:
@@ -12150,6 +12259,10 @@ snapshots:
 
   dedent@0.7.0: {}
 
+  dedent@1.7.0(babel-plugin-macros@3.1.0):
+    optionalDependencies:
+      babel-plugin-macros: 3.1.0
+
   deep-eql@5.0.2: {}
 
   deep-extend@0.6.0: {}
@@ -13456,6 +13569,8 @@ snapshots:
   imurmurhash@0.1.4: {}
 
   indent-string@4.0.0: {}
+
+  indent-string@5.0.0: {}
 
   index-to-position@1.2.0: {}
 
@@ -15084,6 +15199,14 @@ snapshots:
       minimist: 1.2.8
       strip-json-comments: 2.0.1
 
+  react-devtools-core@6.1.2:
+    dependencies:
+      shell-quote: 1.8.3
+      ws: 7.5.10
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+
   react-docgen-typescript@2.4.0(typescript@5.9.3):
     dependencies:
       typescript: 5.9.3
@@ -15154,6 +15277,11 @@ snapshots:
     dependencies:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
+
+  react-reconciler@0.32.0(react@19.2.0):
+    dependencies:
+      react: 19.2.0
+      scheduler: 0.26.0
 
   react-redux@9.2.0(@types/react@19.2.2)(react@19.2.0)(redux@5.0.1):
     dependencies:
@@ -15513,6 +15641,8 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
+  scheduler@0.26.0: {}
+
   scheduler@0.27.0: {}
 
   scslre@0.3.0:
@@ -15576,6 +15706,8 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
+
+  shell-quote@1.8.3: {}
 
   should-equal@2.0.0:
     dependencies:
@@ -16679,6 +16811,10 @@ snapshots:
     dependencies:
       imurmurhash: 0.1.4
       signal-exit: 4.1.0
+
+  ws@7.5.10: {}
+
+  ws@8.18.0: {}
 
   ws@8.18.3: {}
 
