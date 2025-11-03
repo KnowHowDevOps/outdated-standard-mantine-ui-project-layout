@@ -220,8 +220,8 @@ importers:
         specifier: ^2.2.4
         version: 2.2.4(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)
       '@eslint/js':
-        specifier: ^9.38.0
-        version: 9.38.0
+        specifier: ^9.39.0
+        version: 9.39.0
       '@kubb/cli':
         specifier: ^4.4.1
         version: 4.4.1(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))(typescript@5.9.3)
@@ -347,7 +347,7 @@ importers:
         version: 9.38.0(jiti@2.6.1)
       eslint-config-mantine:
         specifier: 4.0.3
-        version: 4.0.3(@eslint/js@9.38.0)(eslint-plugin-jsx-a11y@6.10.2(eslint@9.38.0(jiti@2.6.1)))(eslint-plugin-react@7.37.5(eslint@9.38.0(jiti@2.6.1)))(eslint@9.38.0(jiti@2.6.1))(typescript-eslint@8.46.2(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3))
+        version: 4.0.3(@eslint/js@9.39.0)(eslint-plugin-jsx-a11y@6.10.2(eslint@9.38.0(jiti@2.6.1)))(eslint-plugin-react@7.37.5(eslint@9.38.0(jiti@2.6.1)))(eslint@9.38.0(jiti@2.6.1))(typescript-eslint@8.46.2(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3))
       eslint-config-prettier:
         specifier: ^10.1.8
         version: 10.1.8(eslint@9.38.0(jiti@2.6.1))
@@ -1052,6 +1052,10 @@ packages:
 
   '@eslint/js@9.38.0':
     resolution: {integrity: sha512-UZ1VpFvXf9J06YG9xQBdnzU+kthors6KjhMAl6f4gH4usHyh31rUf2DLGInT8RFYIReYXNSydgPY0V2LuWgl7A==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@eslint/js@9.39.0':
+    resolution: {integrity: sha512-BIhe0sW91JGPiaF1mOuPy5v8NflqfjIcDNpC+LbW9f609WVRX1rArrhi6Z2ymvrAry9jw+5POTj4t2t62o8Bmw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   '@eslint/object-schema@2.1.7':
@@ -8856,6 +8860,8 @@ snapshots:
 
   '@eslint/js@9.38.0': {}
 
+  '@eslint/js@9.39.0': {}
+
   '@eslint/object-schema@2.1.7': {}
 
   '@eslint/plugin-kit@0.4.0':
@@ -12608,9 +12614,9 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-config-mantine@4.0.3(@eslint/js@9.38.0)(eslint-plugin-jsx-a11y@6.10.2(eslint@9.38.0(jiti@2.6.1)))(eslint-plugin-react@7.37.5(eslint@9.38.0(jiti@2.6.1)))(eslint@9.38.0(jiti@2.6.1))(typescript-eslint@8.46.2(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)):
+  eslint-config-mantine@4.0.3(@eslint/js@9.39.0)(eslint-plugin-jsx-a11y@6.10.2(eslint@9.38.0(jiti@2.6.1)))(eslint-plugin-react@7.37.5(eslint@9.38.0(jiti@2.6.1)))(eslint@9.38.0(jiti@2.6.1))(typescript-eslint@8.46.2(eslint@9.38.0(jiti@2.6.1))(typescript@5.9.3)):
     dependencies:
-      '@eslint/js': 9.38.0
+      '@eslint/js': 9.39.0
       eslint: 9.38.0(jiti@2.6.1)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.38.0(jiti@2.6.1))
       eslint-plugin-react: 7.37.5(eslint@9.38.0(jiti@2.6.1))
