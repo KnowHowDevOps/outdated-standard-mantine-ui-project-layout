@@ -1,10 +1,8 @@
 export const readEnvVar = (key: string): string | undefined => {
-  try {
-    if (typeof window !== "undefined" && (window as any)[key] != null) {
-      const v = (window as any)[key];
-      return typeof v === "string" ? v : String(v);
-    }
-  } catch {}
+  if (typeof window !== "undefined" && (window as any)[key] != null) {
+    const v = (window as any)[key];
+    return typeof v === "string" ? v : String(v);
+  }
   return (import.meta as any).env?.[key] as string | undefined;
 };
 
