@@ -38,7 +38,7 @@ msgstr "About"
 msgid "About This Template"
 msgstr "About This Template"
 
-#: src/pages/profile.tsx:226
+#: src/pages/profile.tsx:228
 #: src/widgets/header/ui/header.tsx:45
 #: src/widgets/sidebar/ui/sidebar.tsx:78
 msgid "Account"
@@ -52,7 +52,7 @@ msgstr "Account Actions"
 msgid "Account Information"
 msgstr "Account Information"
 
-#: src/pages/profile.tsx:239
+#: src/pages/profile.tsx:242
 msgid "Account owner"
 msgstr "Account owner"
 
@@ -64,7 +64,7 @@ msgstr "Account Status"
 msgid "Actions"
 msgstr "Actions"
 
-#: src/pages/profile.tsx:226
+#: src/pages/profile.tsx:229
 msgid "active"
 msgstr "active"
 
@@ -96,7 +96,7 @@ msgstr "An unexpected error occurred"
 msgid "Application Error"
 msgstr "Application Error"
 
-#: src/pages/about.tsx:70
+#: src/pages/about.tsx:76
 msgid "Architecture"
 msgstr "Architecture"
 
@@ -110,7 +110,7 @@ msgstr "Are you sure you want to delete this user? This action cannot be undone.
 msgid "Are you sure you want to proceed?"
 msgstr "Are you sure you want to proceed?"
 
-#: src/pages/about.tsx:77
+#: src/pages/about.tsx:83
 msgid "Built following Feature-Sliced Design methodology for maintainable and scalable frontend architecture."
 msgstr "Built following Feature-Sliced Design methodology for maintainable and scalable frontend architecture."
 
@@ -141,7 +141,7 @@ msgstr "CI/CD with GitHub Actions"
 msgid "Click the plus button to open a modal with a sample form using Mantine components. This demonstrates Feature-Sliced Design architecture."
 msgstr "Click the plus button to open a modal with a sample form using Mantine components. This demonstrates Feature-Sliced Design architecture."
 
-#: src/pages/about.tsx:91
+#: src/pages/about.tsx:100
 msgid "Code Quality:"
 msgstr "Code Quality:"
 
@@ -226,7 +226,7 @@ msgstr "Doe"
 msgid "Eastern Time (ET)"
 msgstr "Eastern Time (ET)"
 
-#: src/pages/about.tsx:100
+#: src/pages/about.tsx:110
 msgid "Easy"
 msgstr "Easy"
 
@@ -265,7 +265,7 @@ msgstr "Email Notifications"
 msgid "Email: demo@example.com"
 msgstr "Email: demo@example.com"
 
-#: src/pages/about.tsx:85
+#: src/pages/about.tsx:93
 msgid "End-to-end type safety from API to UI components"
 msgstr "End-to-end type safety from API to UI components"
 
@@ -289,7 +289,7 @@ msgstr "Error"
 msgid "Error notification!"
 msgstr "Error notification!"
 
-#: src/pages/about.tsx:91
+#: src/pages/about.tsx:101
 msgid "ESLint, Prettier, and automated quality checks"
 msgstr "ESLint, Prettier, and automated quality checks"
 
@@ -317,7 +317,7 @@ msgstr "Failed to update settings. Please try again."
 msgid "Feature-Sliced Design architecture"
 msgstr "Feature-Sliced Design architecture"
 
-#: src/pages/about.tsx:82
+#: src/pages/about.tsx:88
 msgid "Feature-Sliced Design:"
 msgstr "Feature-Sliced Design:"
 
@@ -349,7 +349,7 @@ msgstr "Functional"
 msgid "Get notified about activity in your browser"
 msgstr "Get notified about activity in your browser"
 
-#: src/pages/about.tsx:98
+#: src/pages/about.tsx:108
 msgid "Getting Started"
 msgstr "Getting Started"
 
@@ -365,7 +365,7 @@ msgstr "Go Home"
 msgid "Home"
 msgstr "Home"
 
-#: src/pages/profile.tsx:226
+#: src/pages/profile.tsx:229
 msgid "inactive"
 msgstr "inactive"
 
@@ -393,11 +393,11 @@ msgstr "Interactive data table with sorting, actions, and custom rendering"
 msgid "Invalid email address"
 msgstr "Invalid email address"
 
-#: src/entities/form/model/validation-rules.ts:67
+#: src/entities/form/model/validation-rules.ts:69
 msgid "Invalid phone number"
 msgstr "Invalid phone number"
 
-#: src/entities/form/model/validation-rules.ts:78
+#: src/entities/form/model/validation-rules.ts:80
 msgid "Invalid URL"
 msgstr "Invalid URL"
 
@@ -413,7 +413,7 @@ msgstr "Language"
 msgid "Last Name"
 msgstr "Last Name"
 
-#: src/pages/about.tsx:48
+#: src/pages/about.tsx:49
 msgid "Latest React with concurrent features and improved performance"
 msgstr "Latest React with concurrent features and improved performance"
 
@@ -421,7 +421,7 @@ msgstr "Latest React with concurrent features and improved performance"
 msgid "Learn more about the technologies and architecture used in this project"
 msgstr "Learn more about the technologies and architecture used in this project"
 
-#: src/pages/about.tsx:54
+#: src/pages/about.tsx:57
 msgid "Lightning-fast development server with instant HMR"
 msgstr "Lightning-fast development server with instant HMR"
 
@@ -433,7 +433,7 @@ msgstr "Loading..."
 msgid "Login"
 msgstr "Login"
 
-#: src/widgets/header/ui/header.tsx:58
+#: src/widgets/header/ui/header.tsx:60
 msgid "Logout"
 msgstr "Logout"
 
@@ -461,7 +461,7 @@ msgstr "Mantine UI components ready"
 msgid "Mantine UI Template"
 msgstr "Mantine UI Template"
 
-#: src/pages/about.tsx:57
+#: src/pages/about.tsx:60
 msgid "Mantine UI:"
 msgstr "Mantine UI:"
 
@@ -474,7 +474,7 @@ msgstr "Marketing Emails"
 msgid "Modern"
 msgstr "Modern"
 
-#: src/pages/about.tsx:57
+#: src/pages/about.tsx:61
 msgid "Modern React components library with comprehensive theming"
 msgstr "Modern React components library with comprehensive theming"
 
@@ -482,7 +482,7 @@ msgstr "Modern React components library with comprehensive theming"
 msgid "Mountain Time (MT)"
 msgstr "Mountain Time (MT)"
 
-#: src/entities/form/model/validation-rules.ts:86
+#: src/entities/form/model/validation-rules.ts:88
 msgid "Must be a number"
 msgstr "Must be a number"
 
@@ -490,11 +490,11 @@ msgstr "Must be a number"
 msgid "Must be at least {min} characters"
 msgstr "Must be at least {min} characters"
 
-#: src/entities/form/model/validation-rules.ts:31
+#: src/entities/form/model/validation-rules.ts:32
 msgid "Must be no more than {max} characters"
 msgstr "Must be no more than {max} characters"
 
-#: src/entities/form/model/validation-rules.ts:95
+#: src/entities/form/model/validation-rules.ts:97
 msgid "Must contain only letters and numbers"
 msgstr "Must contain only letters and numbers"
 
@@ -514,11 +514,11 @@ msgstr "No data available"
 msgid "No users found"
 msgstr "No users found"
 
-#: src/widgets/header/ui/header.tsx:64
+#: src/widgets/header/ui/header.tsx:66
 msgid "Not authenticated"
 msgstr "Not authenticated"
 
-#: src/pages/profile.tsx:209
+#: src/pages/profile.tsx:211
 msgid "not verified"
 msgstr "not verified"
 
@@ -530,7 +530,7 @@ msgstr "Notification Examples"
 msgid "Notification Preferences"
 msgstr "Notification Preferences"
 
-#: src/pages/about.tsx:82
+#: src/pages/about.tsx:89
 msgid "Organized by business features rather than technical layers"
 msgstr "Organized by business features rather than technical layers"
 
@@ -551,19 +551,19 @@ msgstr "Paris (CET)"
 msgid "Password"
 msgstr "Password"
 
-#: src/entities/form/model/validation-rules.ts:39
+#: src/entities/form/model/validation-rules.ts:41
 msgid "Password must be at least 8 characters"
 msgstr "Password must be at least 8 characters"
 
-#: src/entities/form/model/validation-rules.ts:42
+#: src/entities/form/model/validation-rules.ts:44
 msgid "Password must contain at least one lowercase letter"
 msgstr "Password must contain at least one lowercase letter"
 
-#: src/entities/form/model/validation-rules.ts:48
+#: src/entities/form/model/validation-rules.ts:50
 msgid "Password must contain at least one number"
 msgstr "Password must contain at least one number"
 
-#: src/entities/form/model/validation-rules.ts:45
+#: src/entities/form/model/validation-rules.ts:47
 msgid "Password must contain at least one uppercase letter"
 msgstr "Password must contain at least one uppercase letter"
 
@@ -571,16 +571,16 @@ msgstr "Password must contain at least one uppercase letter"
 msgid "Password: password123"
 msgstr "Password: password123"
 
-#: src/entities/form/model/validation-rules.ts:57
+#: src/entities/form/model/validation-rules.ts:59
 msgid "Passwords do not match"
 msgstr "Passwords do not match"
 
-#: src/pages/about.tsx:63
+#: src/pages/about.tsx:69
 msgid "Powerful data synchronization and caching"
 msgstr "Powerful data synchronization and caching"
 
 #: src/pages/profile.tsx:52
-#: src/widgets/header/ui/header.tsx:46
+#: src/widgets/header/ui/header.tsx:48
 #: src/widgets/sidebar/ui/sidebar.tsx:83
 msgid "Profile"
 msgstr "Profile"
@@ -605,7 +605,7 @@ msgstr "React 19:"
 msgid "Ready"
 msgstr "Ready"
 
-#: src/pages/about.tsx:105
+#: src/pages/about.tsx:115
 msgid "Ready to start building? Check out the documentation and source code."
 msgstr "Ready to start building? Check out the documentation and source code."
 
@@ -651,12 +651,12 @@ msgstr "Sample Form Feature"
 msgid "Save Settings"
 msgstr "Save Settings"
 
-#: src/pages/about.tsx:72
+#: src/pages/about.tsx:78
 msgid "Scalable"
 msgstr "Scalable"
 
 #: src/pages/settings.tsx:104
-#: src/widgets/header/ui/header.tsx:48
+#: src/widgets/header/ui/header.tsx:50
 #: src/widgets/sidebar/ui/sidebar.tsx:93
 #: src/widgets/sidebar/ui/sidebar.tsx:98
 msgid "Settings"
@@ -719,7 +719,7 @@ msgstr "Sydney (AEST)"
 msgid "TanStack Query integrated"
 msgstr "TanStack Query integrated"
 
-#: src/pages/about.tsx:63
+#: src/pages/about.tsx:68
 msgid "TanStack Query:"
 msgstr "TanStack Query:"
 
@@ -727,7 +727,7 @@ msgstr "TanStack Query:"
 msgid "TanStack Router setup"
 msgstr "TanStack Router setup"
 
-#: src/pages/about.tsx:60
+#: src/pages/about.tsx:64
 msgid "TanStack Router:"
 msgstr "TanStack Router:"
 
@@ -747,7 +747,7 @@ msgstr "Test the notification system and other Mantine features"
 msgid "Testing environment ready"
 msgstr "Testing environment ready"
 
-#: src/pages/about.tsx:88
+#: src/pages/about.tsx:96
 msgid "Testing Ready:"
 msgstr "Testing Ready:"
 
@@ -755,7 +755,7 @@ msgstr "Testing Ready:"
 msgid "Testing setup"
 msgstr "Testing setup"
 
-#: src/pages/about.tsx:88
+#: src/pages/about.tsx:97
 msgid "testing setup with Vitest and Playwright"
 msgstr "testing setup with Vitest and Playwright"
 
@@ -800,15 +800,15 @@ msgstr "Try Again"
 msgid "Try Mantine Components"
 msgstr "Try Mantine Components"
 
-#: src/pages/about.tsx:85
+#: src/pages/about.tsx:92
 msgid "Type Safety:"
 msgstr "Type Safety:"
 
-#: src/pages/about.tsx:51
+#: src/pages/about.tsx:53
 msgid "Type-safe development with enhanced developer experience"
 msgstr "Type-safe development with enhanced developer experience"
 
-#: src/pages/about.tsx:60
+#: src/pages/about.tsx:65
 msgid "Type-safe routing with code splitting"
 msgstr "Type-safe routing with code splitting"
 
@@ -816,7 +816,7 @@ msgstr "Type-safe routing with code splitting"
 msgid "TypeScript configured"
 msgstr "TypeScript configured"
 
-#: src/pages/about.tsx:51
+#: src/pages/about.tsx:52
 msgid "TypeScript:"
 msgstr "TypeScript:"
 
@@ -833,11 +833,11 @@ msgstr "Update Failed"
 msgid "User"
 msgstr "User"
 
-#: src/pages/profile.tsx:209
+#: src/pages/profile.tsx:210
 msgid "verified"
 msgstr "verified"
 
-#: src/pages/about.tsx:116
+#: src/pages/about.tsx:126
 msgid "View on GitHub"
 msgstr "View on GitHub"
 
@@ -853,7 +853,7 @@ msgstr "Viewing {userName}"
 msgid "Vite for lightning-fast development"
 msgstr "Vite for lightning-fast development"
 
-#: src/pages/about.tsx:54
+#: src/pages/about.tsx:56
 msgid "Vite:"
 msgstr "Vite:"
 
