@@ -57,9 +57,7 @@ export async function setupMocks(): Promise<void> {
   // Node environment (testing) or test environment
   else {
     if (!server) {
-      const { setupServer } = await import(
-        /* @vite-ignore */ "msw/node"
-      );
+      const { setupServer } = await import(/* @vite-ignore */ "msw/node");
       server = setupServer(...handlers);
     }
 
