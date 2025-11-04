@@ -1,0 +1,5 @@
+window.VITE_API_URL_SERVER = "https://api.example.com";
+window.VITE_API_BASE_URL = "/api";
+window.VITE_ENABLE_MSW = "false";
+window.VITE_MSW_DELAY = "300";
+window.VITE_MSW_LOGGING = "true";

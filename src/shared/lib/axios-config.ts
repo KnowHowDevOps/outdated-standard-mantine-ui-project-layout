@@ -4,6 +4,7 @@ import axios, {
   type AxiosResponse,
 } from "axios";
 import { normalizeAxiosError } from "./http-error";
+import { getEnv } from "@/shared/lib/env";
 
 /**
  * Configuration for axios instance with RFC 9457 Problem Details error handling
@@ -38,10 +39,10 @@ export interface ApiClientConfig {
  */
 export function createApiClient(config: ApiClientConfig = {}): AxiosInstance {
   const {
-    baseURL = "/api",
+    baseURL = getEnv("VITE_API_BASE_URL", "/api") || "/api",
     timeout = 30000,
     headers = {},
-    enableLogging = import.meta.env.DEV,
+    enableLogging = (import.meta as any).DEV,
     onRequest,
     onResponse,
     onError,
@@ -145,7 +146,7 @@ export function createApiClient(config: ApiClientConfig = {}): AxiosInstance {
  * Default API client instance
  */
 export const apiClient = createApiClient({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "/api",
+  baseURL: getEnv("VITE_API_BASE_URL", "/api") || "/api",
 });
 
 /**

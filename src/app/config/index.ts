@@ -1,9 +1,23 @@
+const readEnvVar = (key: string): string | undefined => {
+  try {
+    if (
+      typeof window !== "undefined" &&
+      window &&
+      (window as any)[key] != null
+    ) {
+      const v = (window as any)[key];
+      return typeof v === "string" ? v : String(v);
+    }
+  } catch {}
+  return (import.meta as any).env?.[key] as string | undefined;
+};
+
 export const clientBuildEnv: Record<string, string | undefined> = {
-  VITE_API_URL_SERVER: import.meta.env.VITE_API_URL_SERVER,
-  VITE_API_BASE_URL: import.meta.env.VITE_API_BASE_URL,
-  VITE_ENABLE_MSW: import.meta.env.VITE_ENABLE_MSW,
-  VITE_MSW_DELAY: import.meta.env.VITE_MSW_DELAY,
-  VITE_MSW_LOGGING: import.meta.env.VITE_MSW_LOGGING,
+  VITE_API_URL_SERVER: readEnvVar("VITE_API_URL_SERVER"),
+  VITE_API_BASE_URL: readEnvVar("VITE_API_BASE_URL"),
+  VITE_ENABLE_MSW: readEnvVar("VITE_ENABLE_MSW"),
+  VITE_MSW_DELAY: readEnvVar("VITE_MSW_DELAY"),
+  VITE_MSW_LOGGING: readEnvVar("VITE_MSW_LOGGING"),
 };
 
 export const getConfig = (

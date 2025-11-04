@@ -1,10 +1,11 @@
 import ReactDOM from "react-dom/client";
 import { App } from "@/app";
+import { getEnv } from "@/shared/lib/env";
 
 // Initialize MSW if enabled
 async function initializeApp() {
   // Setup MSW before rendering the app (only in development)
-  if (import.meta.env.DEV && import.meta.env.VITE_ENABLE_MSW === "true") {
+  if ((import.meta as any).DEV && getEnv("VITE_ENABLE_MSW") === "true") {
     try {
       const { setupMocks } = await import("@/shared/lib/msw");
       await setupMocks();
