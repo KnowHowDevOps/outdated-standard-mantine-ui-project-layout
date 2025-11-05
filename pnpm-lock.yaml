@@ -85,7 +85,7 @@ importers:
         version: 1.134.9(@tanstack/react-router@1.133.36(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(zod@3.25.76)
       '@tiptap/extension-color':
         specifier: ^3.8.0
-        version: 3.8.0(@tiptap/extension-text-style@3.8.0(@tiptap/core@3.10.1(@tiptap/pm@3.10.1)))
+        version: 3.8.0(@tiptap/extension-text-style@3.10.1(@tiptap/core@3.10.1(@tiptap/pm@3.10.1)))
       '@tiptap/extension-image':
         specifier: ^3.8.0
         version: 3.8.0(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))
@@ -96,8 +96,8 @@ importers:
         specifier: ^3.10.1
         version: 3.10.1(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))
       '@tiptap/extension-text-style':
-        specifier: ^3.8.0
-        version: 3.8.0(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))
+        specifier: ^3.10.1
+        version: 3.10.1(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))
       '@tiptap/extension-underline':
         specifier: ^3.8.0
         version: 3.8.0(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))
@@ -2690,10 +2690,10 @@ packages:
     peerDependencies:
       '@tiptap/core': ^3.10.1
 
-  '@tiptap/extension-text-style@3.8.0':
-    resolution: {integrity: sha512-P0eCsmisyL/1X/IqyEhpUatsT4VLL64XpNOjTGzmCML9olQX3+Wa8OPjbvv/bQrRLBC8BZzz/CsTlcFEjg3Wdw==}
+  '@tiptap/extension-text-style@3.10.1':
+    resolution: {integrity: sha512-WPpHNtcet6P23w7kQHvut3y3+ATd1/8Wwyk/nIhdEc6RuOerisRm2EPW+kvGHsQ5NdlaQOwY555zKjJkyv1igA==}
     peerDependencies:
-      '@tiptap/core': ^3.8.0
+      '@tiptap/core': ^3.10.1
 
   '@tiptap/extension-text@3.10.1':
     resolution: {integrity: sha512-Af0WBQJvjiTnEArutOZENCVNGuK7Ln3BwUH3jXsk4OUHxOyt5JK9qsDePsO46Dj9OlXHbnBi5hAnhJGI8zGLzw==}
@@ -10601,9 +10601,9 @@ snapshots:
     dependencies:
       '@tiptap/core': 3.10.1(@tiptap/pm@3.10.1)
 
-  '@tiptap/extension-color@3.8.0(@tiptap/extension-text-style@3.8.0(@tiptap/core@3.10.1(@tiptap/pm@3.10.1)))':
+  '@tiptap/extension-color@3.8.0(@tiptap/extension-text-style@3.10.1(@tiptap/core@3.10.1(@tiptap/pm@3.10.1)))':
     dependencies:
-      '@tiptap/extension-text-style': 3.8.0(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))
+      '@tiptap/extension-text-style': 3.10.1(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))
 
   '@tiptap/extension-document@3.10.1(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))':
     dependencies:
@@ -10686,7 +10686,7 @@ snapshots:
     dependencies:
       '@tiptap/core': 3.10.1(@tiptap/pm@3.10.1)
 
-  '@tiptap/extension-text-style@3.8.0(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))':
+  '@tiptap/extension-text-style@3.10.1(@tiptap/core@3.10.1(@tiptap/pm@3.10.1))':
     dependencies:
       '@tiptap/core': 3.10.1(@tiptap/pm@3.10.1)
 
