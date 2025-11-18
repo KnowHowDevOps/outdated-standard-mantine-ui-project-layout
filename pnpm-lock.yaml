@@ -27,8 +27,8 @@ importers:
         specifier: ^5.5.1
         version: 5.5.1(@lingui/babel-plugin-lingui-macro@5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)(react@19.2.0)
       '@lingui/react':
-        specifier: ^5.5.1
-        version: 5.5.1(@lingui/babel-plugin-lingui-macro@5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)(react@19.2.0)
+        specifier: ^5.6.0
+        version: 5.6.0(@lingui/babel-plugin-lingui-macro@5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)(react@19.2.0)
       '@mantine/carousel':
         specifier: ^8.3.5
         version: 8.3.5(@mantine/core@8.3.5(@mantine/hooks@8.3.5(react@19.2.0))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@mantine/hooks@8.3.5(react@19.2.0))(embla-carousel-react@8.6.0(react@19.2.0))(embla-carousel@8.6.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -1576,6 +1576,19 @@ packages:
     engines: {node: '>=20.0.0'}
     peerDependencies:
       '@lingui/babel-plugin-lingui-macro': 5.5.1
+      babel-plugin-macros: 2 || 3
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@lingui/babel-plugin-lingui-macro':
+        optional: true
+      babel-plugin-macros:
+        optional: true
+
+  '@lingui/react@5.6.0':
+    resolution: {integrity: sha512-EhvDQ3xNloW0f/JCKl6hCDi8JVcwEDFYpQd3iC2i9coom2iwRNbxjVeKUa+/27tjl90bdbJrdgTRtis0RXN1wQ==}
+    engines: {node: '>=20.0.0'}
+    peerDependencies:
+      '@lingui/babel-plugin-lingui-macro': 5.6.0
       babel-plugin-macros: 2 || 3
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     peerDependenciesMeta:
@@ -4452,8 +4465,8 @@ packages:
     resolution: {integrity: sha512-w+5mJ3GuFL+NjVtJlvydShqE1eN3h3PbI7/5LAsYJP/2qtuMXjfL2LpHSRqo4b4eSF5K/DH1JXKUAHSB2UW50g==}
     engines: {node: '>= 0.4'}
 
-  es-toolkit@1.41.0:
-    resolution: {integrity: sha512-bDd3oRmbVgqZCJS6WmeQieOrzpl3URcWBUVDXxOELlUW2FuW+0glPOz1n0KnRie+PdyvUZcXz2sOn00c6pPRIA==}
+  es-toolkit@1.42.0:
+    resolution: {integrity: sha512-SLHIyY7VfDJBM8clz4+T2oquwTQxEzu263AyhVK4jREOAwJ+8eebaa4wM3nlvnAqhDrMm2EsA6hWHaQsMPQ1nA==}
 
   es5-ext@0.10.64:
     resolution: {integrity: sha512-p2snDhiLaXe6dahss1LddxqEm+SkuDvV8dnIQG0MWjyHpcMNfXKPE+/Cc0y+PhxJX3A4xGNeFCj5oc0BUh6deg==}
@@ -9695,6 +9708,15 @@ snapshots:
       '@lingui/babel-plugin-lingui-macro': 5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3)
       babel-plugin-macros: 3.1.0
 
+  '@lingui/react@5.6.0(@lingui/babel-plugin-lingui-macro@5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)(react@19.2.0)':
+    dependencies:
+      '@babel/runtime': 7.28.4
+      '@lingui/core': 5.6.0(@lingui/babel-plugin-lingui-macro@5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
+      react: 19.2.0
+    optionalDependencies:
+      '@lingui/babel-plugin-lingui-macro': 5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3)
+      babel-plugin-macros: 3.1.0
+
   '@lingui/swc-plugin@5.6.1(@lingui/core@5.5.1(@lingui/babel-plugin-lingui-macro@5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0))(@swc/core@1.13.5)':
     dependencies:
       '@lingui/core': 5.5.1(@lingui/babel-plugin-lingui-macro@5.6.0(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
@@ -12840,7 +12862,7 @@ snapshots:
       is-date-object: 1.1.0
       is-symbol: 1.1.1
 
-  es-toolkit@1.41.0: {}
+  es-toolkit@1.42.0: {}
 
   es5-ext@0.10.64:
     dependencies:
@@ -15692,7 +15714,7 @@ snapshots:
       '@reduxjs/toolkit': 2.10.1(react-redux@9.2.0(@types/react@19.2.4)(react@19.2.0)(redux@5.0.1))(react@19.2.0)
       clsx: 2.1.1
       decimal.js-light: 2.5.1
-      es-toolkit: 1.41.0
+      es-toolkit: 1.42.0
       eventemitter3: 5.0.1
       immer: 10.2.0
       react: 19.2.0
