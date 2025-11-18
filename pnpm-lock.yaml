@@ -226,20 +226,20 @@ importers:
         specifier: ^4.5.9
         version: 4.5.9(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))(typescript@5.9.3)
       '@kubb/core':
-        specifier: ^4.3.1
-        version: 4.3.1
+        specifier: ^4.5.9
+        version: 4.5.9(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))
       '@kubb/swagger':
         specifier: ^2.28.4
-        version: 2.28.4(encoding@0.1.13)
+        version: 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
       '@kubb/swagger-client':
         specifier: ^2.28.4
-        version: 2.28.4(axios@1.13.2)(encoding@0.1.13)
+        version: 2.28.4(@kubb/react@2.28.4)(axios@1.13.2)(encoding@0.1.13)
       '@kubb/swagger-tanstack-query':
         specifier: ^2.28.4
-        version: 2.28.4(axios@1.13.2)(encoding@0.1.13)
+        version: 2.28.4(@kubb/react@2.28.4)(axios@1.13.2)(encoding@0.1.13)
       '@kubb/swagger-ts':
         specifier: ^2.28.4
-        version: 2.28.4(encoding@0.1.13)
+        version: 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
       '@lingui/cli':
         specifier: ^5.5.2
         version: 5.5.2(babel-plugin-macros@3.1.0)(typescript@5.9.3)
@@ -1359,21 +1359,11 @@ packages:
     resolution: {integrity: sha512-ceujy+nWvG2vavxS6tqbkKCsQQNAqhPRBaKJ3skJ1o4JgNfoOprjKM3E1u5Z1+XboRa8xp8GhzymZ94DDYeeuA==}
     engines: {node: '>=18'}
 
-  '@kubb/core@4.3.1':
-    resolution: {integrity: sha512-ntpmscwiuP3ZomiwrdSzGujsj6HbPKuMZgXcU6ViSQTvCmS/SKIGBnQIc6a94C5Cwz67PzETu6D91exGD+csiw==}
-    engines: {node: '>=20'}
-    peerDependencies:
-      '@kubb/react': ^4.3.0
-
   '@kubb/core@4.5.9':
     resolution: {integrity: sha512-x0wL9vmS5zF9QJKLHv5fo/vdgAYELj5KLwr/nQpoy7etUJsclKWsitRy2FNRY7Yd2dFhHzkhSZT5nB4f3P17lw==}
     engines: {node: '>=20'}
     peerDependencies:
       '@kubb/react-fabric': 0.3.1
-
-  '@kubb/fabric-core@0.1.8':
-    resolution: {integrity: sha512-z16Ih8+5Yeb9PKi+Y7Xs2AhbViJiTla+6dJdgmz+laS5kTkWcIka8I8c4yXrMVqq/e5VUa8pjj/uesekADMrIw==}
-    engines: {node: '>=20'}
 
   '@kubb/fabric-core@0.2.10':
     resolution: {integrity: sha512-BPK4twzQ7DwsRaCUUWqQsmKdd3AFLVF+T4G+XrdyK60yCpe5LbFunEnWq8PQALw1l4SpX/OGpZzqVzGbCea1Vg==}
@@ -1391,10 +1381,6 @@ packages:
     resolution: {integrity: sha512-YQHTBMzMMJzVvNFRXzUSLmjIAXVXVyvWVApOHgoRWgvO3vDCLbGij3fdKoiMIsaLg2R8BB9IcGubCfLgjkkj4w==}
     engines: {node: '>=18'}
 
-  '@kubb/parser-ts@4.1.4':
-    resolution: {integrity: sha512-BRCEqrXmrVerLxJOW2OSyZrn8CsRb0pyZN1qoVQf4SkfJrD4MeZdEmSAjvknh2Ia2zP6N/uXw4UHZDwqam+fJg==}
-    engines: {node: '>=20'}
-
   '@kubb/plugin-oas@2.28.4':
     resolution: {integrity: sha512-0sHNP0TY7kaiQdvLOm8LVPB4eLFJLJ/Zs1aECOZj7U2NkEbseIZKGDCBjG2vVWPtCEn0lomHLeQimJxFgrCAsw==}
     engines: {node: '>=18'}
@@ -1404,6 +1390,10 @@ packages:
   '@kubb/react-fabric@0.2.10':
     resolution: {integrity: sha512-gLHSoI/yLa5yAe0ZFOXlRqGXYuoZz/lkVKh1XE5x0qZ0XCdpJTgIgF5NmcQzSnR05RvVi6Kz4giKErm8VbcBnw==}
     engines: {node: '>=20'}
+
+  '@kubb/react@2.28.4':
+    resolution: {integrity: sha512-sj8VAQ7k8bYQ9ZPyLb4WoUGPQT61L1hNE5YHPTDW4ZEhbZ1HbWr7DgqPOIUksL3KvJ0lqukeii1Lb0Tj98zjFg==}
+    engines: {node: '>=18'}
 
   '@kubb/swagger-client@2.28.4':
     resolution: {integrity: sha512-xXDYBiP9qs1zCAKbIW/zGPb3VG+JZEGz85JYdR1fIyJZaPFbKMMZ9IUIQzlA41MmwU0m5El3nDRTsbyrXCq4aQ==}
@@ -7550,9 +7540,6 @@ packages:
   tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
 
-  tiny-open@1.2.0:
-    resolution: {integrity: sha512-Ibqpncj/mg8TIr1gzwq0cTJLV3kLcueZ3obb5PBw10DSqREYsPB1eI+7tg4DzBf6xptXLyr0juQIxmkPVFTNkQ==}
-
   tiny-warning@1.0.3:
     resolution: {integrity: sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==}
 
@@ -8224,8 +8211,8 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
-  yocto-queue@1.2.1:
-    resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
+  yocto-queue@1.2.2:
+    resolution: {integrity: sha512-4LCcse/U2MHZ63HAJVE+v71o7yOdIe4cZ70Wpf8D/IyjDKYQLV5GD46B+hSTjJsvV5PztjvHoU580EftxjDZFQ==}
     engines: {node: '>=12.20'}
 
   yoctocolors-cjs@2.1.3:
@@ -9221,22 +9208,6 @@ snapshots:
       semver: 7.7.3
       unraw: 3.0.0
 
-  '@kubb/core@4.3.1':
-    dependencies:
-      '@kubb/fabric-core': 0.1.8
-      '@kubb/parser-ts': 4.1.4
-      camelcase: 8.0.0
-      find-up: 7.0.0
-      fs-extra: 11.3.2
-      js-runtime: 0.0.8
-      natural-orderby: 5.0.0
-      object-hash: 3.0.0
-      p-limit: 7.2.0
-      picocolors: 1.1.1
-      remeda: 2.32.0
-      seedrandom: 3.0.5
-      semver: 7.7.3
-
   '@kubb/core@4.5.9(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))':
     dependencies:
       '@kubb/react-fabric': 0.2.10(babel-plugin-macros@3.1.0)
@@ -9252,17 +9223,6 @@ snapshots:
       remeda: 2.32.0
       seedrandom: 3.0.5
       semver: 7.7.3
-
-  '@kubb/fabric-core@0.1.8':
-    dependencies:
-      cli-progress: 3.12.0
-      fs-extra: 11.3.2
-      js-runtime: 0.0.8
-      natural-orderby: 5.0.0
-      p-limit: 7.2.0
-      serve-handler: 6.1.6
-      tiny-open: 1.2.0
-      typescript: 5.9.3
 
   '@kubb/fabric-core@0.2.10':
     dependencies:
@@ -9300,17 +9260,12 @@ snapshots:
       ts-morph: 23.0.0
       typescript: 5.9.3
 
-  '@kubb/parser-ts@4.1.4':
-    dependencies:
-      prettier: 3.6.2
-      remeda: 2.32.0
-      typescript: 5.9.3
-
-  '@kubb/plugin-oas@2.28.4(encoding@0.1.13)':
+  '@kubb/plugin-oas@2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)':
     dependencies:
       '@kubb/core': 2.28.4
       '@kubb/fs': 2.28.4
       '@kubb/oas': 2.28.4(encoding@0.1.13)
+      '@kubb/react': 2.28.4
       '@stoplight/yaml': 4.3.0
       remeda: 2.32.0
     transitivePeerDependencies:
@@ -9334,62 +9289,74 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@kubb/swagger-client@2.28.4(axios@1.13.2)(encoding@0.1.13)':
+  '@kubb/react@2.28.4':
+    dependencies:
+      '@kubb/core': 2.28.4
+      '@kubb/fs': 2.28.4
+      '@kubb/parser-ts': 2.28.4
+      natural-orderby: 3.0.2
+
+  '@kubb/swagger-client@2.28.4(@kubb/react@2.28.4)(axios@1.13.2)(encoding@0.1.13)':
     dependencies:
       '@kubb/core': 2.28.4
       '@kubb/fs': 2.28.4
       '@kubb/oas': 2.28.4(encoding@0.1.13)
       '@kubb/parser-ts': 2.28.4
-      '@kubb/plugin-oas': 2.28.4(encoding@0.1.13)
-      '@kubb/swagger-ts': 2.28.4(encoding@0.1.13)
+      '@kubb/plugin-oas': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
+      '@kubb/react': 2.28.4
+      '@kubb/swagger-ts': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
     optionalDependencies:
       axios: 1.13.2
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  '@kubb/swagger-tanstack-query@2.28.4(axios@1.13.2)(encoding@0.1.13)':
+  '@kubb/swagger-tanstack-query@2.28.4(@kubb/react@2.28.4)(axios@1.13.2)(encoding@0.1.13)':
     dependencies:
       '@kubb/core': 2.28.4
       '@kubb/fs': 2.28.4
       '@kubb/oas': 2.28.4(encoding@0.1.13)
       '@kubb/parser-ts': 2.28.4
-      '@kubb/plugin-oas': 2.28.4(encoding@0.1.13)
-      '@kubb/swagger-client': 2.28.4(axios@1.13.2)(encoding@0.1.13)
-      '@kubb/swagger-ts': 2.28.4(encoding@0.1.13)
-      '@kubb/swagger-zod': 2.28.4(encoding@0.1.13)
+      '@kubb/plugin-oas': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
+      '@kubb/react': 2.28.4
+      '@kubb/swagger-client': 2.28.4(@kubb/react@2.28.4)(axios@1.13.2)(encoding@0.1.13)
+      '@kubb/swagger-ts': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
+      '@kubb/swagger-zod': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
     transitivePeerDependencies:
       - axios
       - encoding
       - supports-color
 
-  '@kubb/swagger-ts@2.28.4(encoding@0.1.13)':
+  '@kubb/swagger-ts@2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)':
     dependencies:
       '@kubb/core': 2.28.4
       '@kubb/fs': 2.28.4
       '@kubb/oas': 2.28.4(encoding@0.1.13)
       '@kubb/parser-ts': 2.28.4
-      '@kubb/plugin-oas': 2.28.4(encoding@0.1.13)
+      '@kubb/plugin-oas': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
+      '@kubb/react': 2.28.4
       '@kubb/types': 2.28.4
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  '@kubb/swagger-zod@2.28.4(encoding@0.1.13)':
+  '@kubb/swagger-zod@2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)':
     dependencies:
       '@kubb/core': 2.28.4
       '@kubb/fs': 2.28.4
       '@kubb/oas': 2.28.4(encoding@0.1.13)
       '@kubb/parser-ts': 2.28.4
-      '@kubb/plugin-oas': 2.28.4(encoding@0.1.13)
-      '@kubb/swagger-ts': 2.28.4(encoding@0.1.13)
+      '@kubb/plugin-oas': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
+      '@kubb/react': 2.28.4
+      '@kubb/swagger-ts': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  '@kubb/swagger@2.28.4(encoding@0.1.13)':
+  '@kubb/swagger@2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)':
     dependencies:
-      '@kubb/plugin-oas': 2.28.4(encoding@0.1.13)
+      '@kubb/plugin-oas': 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
+      '@kubb/react': 2.28.4
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -14911,11 +14878,11 @@ snapshots:
 
   p-limit@4.0.0:
     dependencies:
-      yocto-queue: 1.2.1
+      yocto-queue: 1.2.2
 
   p-limit@7.2.0:
     dependencies:
-      yocto-queue: 1.2.1
+      yocto-queue: 1.2.2
 
   p-locate@5.0.0:
     dependencies:
@@ -16314,8 +16281,6 @@ snapshots:
 
   tiny-invariant@1.3.3: {}
 
-  tiny-open@1.2.0: {}
-
   tiny-warning@1.0.3: {}
 
   tiny-worker@2.3.0:
@@ -16977,7 +16942,7 @@ snapshots:
 
   yocto-queue@0.1.0: {}
 
-  yocto-queue@1.2.1: {}
+  yocto-queue@1.2.2: {}
 
   yoctocolors-cjs@2.1.3: {}
 
