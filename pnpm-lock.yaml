@@ -224,10 +224,10 @@ importers:
         version: 9.39.1
       '@kubb/cli':
         specifier: ^4.5.9
-        version: 4.5.9(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))(typescript@5.9.3)
+        version: 4.5.9(typescript@5.9.3)
       '@kubb/core':
-        specifier: ^4.5.9
-        version: 4.5.9(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))
+        specifier: ^4.6.2
+        version: 4.6.2
       '@kubb/swagger':
         specifier: ^2.28.4
         version: 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
@@ -1371,9 +1371,11 @@ packages:
     peerDependencies:
       '@kubb/react-fabric': 0.3.1
 
-  '@kubb/fabric-core@0.2.10':
-    resolution: {integrity: sha512-BPK4twzQ7DwsRaCUUWqQsmKdd3AFLVF+T4G+XrdyK60yCpe5LbFunEnWq8PQALw1l4SpX/OGpZzqVzGbCea1Vg==}
+  '@kubb/core@4.6.2':
+    resolution: {integrity: sha512-y+BfQa/Y9Ej4yhQ314DRDC/7N5HKYBjPkYsUJqfTa9uocl4I73rvJzbtmWVGvEBIRFBWGogW2gHlO4Z+/3jwpg==}
     engines: {node: '>=20'}
+    peerDependencies:
+      '@kubb/react-fabric': 0.5.2
 
   '@kubb/fs@2.28.4':
     resolution: {integrity: sha512-r14Opu6BbRfbovGRph2vK30H6vI4KkGQVG/qEY4ZrGKenoQhsLqDllkLYTUbZc77E6ncpBlw5m17mE0N2EyXbw==}
@@ -1392,10 +1394,6 @@ packages:
     engines: {node: '>=18'}
     peerDependencies:
       '@kubb/react': 2.28.4
-
-  '@kubb/react-fabric@0.2.10':
-    resolution: {integrity: sha512-gLHSoI/yLa5yAe0ZFOXlRqGXYuoZz/lkVKh1XE5x0qZ0XCdpJTgIgF5NmcQzSnR05RvVi6Kz4giKErm8VbcBnw==}
-    engines: {node: '>=20'}
 
   '@kubb/react@2.28.4':
     resolution: {integrity: sha512-sj8VAQ7k8bYQ9ZPyLb4WoUGPQT61L1hNE5YHPTDW4ZEhbZ1HbWr7DgqPOIUksL3KvJ0lqukeii1Lb0Tj98zjFg==}
@@ -3492,10 +3490,6 @@ packages:
     resolution: {integrity: sha512-tjwM5exMg6BGRI+kNmTntNsvdZS1X8BFYS6tnJ2hdH0kVxM6/eVZ2xy+FqStSWvYmtfFMDLIxurorHwDKfDz5Q==}
     engines: {node: '>=18'}
 
-  bytes@3.0.0:
-    resolution: {integrity: sha512-pMhOfFDPiv9t5jjIXkHosWmkSyQbvsgEVNkz0ERHbuLh2T/7j4Mqqpz523Fe8MVY89KC6Sh/QfS2sM+SjgFDcw==}
-    engines: {node: '>= 0.8'}
-
   bytes@3.1.2:
     resolution: {integrity: sha512-/Nf7TyzTx6S3yRJObOAV7956r8cr2+Oj8AC5dt8wSP3BQAoeX58NoHyCU8P8zGkNXStjTSi6fzO6F0pBdcYbEg==}
     engines: {node: '>= 0.8'}
@@ -3796,10 +3790,6 @@ packages:
     resolution: {integrity: sha512-5IKcdX0nnYavi6G7TtOhwkYzyjfJlatbjMjuLSfE2kYT5pMDOilZ4OvMhi637CcDICTmz3wARPoyhqyX1Y+XvA==}
     engines: {node: ^14.18.0 || >=16.10.0}
 
-  content-disposition@0.5.2:
-    resolution: {integrity: sha512-kRGRZw3bLlFISDBgwTSA1TMBFN6J6GWDeubmDE3AF+3+yXL8hTWv8r5rkLbqYXY4RjPk/EzHnClI3zQf1cFmHA==}
-    engines: {node: '>= 0.6'}
-
   conventional-changelog-angular@7.0.0:
     resolution: {integrity: sha512-ROjNchA9LgfNMTTFSIWPzebCwOGFdgkEq45EnvvrmSLvCtAw0HSmrCs7/ty+wAeYUZyNay0YMUNYFTRL72PkBQ==}
     engines: {node: '>=16'}
@@ -4089,14 +4079,6 @@ packages:
 
   dedent@0.7.0:
     resolution: {integrity: sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==}
-
-  dedent@1.7.0:
-    resolution: {integrity: sha512-HGFtf8yhuhGhqO07SV79tRp+br4MnbdjeVxotpn1QBl30pcLLCQjX5b2295ll0fv8RKDKsmWYrl05usHM9CewQ==}
-    peerDependencies:
-      babel-plugin-macros: ^3.1.0
-    peerDependenciesMeta:
-      babel-plugin-macros:
-        optional: true
 
   deep-eql@5.0.2:
     resolution: {integrity: sha512-h5k/5U50IJJFpzfL6nO9jaaumfjO/f2NjK/oYB2Djzm4p9L+3T9qWpZqZ2hAbLPuuYq9wrU08WQyBTL5GbPk5Q==}
@@ -5153,10 +5135,6 @@ packages:
     resolution: {integrity: sha512-EdDDZu4A2OyIK7Lr/2zG+w5jmbuk1DVBnEwREQvBzspBJkCEbRa8GxU1lghYcaGJCnRWibjDXlq779X1/y5xwg==}
     engines: {node: '>=8'}
 
-  indent-string@5.0.0:
-    resolution: {integrity: sha512-m6FAo/spmsW2Ab2fU35JTYwtOKa2yAwXSwgjSv1TJzh4Mh7mC3lzAOVLBprb72XsTrgkEIsl7YrFNAiDiRhIGg==}
-    engines: {node: '>=12'}
-
   inflected@2.1.0:
     resolution: {integrity: sha512-hAEKNxvHf2Iq3H60oMBHkB4wl5jn3TPF3+fXek/sRwAB5gP9xWs4r7aweSF95f99HFoz69pnZTcu8f0SIHV18w==}
 
@@ -5871,20 +5849,12 @@ packages:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
-  mime-db@1.33.0:
-    resolution: {integrity: sha512-BHJ/EKruNIqJf/QahvxwQZXKygOQ256myeN/Ew+THcAa5q+PjyTTMMeNQC4DZw5AwfvelsUrA6B67NKMqXDbzQ==}
-    engines: {node: '>= 0.6'}
-
   mime-db@1.52.0:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
 
   mime-db@1.54.0:
     resolution: {integrity: sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==}
-    engines: {node: '>= 0.6'}
-
-  mime-types@2.1.18:
-    resolution: {integrity: sha512-lc/aahn+t4/SWV/qcmumYjymLsWfN3ELhpmVuUFjgsORruuZPVSwAQryq+HHGvO/SI2KVX26bx+En+zhM8g8hQ==}
     engines: {node: '>= 0.6'}
 
   mime-types@2.1.35:
@@ -6384,9 +6354,6 @@ packages:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
     engines: {node: '>=0.10.0'}
 
-  path-is-inside@1.0.2:
-    resolution: {integrity: sha512-DUWJr3+ULp4zXmol/SZkFf3JGsS9/SIv+Y3Rt93/UjPpDpklB5f1er4O3POIbUuUJ3FXgqte2Q7SrU6zAqwk8w==}
-
   path-key@3.1.1:
     resolution: {integrity: sha512-ojmeN0qd+y0jszEtoY48r0Peq5dwMEkIlCOu6Q5f41lfkswXuKtYrhgoTpLnyIcHm24Uhqx+5Tqm2InSwLhE6Q==}
     engines: {node: '>=8'}
@@ -6405,9 +6372,6 @@ packages:
   path-scurry@2.0.1:
     resolution: {integrity: sha512-oWyT4gICAu+kaA7QWk/jvCHWarMKNs6pXOGWKDTr7cw4IGcUbW+PeTfbaQiLGheFRpjo6O9J0PmyMfQPjH71oA==}
     engines: {node: 20 || >=22}
-
-  path-to-regexp@3.3.0:
-    resolution: {integrity: sha512-qyCH421YQPS2WFDxDjftfc1ZR5WKQzVzqsp4n9M2kQhVOo/ByahFoUNJfl58kOcEGfQ//7weFTDhm+ss8Ecxgw==}
 
   path-to-regexp@6.3.0:
     resolution: {integrity: sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==}
@@ -6688,19 +6652,12 @@ packages:
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
-  range-parser@1.2.0:
-    resolution: {integrity: sha512-kA5WQoNVo4t9lNx2kQNFCxKeBl5IbbSNBl1M/tLkw9WCn+hxNBAW5Qh8gdhs63CJnhjJ2zQWFoqPJP2sK1AV5A==}
-    engines: {node: '>= 0.6'}
-
   rc9@2.1.2:
     resolution: {integrity: sha512-btXCnMmRIBINM2LDZoEmOogIZU7Qe7zn4BpomSKZ/ykbLObuBdvG+mFq11DL6fjH1DRwHhrlgtYWG96bJiC7Cg==}
 
   rc@1.2.8:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
     hasBin: true
-
-  react-devtools-core@6.1.2:
-    resolution: {integrity: sha512-ldFwzufLletzCikNJVYaxlxMLu7swJ3T2VrGfzXlMsVhZhPDKXA38DEROidaYZVgMAmQnIjymrmqto5pyfrwPA==}
 
   react-docgen-typescript@2.4.0:
     resolution: {integrity: sha512-ZtAp5XTO5HRzQctjPU0ybY0RRCQO19X/8fxn3w7y2VVTUbGHDKULPTL4ky3vB05euSgG5NpALhEhDPvQ56wvXg==}
@@ -6765,12 +6722,6 @@ packages:
     peerDependencies:
       react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-
-  react-reconciler@0.32.0:
-    resolution: {integrity: sha512-2NPMOzgTlG0ZWdIf3qG+dcbLSoAc/uLfOwckc3ofy5sSK0pLJqnQLpUFxvGcN2rlXSjnVtGeeFLNimCQEj5gOQ==}
-    engines: {node: '>=0.10.0'}
-    peerDependencies:
-      react: ^19.1.0
 
   react-redux@9.2.0:
     resolution: {integrity: sha512-ROY9fvHhwOD9ySfrF0wmvu//bKCQ6AeZZq1nJNtbDC+kk5DuSuNX/n6YWYF/SYy7bSba4D4FSz8DJeKY/S/r+g==}
@@ -7049,9 +7000,6 @@ packages:
     resolution: {integrity: sha512-xAg7SOnEhrm5zI3puOOKyy1OMcMlIJZYNJY7xLBwSze0UjhPLnWfj2GF2EpT0jmzaJKIWKHLsaSSajf35bcYnA==}
     engines: {node: '>=v12.22.7'}
 
-  scheduler@0.26.0:
-    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
-
   scheduler@0.27.0:
     resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
@@ -7099,9 +7047,6 @@ packages:
     resolution: {integrity: sha512-BdrNXdzlofomLTiRnwJTSEAaGKyHHZkbMXIywOh7zlzp4uZnXErEwl9XZ+N1hJSNpeTtNxWvVwN0wUzAIQ4Hpg==}
     engines: {node: '>=10'}
 
-  serve-handler@6.1.6:
-    resolution: {integrity: sha512-x5RL9Y2p5+Sh3D38Fh9i/iQ5ZK+e4xuXRd/pGbM4D13tgo/MGwbttUk8emytcr1YYzBYs+apnUngBDFYfpjPuQ==}
-
   set-function-length@1.2.2:
     resolution: {integrity: sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg==}
     engines: {node: '>= 0.4'}
@@ -7124,10 +7069,6 @@ packages:
   shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
-
-  shell-quote@1.8.3:
-    resolution: {integrity: sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==}
-    engines: {node: '>= 0.4'}
 
   should-equal@2.0.0:
     resolution: {integrity: sha512-ZP36TMrK9euEuWQYBig9W55WPC7uo37qzAEmbjHz4gfyuXrEUgF8cUvQVO+w+d3OMfPvSRQJ22lSm8MQJ43LTA==}
@@ -8101,30 +8042,6 @@ packages:
   write-file-atomic@5.0.1:
     resolution: {integrity: sha512-+QU2zd6OTD8XWIJCbffaiQeH9U73qIqafo1x6V1snCWYGJf6cVE0cDR4D8xRzcEnfI21IFrUPzPGtcPf8AC+Rw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
-
-  ws@7.5.10:
-    resolution: {integrity: sha512-+dbF1tHwZpXcbOJdVOkzLDxZP1ailvSxM6ZweXTegylPny803bFhA+vqBYw4s31NSAk4S2Qz+AKXK9a4wkdjcQ==}
-    engines: {node: '>=8.3.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: ^5.0.2
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
-
-  ws@8.18.0:
-    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      bufferutil: ^4.0.1
-      utf-8-validate: '>=5.0.2'
-    peerDependenciesMeta:
-      bufferutil:
-        optional: true
-      utf-8-validate:
-        optional: true
 
   ws@8.18.3:
     resolution: {integrity: sha512-PEIGCY5tSlUt50cqyMXfCzX+oOPqN0vuGqWzbcJ2xvnkzkq46oOpz7dQaTDBdfICb4N14+GARUDw2XV2N4tvzg==}
@@ -9157,9 +9074,9 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@kubb/cli@4.5.9(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))(typescript@5.9.3)':
+  '@kubb/cli@4.5.9(typescript@5.9.3)':
     dependencies:
-      '@kubb/core': 4.5.9(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))
+      '@kubb/core': 4.5.9
       chokidar: 4.0.3
       citty: 0.1.6
       cli-progress: 3.12.0
@@ -9191,9 +9108,8 @@ snapshots:
       semver: 7.7.3
       unraw: 3.0.0
 
-  '@kubb/core@4.5.9(@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0))':
+  '@kubb/core@4.5.9':
     dependencies:
-      '@kubb/react-fabric': 0.2.10(babel-plugin-macros@3.1.0)
       camelcase: 8.0.0
       find-up: 7.0.0
       fs-extra: 11.3.2
@@ -9207,14 +9123,20 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.3
 
-  '@kubb/fabric-core@0.2.10':
+  '@kubb/core@4.6.2':
     dependencies:
-      cli-progress: 3.12.0
+      camelcase: 8.0.0
+      find-up: 7.0.0
       fs-extra: 11.3.2
+      jiti: 2.6.1
+      js-runtime: 0.0.8
       natural-orderby: 5.0.0
+      object-hash: 3.0.0
       p-limit: 7.2.0
-      serve-handler: 6.1.6
-      typescript: 5.9.3
+      picocolors: 1.1.1
+      remeda: 2.32.0
+      seedrandom: 3.0.5
+      semver: 7.7.3
 
   '@kubb/fs@2.28.4':
     dependencies:
@@ -9254,23 +9176,6 @@ snapshots:
     transitivePeerDependencies:
       - encoding
       - supports-color
-
-  '@kubb/react-fabric@0.2.10(babel-plugin-macros@3.1.0)':
-    dependencies:
-      '@kubb/fabric-core': 0.2.10
-      dedent: 1.7.0(babel-plugin-macros@3.1.0)
-      execa: 9.6.0
-      indent-string: 5.0.0
-      natural-orderby: 5.0.0
-      react: 19.2.0
-      react-devtools-core: 6.1.2
-      react-reconciler: 0.32.0(react@19.2.0)
-      signal-exit: 4.1.0
-      ws: 8.18.0
-    transitivePeerDependencies:
-      - babel-plugin-macros
-      - bufferutil
-      - utf-8-validate
 
   '@kubb/react@2.28.4':
     dependencies:
@@ -11636,8 +11541,6 @@ snapshots:
     dependencies:
       run-applescript: 7.1.0
 
-  bytes@3.0.0: {}
-
   bytes@3.1.2: {}
 
   c12@1.11.2(magicast@0.3.5):
@@ -12007,8 +11910,6 @@ snapshots:
 
   consola@3.4.2: {}
 
-  content-disposition@0.5.2: {}
-
   conventional-changelog-angular@7.0.0:
     dependencies:
       compare-func: 2.0.0
@@ -12290,10 +12191,6 @@ snapshots:
   decode-uri-component@0.4.1: {}
 
   dedent@0.7.0: {}
-
-  dedent@1.7.0(babel-plugin-macros@3.1.0):
-    optionalDependencies:
-      babel-plugin-macros: 3.1.0
 
   deep-eql@5.0.2: {}
 
@@ -13586,8 +13483,6 @@ snapshots:
 
   indent-string@4.0.0: {}
 
-  indent-string@5.0.0: {}
-
   inflected@2.1.0: {}
 
   inflight@1.0.6:
@@ -14285,15 +14180,9 @@ snapshots:
       braces: 3.0.3
       picomatch: 2.3.1
 
-  mime-db@1.33.0: {}
-
   mime-db@1.52.0: {}
 
   mime-db@1.54.0: {}
-
-  mime-types@2.1.18:
-    dependencies:
-      mime-db: 1.33.0
 
   mime-types@2.1.35:
     dependencies:
@@ -14880,8 +14769,6 @@ snapshots:
 
   path-is-absolute@1.0.1: {}
 
-  path-is-inside@1.0.2: {}
-
   path-key@3.1.1: {}
 
   path-key@4.0.0: {}
@@ -14897,8 +14784,6 @@ snapshots:
     dependencies:
       lru-cache: 11.2.2
       minipass: 7.1.2
-
-  path-to-regexp@3.3.0: {}
 
   path-to-regexp@6.3.0: {}
 
@@ -15210,8 +15095,6 @@ snapshots:
 
   queue-microtask@1.2.3: {}
 
-  range-parser@1.2.0: {}
-
   rc9@2.1.2:
     dependencies:
       defu: 6.1.4
@@ -15223,14 +15106,6 @@ snapshots:
       ini: 1.3.8
       minimist: 1.2.8
       strip-json-comments: 2.0.1
-
-  react-devtools-core@6.1.2:
-    dependencies:
-      shell-quote: 1.8.3
-      ws: 7.5.10
-    transitivePeerDependencies:
-      - bufferutil
-      - utf-8-validate
 
   react-docgen-typescript@2.4.0(typescript@5.9.3):
     dependencies:
@@ -15302,11 +15177,6 @@ snapshots:
     dependencies:
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
-
-  react-reconciler@0.32.0(react@19.2.0):
-    dependencies:
-      react: 19.2.0
-      scheduler: 0.26.0
 
   react-redux@9.2.0(@types/react@19.2.4)(react@19.2.0)(redux@5.0.1):
     dependencies:
@@ -15650,8 +15520,6 @@ snapshots:
     dependencies:
       xmlchars: 2.2.0
 
-  scheduler@0.26.0: {}
-
   scheduler@0.27.0: {}
 
   scslre@0.3.0:
@@ -15682,16 +15550,6 @@ snapshots:
 
   seroval@1.4.0: {}
 
-  serve-handler@6.1.6:
-    dependencies:
-      bytes: 3.0.0
-      content-disposition: 0.5.2
-      mime-types: 2.1.18
-      minimatch: 3.1.2
-      path-is-inside: 1.0.2
-      path-to-regexp: 3.3.0
-      range-parser: 1.2.0
-
   set-function-length@1.2.2:
     dependencies:
       define-data-property: 1.1.4
@@ -15721,8 +15579,6 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
-
-  shell-quote@1.8.3: {}
 
   should-equal@2.0.0:
     dependencies:
@@ -16826,10 +16682,6 @@ snapshots:
     dependencies:
       imurmurhash: 0.1.4
       signal-exit: 4.1.0
-
-  ws@7.5.10: {}
-
-  ws@8.18.0: {}
 
   ws@8.18.3: {}
 
