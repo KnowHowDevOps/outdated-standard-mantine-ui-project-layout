@@ -130,7 +130,7 @@
     "@eslint-react/eslint-plugin": "^2.3.5",
     "@eslint/js": "^9.39.1",
     "@kubb/cli": "^4.5.9",
-    "@kubb/core": "^4.5.9",
+    "@kubb/core": "^4.6.2",
     "@kubb/swagger": "^2.28.4",
     "@kubb/swagger-client": "^2.28.4",
     "@kubb/swagger-tanstack-query": "^2.28.4",
