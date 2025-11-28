@@ -8,13 +8,8 @@ const config = getMockConfig();
  * Create a mock HTTP response with consistent formatting
  */
 export function createMockResponse<
-  T extends
-    | Record<string, any>
-    | any[]
-    | string
-    | number
-    | boolean
-    | null = any,
+  T extends Record<string, any> | any[] | string | number | boolean | null =
+    any,
 >(
   data: T,
   options: {
@@ -104,13 +99,8 @@ function getStatusText(status: number): string {
  * Create a delayed response (useful for testing loading states)
  */
 export function createDelayedResponse<
-  T extends
-    | Record<string, any>
-    | any[]
-    | string
-    | number
-    | boolean
-    | null = any,
+  T extends Record<string, any> | any[] | string | number | boolean | null =
+    any,
 >(
   data: T,
   delay: number,

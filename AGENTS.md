@@ -967,8 +967,10 @@ import { memo, useMemo } from "react";
 import { DataTable as MantineDataTable } from "mantine-datatable";
 import type { DataTableProps } from "mantine-datatable";
 
-interface OptimizedDataTableProps<T>
-  extends Omit<DataTableProps<T>, "records"> {
+interface OptimizedDataTableProps<T> extends Omit<
+  DataTableProps<T>,
+  "records"
+> {
   data: T[];
   searchQuery?: string;
   searchFields?: (keyof T)[];
