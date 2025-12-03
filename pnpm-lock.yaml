@@ -229,8 +229,8 @@ importers:
         specifier: ^4.5.9
         version: 4.5.9(typescript@5.9.3)
       '@kubb/core':
-        specifier: ^4.6.2
-        version: 4.6.2
+        specifier: ^4.7.2
+        version: 4.7.2
       '@kubb/swagger':
         specifier: ^2.28.4
         version: 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
@@ -1376,8 +1376,8 @@ packages:
     peerDependencies:
       '@kubb/react-fabric': 0.3.1
 
-  '@kubb/core@4.6.2':
-    resolution: {integrity: sha512-y+BfQa/Y9Ej4yhQ314DRDC/7N5HKYBjPkYsUJqfTa9uocl4I73rvJzbtmWVGvEBIRFBWGogW2gHlO4Z+/3jwpg==}
+  '@kubb/core@4.7.2':
+    resolution: {integrity: sha512-N5dI0RLYSVLTRbHJQKNKgt0TIqqIAmsNCtvdlXU0BRHLvUmQNP2xVcTTaWQcecLM/v2wcOOqKycaPb5vtxsgHQ==}
     engines: {node: '>=20'}
     peerDependencies:
       '@kubb/react-fabric': 0.5.2
@@ -9174,7 +9174,7 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.3
 
-  '@kubb/core@4.6.2':
+  '@kubb/core@4.7.2':
     dependencies:
       camelcase: 8.0.0
       find-up: 7.0.0
