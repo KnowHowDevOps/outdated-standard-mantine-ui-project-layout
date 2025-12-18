@@ -136,7 +136,7 @@
     "@kubb/swagger-client": "^2.28.4",
     "@kubb/swagger-tanstack-query": "^2.28.4",
     "@kubb/swagger-ts": "^2.28.4",
-    "@lingui/cli": "^5.6.1",
+    "@lingui/cli": "^5.7.0",
     "@lingui/swc-plugin": "^5.6.1",
     "@lingui/vite-plugin": "^5.6.0",
     "@playwright/test": "1.57.0",
