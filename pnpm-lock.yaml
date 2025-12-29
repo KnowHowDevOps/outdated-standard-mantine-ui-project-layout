@@ -271,8 +271,8 @@ importers:
         specifier: ^8.6.14
         version: 8.6.14(react@19.2.0)(storybook@8.6.15(prettier@3.7.1))
       '@storybook/addon-themes':
-        specifier: ^8.6.14
-        version: 8.6.14(storybook@8.6.15(prettier@3.7.1))
+        specifier: ^8.6.15
+        version: 8.6.15(storybook@8.6.15(prettier@3.7.1))
       '@storybook/blocks':
         specifier: ^8.6.14
         version: 8.6.14(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(storybook@8.6.15(prettier@3.7.1))
@@ -2381,10 +2381,10 @@ packages:
     peerDependencies:
       storybook: ^8.6.14
 
-  '@storybook/addon-themes@8.6.14':
-    resolution: {integrity: sha512-/HJCgskA3OFGectuoLEBQ3JX1nQhE7lnpSv5gH13CWyyaMEk/mP8JYF1uO25YQqwGuSgL2gaEox+aK7UmglAmQ==}
+  '@storybook/addon-themes@8.6.15':
+    resolution: {integrity: sha512-ARlMx0x0nW+NTJqbZiyYlYUfGLQVhJteltF/YaQ84rt/VKna3TcZFA2zOElJjZp64A06Ov0j5BE4J+YaCRQIAg==}
     peerDependencies:
-      storybook: ^8.6.14
+      storybook: ^8.6.15
 
   '@storybook/addon-toolbars@8.6.14':
     resolution: {integrity: sha512-W/wEXT8h3VyZTVfWK/84BAcjAxTdtRiAkT2KAN0nbSHxxB5KEM1MjKpKu2upyzzMa3EywITqbfy4dP6lpkVTwQ==}
@@ -8247,6 +8247,7 @@ packages:
   whatwg-encoding@3.1.1:
     resolution: {integrity: sha512-6qN4hJdMwfYBtE3YBTTHhoeuUrDBPZmbQaxWAqSALV/MeEnR5z1xd8UKud2RAkFoPkmB+hli1TZSnyi84xz1vQ==}
     engines: {node: '>=18'}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@3.0.0:
     resolution: {integrity: sha512-nt+N2dzIutVRxARx1nghPKGv1xHikU7HKdfafKkLNLindmPU/ch3U31NOCGGA/dmPcmb1VlofO0vnKAcsm0o/Q==}
@@ -10404,7 +10405,7 @@ snapshots:
       storybook: 8.6.15(prettier@3.7.1)
       ts-dedent: 2.2.0
 
-  '@storybook/addon-themes@8.6.14(storybook@8.6.15(prettier@3.7.1))':
+  '@storybook/addon-themes@8.6.15(storybook@8.6.15(prettier@3.7.1))':
     dependencies:
       storybook: 8.6.15(prettier@3.7.1)
       ts-dedent: 2.2.0
