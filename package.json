@@ -195,7 +195,7 @@
     "knip": "5.73.3",
     "lint-staged": "^16.2.7",
     "lru-cache": "^11.2.4",
-    "msw": "^2.12.3",
+    "msw": "^2.12.7",
     "msw-storybook-addon": "^2.0.6",
     "nx": "^22.3.3",
     "postcss": "^8.5.6",
