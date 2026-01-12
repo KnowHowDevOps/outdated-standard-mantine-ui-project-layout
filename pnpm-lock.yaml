@@ -22,7 +22,7 @@ importers:
         version: 3.0.5(react@19.2.0)
       '@hookform/resolvers':
         specifier: ^5.2.2
-        version: 5.2.2(react-hook-form@7.70.0(react@19.2.0))
+        version: 5.2.2(react-hook-form@7.71.0(react@19.2.0))
       '@lingui/core':
         specifier: ^5.5.1
         version: 5.5.1(@lingui/babel-plugin-lingui-macro@5.7.0(babel-plugin-macros@3.1.0)(typescript@5.9.3))(babel-plugin-macros@3.1.0)
@@ -189,8 +189,8 @@ importers:
         specifier: ^19.2.0
         version: 19.2.0(react@19.2.0)
       react-hook-form:
-        specifier: ^7.70.0
-        version: 7.70.0(react@19.2.0)
+        specifier: ^7.71.0
+        version: 7.71.0(react@19.2.0)
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.2.0)
@@ -6921,8 +6921,8 @@ packages:
     peerDependencies:
       react: '>= 16.8 || 18.0.0'
 
-  react-hook-form@7.70.0:
-    resolution: {integrity: sha512-COOMajS4FI3Wuwrs3GPpi/Jeef/5W1DRR84Yl5/ShlT3dKVFUfoGiEZ/QE6Uw8P4T2/CLJdcTVYKvWBMQTEpvw==}
+  react-hook-form@7.71.0:
+    resolution: {integrity: sha512-oFDt/iIFMV9ZfV52waONXzg4xuSlbwKUPvXVH2jumL1me5qFhBMc4knZxuXiZ2+j6h546sYe3ZKJcg/900/iHw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -9158,10 +9158,10 @@ snapshots:
     dependencies:
       graphql: 16.12.0
 
-  '@hookform/resolvers@5.2.2(react-hook-form@7.70.0(react@19.2.0))':
+  '@hookform/resolvers@5.2.2(react-hook-form@7.71.0(react@19.2.0))':
     dependencies:
       '@standard-schema/utils': 0.3.0
-      react-hook-form: 7.70.0(react@19.2.0)
+      react-hook-form: 7.71.0(react@19.2.0)
 
   '@humanfs/core@0.19.1': {}
 
@@ -15569,7 +15569,7 @@ snapshots:
       prop-types: 15.8.1
       react: 19.2.0
 
-  react-hook-form@7.70.0(react@19.2.0):
+  react-hook-form@7.71.0(react@19.2.0):
     dependencies:
       react: 19.2.0
 
