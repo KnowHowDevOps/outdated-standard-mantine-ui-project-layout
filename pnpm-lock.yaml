@@ -64,7 +64,7 @@ importers:
         version: 8.3.5(@mantine/core@8.3.5(@mantine/hooks@8.3.5(react@19.2.0))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@mantine/hooks@8.3.5(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@mantine/tiptap':
         specifier: ^8.3.5
-        version: 8.3.5(@mantine/core@8.3.5(@mantine/hooks@8.3.5(react@19.2.0))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@mantine/hooks@8.3.5(react@19.2.0))(@tiptap/extension-link@3.8.0(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3))(@tiptap/react@3.10.1(@floating-ui/dom@1.7.4)(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)(@types/react-dom@19.2.2(@types/react@19.2.4))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 8.3.5(@mantine/core@8.3.5(@mantine/hooks@8.3.5(react@19.2.0))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@mantine/hooks@8.3.5(react@19.2.0))(@tiptap/extension-link@3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3))(@tiptap/react@3.10.1(@floating-ui/dom@1.7.4)(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)(@types/react-dom@19.2.2(@types/react@19.2.4))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@microsoft/fetch-event-source':
         specifier: ^2.0.1
         version: 2.0.1
@@ -93,8 +93,8 @@ importers:
         specifier: ^3.11.0
         version: 3.11.0(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))
       '@tiptap/extension-link':
-        specifier: ^3.8.0
-        version: 3.8.0(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)
+        specifier: ^3.15.3
+        version: 3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)
       '@tiptap/extension-text-align':
         specifier: ^3.10.1
         version: 3.10.1(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))
@@ -2877,12 +2877,6 @@ packages:
     peerDependencies:
       '@tiptap/core': ^3.15.3
       '@tiptap/pm': ^3.15.3
-
-  '@tiptap/extension-link@3.8.0':
-    resolution: {integrity: sha512-S9SQbVCnTk+CAWFoliri0jLMBrhLUg+9sHR6jc+fCmKih3OpHsugksvsym5XU0pl9R6a7JuSmwveAs2A1MCyXw==}
-    peerDependencies:
-      '@tiptap/core': ^3.8.0
-      '@tiptap/pm': ^3.8.0
 
   '@tiptap/extension-list-item@3.15.3':
     resolution: {integrity: sha512-CCxL5ek1p0lO5e8aqhnPzIySldXRSigBFk2fP9OLgdl5qKFLs2MGc19jFlx5+/kjXnEsdQTFbGY1Sizzt0TVDw==}
@@ -9846,11 +9840,11 @@ snapshots:
     dependencies:
       react: 19.2.0
 
-  '@mantine/tiptap@8.3.5(@mantine/core@8.3.5(@mantine/hooks@8.3.5(react@19.2.0))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@mantine/hooks@8.3.5(react@19.2.0))(@tiptap/extension-link@3.8.0(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3))(@tiptap/react@3.10.1(@floating-ui/dom@1.7.4)(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)(@types/react-dom@19.2.2(@types/react@19.2.4))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@mantine/tiptap@8.3.5(@mantine/core@8.3.5(@mantine/hooks@8.3.5(react@19.2.0))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(@mantine/hooks@8.3.5(react@19.2.0))(@tiptap/extension-link@3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3))(@tiptap/react@3.10.1(@floating-ui/dom@1.7.4)(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)(@types/react-dom@19.2.2(@types/react@19.2.4))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@mantine/core': 8.3.5(@mantine/hooks@8.3.5(react@19.2.0))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@mantine/hooks': 8.3.5(react@19.2.0)
-      '@tiptap/extension-link': 3.8.0(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)
+      '@tiptap/extension-link': 3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)
       '@tiptap/react': 3.10.1(@floating-ui/dom@1.7.4)(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)(@types/react-dom@19.2.2(@types/react@19.2.4))(@types/react@19.2.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       react: 19.2.0
       react-dom: 19.2.0(react@19.2.0)
@@ -10963,12 +10957,6 @@ snapshots:
       '@tiptap/core': 3.15.3(@tiptap/pm@3.15.3)
 
   '@tiptap/extension-link@3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)':
-    dependencies:
-      '@tiptap/core': 3.15.3(@tiptap/pm@3.15.3)
-      '@tiptap/pm': 3.15.3
-      linkifyjs: 4.3.2
-
-  '@tiptap/extension-link@3.8.0(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))(@tiptap/pm@3.15.3)':
     dependencies:
       '@tiptap/core': 3.15.3(@tiptap/pm@3.15.3)
       '@tiptap/pm': 3.15.3
