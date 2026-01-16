@@ -87,8 +87,8 @@ importers:
         specifier: ^1.147.3
         version: 1.147.3(@tanstack/react-router@1.150.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(zod@3.25.76)
       '@tiptap/extension-color':
-        specifier: ^3.10.1
-        version: 3.10.1(@tiptap/extension-text-style@3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3)))
+        specifier: ^3.15.3
+        version: 3.15.3(@tiptap/extension-text-style@3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3)))
       '@tiptap/extension-image':
         specifier: ^3.11.0
         version: 3.11.0(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))
@@ -2813,10 +2813,10 @@ packages:
     peerDependencies:
       '@tiptap/core': ^3.15.3
 
-  '@tiptap/extension-color@3.10.1':
-    resolution: {integrity: sha512-bQ8RacGr9rk4DJLI+w8wCBEJXmr9gDwrXcfuGYu+JA0nfgKTlz0ITNkziVVmlw7P2rpNPuzGe0DVxWD9DQhtdA==}
+  '@tiptap/extension-color@3.15.3':
+    resolution: {integrity: sha512-GS+LEJ7YC7J6CiQ/caTDVyKg+ZlU4B5ofzAZ0iCWPahjMyUUZImzXvoRlfMumAiPG+IUW9PC2BztSGd3SCLpGA==}
     peerDependencies:
-      '@tiptap/extension-text-style': ^3.10.1
+      '@tiptap/extension-text-style': ^3.15.3
 
   '@tiptap/extension-document@3.15.3':
     resolution: {integrity: sha512-AC72nI2gnogBuETCKbZekn+h6t5FGGcZG2abPGKbz/x9rwpb6qV2hcbAQ30t6M7H6cTOh2/Ut8bEV2MtMB15sw==}
@@ -10938,7 +10938,7 @@ snapshots:
     dependencies:
       '@tiptap/core': 3.15.3(@tiptap/pm@3.15.3)
 
-  '@tiptap/extension-color@3.10.1(@tiptap/extension-text-style@3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3)))':
+  '@tiptap/extension-color@3.15.3(@tiptap/extension-text-style@3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3)))':
     dependencies:
       '@tiptap/extension-text-style': 3.15.3(@tiptap/core@3.15.3(@tiptap/pm@3.15.3))
 
