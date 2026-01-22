@@ -226,8 +226,8 @@ importers:
         specifier: ^9.39.2
         version: 9.39.2
       '@kubb/cli':
-        specifier: ^4.16.0
-        version: 4.16.0(typescript@5.9.3)
+        specifier: ^4.18.3
+        version: 4.18.3(typescript@5.9.3)
       '@kubb/core':
         specifier: ^4.17.1
         version: 4.17.1
@@ -1502,8 +1502,8 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@kubb/cli@4.16.0':
-    resolution: {integrity: sha512-isJ1CeY4mvtjqGIfRVRHEeoHpLEdIOio3p+qaMjPTpMu1pJwTman1yltPHnF+mVzdqCNoUGs/g0zbJfq1YHwwA==}
+  '@kubb/cli@4.18.3':
+    resolution: {integrity: sha512-cH7z1Sn/5tQrWPHuWdWcT5uULrQr0943bneeOE5ypDFPcrYJPAwFfQdAwQc74LaPe+05vj6yZbCXPjtX2FoahA==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1511,17 +1511,17 @@ packages:
     resolution: {integrity: sha512-ceujy+nWvG2vavxS6tqbkKCsQQNAqhPRBaKJ3skJ1o4JgNfoOprjKM3E1u5Z1+XboRa8xp8GhzymZ94DDYeeuA==}
     engines: {node: '>=18'}
 
-  '@kubb/core@4.16.0':
-    resolution: {integrity: sha512-eRgSGwFxld5FdClrGRQORCwjjpgFHHnKeOc0EPwaU8gbnM+y+rWISBmw6AMQY7DuuZ6LR6EBifa/kaJlgrKvaA==}
-    engines: {node: '>=20'}
-    peerDependencies:
-      '@kubb/react-fabric': 0.9.5
-
   '@kubb/core@4.17.1':
     resolution: {integrity: sha512-HJtCzNcyuAyTu7qTIQyjXiGWzH3YjZW8JDwWxjZ3QHMg8Rh/c1OGDHzECOWstzCmvj51o0w4gpBzMBiHh3J7/w==}
     engines: {node: '>=20'}
     peerDependencies:
       '@kubb/react-fabric': 0.11.3
+
+  '@kubb/core@4.18.3':
+    resolution: {integrity: sha512-VTkfsGE+ntSef6PVYU/0eY/XNzl8/a0sNwiEe6Lp2bE5ZPP1owU1t8NlFWgszKa/efupxQCpCeTGoWQsQXOUmA==}
+    engines: {node: '>=20'}
+    peerDependencies:
+      '@kubb/react-fabric': 0.11.8
 
   '@kubb/fs@2.28.4':
     resolution: {integrity: sha512-r14Opu6BbRfbovGRph2vK30H6vI4KkGQVG/qEY4ZrGKenoQhsLqDllkLYTUbZc77E6ncpBlw5m17mE0N2EyXbw==}
@@ -2068,8 +2068,8 @@ packages:
     resolution: {integrity: sha512-YcPQ8a0jwYU9bTdJDpXjMi7Brhkr1mXsXrUJvjqM2mQDgkRiz8jFaQGOdaLxgjtUfQgZhKy/O3cG/YwmgKaxLA==}
     engines: {node: '>=12.22.0'}
 
-  '@pnpm/npm-conf@2.3.1':
-    resolution: {integrity: sha512-c83qWb22rNRuB0UaVCI0uRPNRr8Z0FWnEIvT47jiHAmOIUHbBOg5XvV7pM5x+rKn9HRpjxquDbXYSXr3fAKFcw==}
+  '@pnpm/npm-conf@3.0.2':
+    resolution: {integrity: sha512-h104Kh26rR8tm+a3Qkc5S4VLYint3FE48as7+/5oCEcKR2idC/pF1G6AhIXKI+eHPJa/3J9i5z0Al47IeGHPkA==}
     engines: {node: '>=12'}
 
   '@polka/url@1.0.0-next.29':
@@ -7103,8 +7103,8 @@ packages:
     resolution: {integrity: sha512-dYqgNSZbDwkaJ2ceRd9ojCGjBq+mOm9LmtXnAnEGyHhN/5R7iDW2TRw3h+o/jCFxus3P2LfWIIiwowAjANm7IA==}
     engines: {node: '>= 0.4'}
 
-  registry-auth-token@5.1.0:
-    resolution: {integrity: sha512-GdekYuwLXLxMuFTwAPg5UKGLW/UXzQrZvH/Zj791BQif5T05T0RsaLfHc9q3ZOKi7n+BoprPD9mJ0O0k4xzUlw==}
+  registry-auth-token@5.1.1:
+    resolution: {integrity: sha512-P7B4+jq8DeD2nMsAcdfaqHbssgHtZ7Z5+++a5ask90fvmJ8p5je4mOa+wzu+DB4vQ5tdJV/xywY+UnVFeQLV5Q==}
     engines: {node: '>=14'}
 
   registry-url@6.0.1:
@@ -9377,10 +9377,10 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@kubb/cli@4.16.0(typescript@5.9.3)':
+  '@kubb/cli@4.18.3(typescript@5.9.3)':
     dependencies:
       '@clack/prompts': 1.0.0-alpha.8
-      '@kubb/core': 4.16.0
+      '@kubb/core': 4.18.3
       chokidar: 4.0.3
       citty: 0.1.6
       cosmiconfig: 9.0.0(typescript@5.9.3)
@@ -9411,7 +9411,7 @@ snapshots:
       semver: 7.7.3
       unraw: 3.0.0
 
-  '@kubb/core@4.16.0':
+  '@kubb/core@4.17.1':
     dependencies:
       camelcase: 8.0.0
       find-up: 7.0.0
@@ -9423,7 +9423,7 @@ snapshots:
       remeda: 2.33.4
       semver: 7.7.3
 
-  '@kubb/core@4.17.1':
+  '@kubb/core@4.18.3':
     dependencies:
       camelcase: 8.0.0
       find-up: 7.0.0
@@ -10021,7 +10021,7 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.10
 
-  '@pnpm/npm-conf@2.3.1':
+  '@pnpm/npm-conf@3.0.2':
     dependencies:
       '@pnpm/config.env-replace': 1.1.0
       '@pnpm/network.ca-file': 1.0.2
@@ -15173,7 +15173,7 @@ snapshots:
   package-json@10.0.1:
     dependencies:
       ky: 1.14.2
-      registry-auth-token: 5.1.0
+      registry-auth-token: 5.1.1
       registry-url: 6.0.1
       semver: 7.7.3
 
@@ -15753,9 +15753,9 @@ snapshots:
       gopd: 1.2.0
       set-function-name: 2.0.2
 
-  registry-auth-token@5.1.0:
+  registry-auth-token@5.1.1:
     dependencies:
-      '@pnpm/npm-conf': 2.3.1
+      '@pnpm/npm-conf': 3.0.2
 
   registry-url@6.0.1:
     dependencies:
