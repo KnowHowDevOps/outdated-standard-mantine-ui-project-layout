@@ -226,8 +226,8 @@ importers:
         specifier: ^9.39.2
         version: 9.39.2
       '@kubb/cli':
-        specifier: ^4.18.3
-        version: 4.18.3(typescript@5.9.3)
+        specifier: ^4.18.4
+        version: 4.18.4(typescript@5.9.3)
       '@kubb/core':
         specifier: ^4.17.1
         version: 4.17.1
@@ -628,8 +628,8 @@ packages:
   '@clack/core@1.0.0-alpha.7':
     resolution: {integrity: sha512-3vdh6Ar09D14rVxJZIm3VQJkU+ZOKKT5I5cC0cOVazy70CNyYYjiwRj9unwalhESndgxx6bGc/m6Hhs4EKF5XQ==}
 
-  '@clack/prompts@1.0.0-alpha.8':
-    resolution: {integrity: sha512-YZGC4BmTKSF5OturNKEz/y4xNjYGmGk6NI785CQucJ7OEdX0qbMmL/zok+9bL6c7qE3WSYffyK5grh2RnkGNtQ==}
+  '@clack/prompts@1.0.0-alpha.9':
+    resolution: {integrity: sha512-sKs0UjiHFWvry4SiRfBi5Qnj0C/6AYx8aKkFPZQSuUZXgAram25ZDmhQmP7vj1aFyLpfHWtLQjWvOvcat0TOLg==}
 
   '@commitlint/cli@20.3.1':
     resolution: {integrity: sha512-NtInjSlyev/+SLPvx/ulz8hRE25Wf5S9dLNDcIwazq0JyB4/w1ROF/5nV0ObPTX8YpRaKYeKtXDYWqumBNHWsw==}
@@ -1502,8 +1502,8 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@kubb/cli@4.18.3':
-    resolution: {integrity: sha512-cH7z1Sn/5tQrWPHuWdWcT5uULrQr0943bneeOE5ypDFPcrYJPAwFfQdAwQc74LaPe+05vj6yZbCXPjtX2FoahA==}
+  '@kubb/cli@4.18.4':
+    resolution: {integrity: sha512-vQ+5wpkKaOtT/7fPsBfUVsIQnyDZiuXb9PdqM/u0cFX2YzeVeI9FxBWb3ThRkGkO/6AM6m3ko9j7Kc+FCeAHWA==}
     engines: {node: '>=20'}
     hasBin: true
 
@@ -1517,11 +1517,11 @@ packages:
     peerDependencies:
       '@kubb/react-fabric': 0.11.3
 
-  '@kubb/core@4.18.3':
-    resolution: {integrity: sha512-VTkfsGE+ntSef6PVYU/0eY/XNzl8/a0sNwiEe6Lp2bE5ZPP1owU1t8NlFWgszKa/efupxQCpCeTGoWQsQXOUmA==}
+  '@kubb/core@4.18.4':
+    resolution: {integrity: sha512-TtYD5t8uqCDkY0wDy0LnKSIVIj0R21uUgz7zHuWSw3iCvfGCqSEnGSf7PQMHSMBVLzPCkcdiavzyjvXq7bt28g==}
     engines: {node: '>=20'}
     peerDependencies:
-      '@kubb/react-fabric': 0.11.8
+      '@kubb/react-fabric': 0.12.4
 
   '@kubb/fs@2.28.4':
     resolution: {integrity: sha512-r14Opu6BbRfbovGRph2vK30H6vI4KkGQVG/qEY4ZrGKenoQhsLqDllkLYTUbZc77E6ncpBlw5m17mE0N2EyXbw==}
@@ -8586,7 +8586,7 @@ snapshots:
       picocolors: 1.1.1
       sisteransi: 1.0.5
 
-  '@clack/prompts@1.0.0-alpha.8':
+  '@clack/prompts@1.0.0-alpha.9':
     dependencies:
       '@clack/core': 1.0.0-alpha.7
       picocolors: 1.1.1
@@ -9377,10 +9377,10 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@kubb/cli@4.18.3(typescript@5.9.3)':
+  '@kubb/cli@4.18.4(typescript@5.9.3)':
     dependencies:
-      '@clack/prompts': 1.0.0-alpha.8
-      '@kubb/core': 4.18.3
+      '@clack/prompts': 1.0.0-alpha.9
+      '@kubb/core': 4.18.4
       chokidar: 4.0.3
       citty: 0.1.6
       cosmiconfig: 9.0.0(typescript@5.9.3)
@@ -9423,7 +9423,7 @@ snapshots:
       remeda: 2.33.4
       semver: 7.7.3
 
-  '@kubb/core@4.18.3':
+  '@kubb/core@4.18.4':
     dependencies:
       camelcase: 8.0.0
       find-up: 7.0.0
