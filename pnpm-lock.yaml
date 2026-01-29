@@ -226,8 +226,8 @@ importers:
         specifier: ^9.39.2
         version: 9.39.2
       '@kubb/cli':
-        specifier: ^4.18.5
-        version: 4.18.5(@kubb/react-fabric@0.12.4)(typescript@5.9.3)
+        specifier: ^4.19.2
+        version: 4.19.2(@kubb/react-fabric@0.12.4)(typescript@5.9.3)
       '@kubb/core':
         specifier: ^4.19.2
         version: 4.19.2(@kubb/react-fabric@0.12.4)
@@ -1539,20 +1539,14 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@kubb/cli@4.18.5':
-    resolution: {integrity: sha512-ewTVOic3OqZSSOTnGEg4dy2RJErG09nGTqOvPeOmq14CtPs79/SEfRLcqR4sl9dr1UuHlT+uDRzEmTNgtsLBpg==}
+  '@kubb/cli@4.19.2':
+    resolution: {integrity: sha512-GPhj+YJu8ga6w0QjTzQ32xKqoE+DsbPx4tpfpL7dBkRdi3gg8yZuCEYYCu2agtwaz72UHFYWT4Ym8z8KTJDQ2g==}
     engines: {node: '>=20'}
     hasBin: true
 
   '@kubb/core@2.28.4':
     resolution: {integrity: sha512-ceujy+nWvG2vavxS6tqbkKCsQQNAqhPRBaKJ3skJ1o4JgNfoOprjKM3E1u5Z1+XboRa8xp8GhzymZ94DDYeeuA==}
     engines: {node: '>=18'}
-
-  '@kubb/core@4.18.5':
-    resolution: {integrity: sha512-G+4NZwFurvkgtdN3fKdV4SpaTYQC7GvZj2eH3WcVLhZikdmqRhAdDhIjc0UYFgGfO4JQrNnfBf0trkuvRXci5w==}
-    engines: {node: '>=20'}
-    peerDependencies:
-      '@kubb/react-fabric': 0.12.4
 
   '@kubb/core@4.19.2':
     resolution: {integrity: sha512-rLKJwgJXJ9co0NgtXRFkjt23b3DUhF3Ea8LFqkVN5+fXBeUP7Gvfwi3dmVjtSCJ1+Q4S+9bhI4e0PRyrZkBgPw==}
@@ -9600,10 +9594,10 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@kubb/cli@4.18.5(@kubb/react-fabric@0.12.4)(typescript@5.9.3)':
+  '@kubb/cli@4.19.2(@kubb/react-fabric@0.12.4)(typescript@5.9.3)':
     dependencies:
       '@clack/prompts': 1.0.0-alpha.9
-      '@kubb/core': 4.18.5(@kubb/react-fabric@0.12.4)
+      '@kubb/core': 4.19.2(@kubb/react-fabric@0.12.4)
       chokidar: 4.0.3
       citty: 0.1.6
       cosmiconfig: 9.0.0(typescript@5.9.3)
@@ -9633,19 +9627,6 @@ snapshots:
       seedrandom: 3.0.5
       semver: 7.7.3
       unraw: 3.0.0
-
-  '@kubb/core@4.18.5(@kubb/react-fabric@0.12.4)':
-    dependencies:
-      '@kubb/react-fabric': 0.12.4
-      camelcase: 8.0.0
-      find-up: 7.0.0
-      fs-extra: 11.3.3
-      jiti: 2.6.1
-      js-runtime: 0.0.8
-      natural-orderby: 5.0.0
-      p-limit: 7.2.0
-      remeda: 2.33.4
-      semver: 7.7.3
 
   '@kubb/core@4.19.2(@kubb/react-fabric@0.12.4)':
     dependencies:
