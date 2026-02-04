@@ -229,8 +229,8 @@ importers:
         specifier: ^4.20.1
         version: 4.20.1(@kubb/react-fabric@0.12.7)(typescript@5.9.3)
       '@kubb/core':
-        specifier: ^4.20.0
-        version: 4.20.0(@kubb/react-fabric@0.12.7)
+        specifier: ^4.20.1
+        version: 4.20.1(@kubb/react-fabric@0.12.7)
       '@kubb/swagger':
         specifier: ^2.28.4
         version: 2.28.4(@kubb/react@2.28.4)(encoding@0.1.13)
@@ -1554,12 +1554,6 @@ packages:
   '@kubb/core@2.28.4':
     resolution: {integrity: sha512-ceujy+nWvG2vavxS6tqbkKCsQQNAqhPRBaKJ3skJ1o4JgNfoOprjKM3E1u5Z1+XboRa8xp8GhzymZ94DDYeeuA==}
     engines: {node: '>=18'}
-
-  '@kubb/core@4.20.0':
-    resolution: {integrity: sha512-dB/ht/4VsfrCgVbJCNSw0LGRnX2G+UoSJwJ6zKIseZwh6hQntoZ1X8SQWT7KxeWqA0kSJM+dQy9YWQKAs/Izrg==}
-    engines: {node: '>=20'}
-    peerDependencies:
-      '@kubb/react-fabric': 0.12.7
 
   '@kubb/core@4.20.1':
     resolution: {integrity: sha512-izInUdukHhI9rEfh0kDNz2QR0lplje0W/aTWPVclRA1ZbiJgRwyfWZmg5DNnuzghU7cnES1J/nRsDxOS0rOtyw==}
@@ -5204,16 +5198,18 @@ packages:
 
   glob@10.5.0:
     resolution: {integrity: sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@11.1.0:
     resolution: {integrity: sha512-vuNwKSaKiqm7g0THUBu2x7ckSs3XJLXE+2ssL7/MfTGPLLcrJQ/4Uq1CjPTtO5cCIiRxqvN6Twy1qOwhL0Xjcw==}
     engines: {node: 20 || >=22}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -6560,8 +6556,8 @@ packages:
     resolution: {integrity: sha512-5b0R4txpzjPWVw/cXXUResoD4hb6U/x9BH08L7nw+GN1sezDzPdxeRvpc9c433fZhBan/wusjbCsqwqm4EIBIQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  p-limit@7.2.0:
-    resolution: {integrity: sha512-ATHLtwoTNDloHRFFxFJdHnG6n2WUeFjaR8XQMFdKIv0xkXjrER8/iG9iu265jOM95zXHAfv9oTkqhrfbIzosrQ==}
+  p-limit@7.3.0:
+    resolution: {integrity: sha512-7cIXg/Z0M5WZRblrsOla88S4wAK+zOQQWeBYfV3qJuJXMr+LnbYjaadrFaS0JILfEDPVqHyKnZ1Z/1d6J9VVUw==}
     engines: {node: '>=20'}
 
   p-locate@5.0.0:
@@ -7733,7 +7729,7 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   test-exclude@7.0.1:
     resolution: {integrity: sha512-pFYqmTw68LXVjeWJMST4+borgQP2AyMNbg1BpZh9LbyhUeNkeaPF9gzfPGUAnSMV3qPYdWUwDIjjCLiSDOl7vg==}
@@ -9547,19 +9543,6 @@ snapshots:
       semver: 7.7.3
       unraw: 3.0.0
 
-  '@kubb/core@4.20.0(@kubb/react-fabric@0.12.7)':
-    dependencies:
-      '@kubb/react-fabric': 0.12.7
-      camelcase: 8.0.0
-      find-up: 7.0.0
-      fs-extra: 11.3.3
-      jiti: 2.6.1
-      js-runtime: 0.0.8
-      natural-orderby: 5.0.0
-      p-limit: 7.2.0
-      remeda: 2.33.4
-      semver: 7.7.3
-
   '@kubb/core@4.20.1(@kubb/react-fabric@0.12.7)':
     dependencies:
       '@kubb/react-fabric': 0.12.7
@@ -9569,7 +9552,7 @@ snapshots:
       jiti: 2.6.1
       js-runtime: 0.0.8
       natural-orderby: 5.0.0
-      p-limit: 7.2.0
+      p-limit: 7.3.0
       remeda: 2.33.4
       semver: 7.7.3
 
@@ -9578,7 +9561,7 @@ snapshots:
       '@clack/prompts': 1.0.0
       fs-extra: 11.3.3
       natural-orderby: 5.0.0
-      p-limit: 7.2.0
+      p-limit: 7.3.0
       picocolors: 1.1.1
       remeda: 2.33.4
       serve-handler: 6.1.6
@@ -15244,7 +15227,7 @@ snapshots:
     dependencies:
       yocto-queue: 1.2.2
 
-  p-limit@7.2.0:
+  p-limit@7.3.0:
     dependencies:
       yocto-queue: 1.2.2
 
